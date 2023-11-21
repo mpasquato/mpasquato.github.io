@@ -1,0 +1,72 @@
+html {
+    font-size: 62.5%;
+    line-height: 1.2;
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: "Figtree";
+    font-weight: normal;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Aleo";
+    font-size: 6.4rem;
+    line-height: 1em;
+    color: #C82418;
+    text-align: center;
+    font-weight: normal;
+    margin: 0;
+}
+
+a, a:hover, a:visited {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+b {
+    font-weight: bold;
+}
+
+img {
+    display: block;
+}
+
+.mv-32 {
+    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
+}
+
+.mv-48 {
+    margin-top: 4.8rem;
+    margin-bottom: 4.8rem;
+}
+
+.mv-64 {
+    margin-top: 6.4rem;
+    margin-bottom: 6.4rem;
+}
+
+.mv-80 {
+    margin-top: 8.0rem;
+    margin-bottom: 8.0rem;
+}
+
+.txt-dark {
+    color: #000000;
+}
+
+.txt-light {
+    color: #FFFFFF;
+}
+
+.txt-accent {
+    color: #C82418;
+}
+
+.txt-quote {
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: bold;
+}
