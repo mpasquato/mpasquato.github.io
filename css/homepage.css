@@ -1,5 +1,7 @@
 .hero {
     background-color: #C82418;
+    color: #FFFFFF;
+    padding: 2.2rem;
 }
 
 .hero-section {
@@ -9,8 +11,6 @@
 
     width: 100%;
     height: 60vh;
-    color: #FFFFFF;
-    padding: 2.2rem;
 
     font-family: "Aleo", serif;
     font-size: 8.6rem;
@@ -28,13 +28,35 @@
     gap: 3.2rem;
 }
 
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+.cta-secondary {
+    font-size: 1.8rem;
+    line-height: 1em;
+    font-weight: bold;
+    color: #C82418;
+    padding: 8px 12px;
+}
+
+.project-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
 .project-card {
     overflow: hidden;
+    position: relative;
 
     display: flex;
     flex-direction: row;
 
-    background-color: green;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25), 0px 0px 16px 0px rgba(0, 0, 0, 0.15);
     
     width: 100%;
     border-radius: 8px;
@@ -44,6 +66,91 @@
 }
 
 .project-card > img {
+    align-self: stretch;
     object-fit: fill;
     max-width: 250px;
+}
+
+.project-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 24px 0;
+    gap: 24px;
+}
+
+.project-tag-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-self: stretch;
+    gap: 12px;
+}
+
+.project-tag {
+    background: #EAEAEA;
+    padding: 6px 10px;
+    border-radius: 8px;
+    
+    color: #343434;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.card-clickable-area {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	opacity: 0;
+}
+
+.project-card-content a {
+    position: relative;
+    z-index: 10;
+
+    text-decoration: underline;
+}
+
+.project-card-content > .cta-secondary {
+    align-self: flex-end;
+}
+
+.contacts-card {
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25), 0px 0px 16px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+.contacts-img {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    
+    background-color: #343434;
+}
+
+.contacts-content {
+    padding: 4px 12px;
+}
+
+.footer {
+    background-color: #343434;
+    padding: 48px 0;
 }
