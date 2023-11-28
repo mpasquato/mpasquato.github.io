@@ -182,10 +182,6 @@ p:first-of-type {
 
 @media (max-width: 992px) {
 
-footer > .container > .row {
-    gap: 3.6rem;
-}
-
 }
 
 
