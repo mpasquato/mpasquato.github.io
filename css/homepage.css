@@ -16,22 +16,16 @@
     font-size: 8.6rem;
 }
 
-.intro {
-    display: flex;
-    flex-direction: column;
-    gap: 2.6rem;
+.intro > .row:not(:first-child) {
+    margin-top: 2.6rem;
 }
 
-.projects {
-    display: flex;
-    flex-direction: column;
-    gap: 3.2rem;
+.projects > .row:not(:first-child) {
+    margin-top: 3.2rem;
 }
 
-.contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 3.2rem;
+.contacts > .row:not(:first-child) {
+    margin-top: 3.2rem;
 }
 
 .cta-secondary {
@@ -95,6 +89,7 @@ p:first-of-type {
     flex-direction: row;
     align-items: stretch;
     align-self: stretch;
+    flex-wrap: wrap;
     gap: 12px;
 }
 
@@ -179,21 +174,76 @@ p:first-of-type {
 }
 
 
-
+/* MAX WIDTH: 992PX */
 @media (max-width: 992px) {
 
 }
 
 
 
+/* MAX WIDTH: 768PX */
 @media (max-width: 768px) {
 
+.project-card {
+    flex-direction: column;
+
+    padding-right: 0;
+    align-items: center;
+    gap: 24px;
+}
+
+.project-card > img {
+    max-width: initial;
+    width: 100%;
+    max-height: 280px;
+}
+
+.project-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: initial;
+    align-items: center;
+    padding: 0px 16px 24px 16px;
+    gap: 16px;
+}
+
+.project-card-content > * {
+    width: 100%;
+}
+
+.project-card-content > .cta-secondary {
+    align-self: flex-end;
+}
+
 }
 
 
 
+/* MAX WIDTH: 576PX */
 @media (max-width: 576px) {
 
+.cta-secondary {
+    font-size: 1.6rem;
+    padding: 6px 10px;
 }
+
+.project-card-container {
+    gap: 24px;
+}
+
+.projects > .row:not(:first-child) {
+    margin-top: 2.4rem;
+}
+
+}
+
+/* MAX WIDTH: 320PX */
+@media (max-width: 320px) {
+
+.project-card > img {
+    max-height: 200px;
+}
+    
+    }
 
 
