@@ -174,8 +174,26 @@ p:first-of-type {
 }
 
 
+
+/* MAX WIDTH: PX 1200*/
+@media (max-width: 1200px) {
+
+.contacts-row {
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+}
+
+
+
 /* MAX WIDTH: 992PX */
 @media (max-width: 992px) {
+
+.contacts-row {
+    padding-right: 0;
+    padding-left: 0;
+}
 
 }
 
@@ -222,6 +240,15 @@ p:first-of-type {
 /* MAX WIDTH: 576PX */
 @media (max-width: 576px) {
 
+.hero-section {
+    font-size: 4.8rem;
+}
+
+.main-content {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
 .cta-secondary {
     font-size: 1.6rem;
     padding: 6px 10px;
@@ -235,6 +262,34 @@ p:first-of-type {
     margin-top: 2.4rem;
 }
 
+.contacts .contacts-card-container + .contacts-card-container {
+    margin-top: 24px;
+}
+
+.contacts-card-container {
+    padding-right: 20%;
+    padding-left: 20%;
+}
+
+.footer {
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+}
+
+
+
+/* CUSTOM BREAKPOINTS */
+
+/* MAX WIDTH: 486PX */
+@media (max-width: 486px) {
+
+.contacts-card-container {
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
 }
 
 /* MAX WIDTH: 320PX */
@@ -243,7 +298,12 @@ p:first-of-type {
 .project-card > img {
     max-height: 200px;
 }
-    
-    }
+
+.contacts-card-container {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+}
 
 

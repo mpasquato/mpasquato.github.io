@@ -115,7 +115,8 @@ img {
 }
 
 .mv-md-24 {
-    margin: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 body {
