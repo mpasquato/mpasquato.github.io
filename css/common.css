@@ -1,16 +1,24 @@
-/* UTILITIES & BASICS */
+/* XS (ALL SIZES) */
 
 html {
     font-size: 62.5%;
-    line-height: 1.2;
+    line-height: 1.5;
+    scroll-padding-top: 90px;
 }
 
 body {
     margin: 0;
     font-size: 1.8rem;
     font-family: "Figtree";
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
+
+    background-color: #C82418;
+}
+
+a, a:hover, a:visited {
+    text-decoration: underline;
+    color: inherit;
 }
 
 h2 {
@@ -19,61 +27,35 @@ h2 {
     line-height: 1em;
     color: #C82418;
     text-align: center;
-    font-weight: normal;
+    font-weight: 400;
     margin: 0;
 }
 
 h5 {
     font-size: 2.4rem;
     line-height: 1em;
-    font-weight: bold;
+    font-weight: 700;
     margin: 0;
 }
 
 h6 {
     font-size: 1.8rem;
     line-height: 1em;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
     margin: 0;
 }
 
 p {
     margin: 1.2rem 0 0 0;
-
-}
-
-a, a:hover, a:visited {
-    text-decoration: underline;
-    color: inherit;
 }
 
 b {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 img {
     display: block;
-}
-
-.mv-32 {
-    margin-top: 32px;
-    margin-bottom: 32px;
-}
-
-.mv-48 {
-    margin-top: 48px;
-    margin-bottom: 48px;
-}
-
-.mv-64 {
-    margin-top: 64px;
-    margin-bottom: 64px;
-}
-
-.mv-80 {
-    margin-top: 80px;
-    margin-bottom: 80px;
 }
 
 .txt-dark {
@@ -91,32 +73,31 @@ img {
 .txt-quote {
     text-align: center;
     font-size: 2.6rem;
-    font-weight: bold;
+    font-weight: 700;
+}
+
+.background {
+    background-color: #FAFAFA;
+}
+
+.ending-decoration {
+    height: 12px;
 }
 
 
 
-/* MAX WIDTH: 992PX */
+/* MD MAX WIDTH: 992PX */
 @media (max-width: 992px) {
 
 }
 
 
 
-/* MAX WIDTH: 768PX */
+/* SM MAX WIDTH: 768PX */
 @media (max-width: 768px) {
 
 .txt-quote {
     text-align: left;
-}
-
-.mt-md-36 {
-    margin-top: 36px;
-}
-
-.mv-md-24 {
-    margin-top: 24px;
-    margin-bottom: 24px;
 }
 
 body {
@@ -127,7 +108,7 @@ body {
 
 
 
-/* MAX WIDTH: 576PX */
+/* XS MAX WIDTH: 576PX */
 @media (max-width: 576px) {
 
 h2 {
@@ -138,21 +119,4 @@ h5 {
     font-size: 2.0rem;
 }
 
-}
-
-
-
-
-/* COMMON STYLES */
-
-body {
-    background-color: #C82418;
-}
-
-.background {
-    background-color: #FAFAFA;
-}
-
-.ending-decoration {
-    height: 12px;
 }

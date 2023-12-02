@@ -8,18 +8,50 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
-    <link rel="stylesheet" href="css/basis.css">
+    <link rel="stylesheet" href="css/custom-reset.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/spacing.css">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/homepage.css">
 
     <title>Marco Pasquato</title>
 </head>
 
 <body class="txt-dark">
+    <nav id="nav-desktop">
+        <div class="container">
+            <div id="nav-desktop-wrapper">
+                <a href="https://www.marcopasquato.com" class="logo-wrapper"><img src="media/logo/mp.svg" alt=""
+                        class="logo">
+                </a>
+                <ul>
+                    <li><a href="#about-me">About me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile">
+        <div class="container">
+            <div id="nav-mobile-wrapper">
+                <a href="https://www.marcopasquato.com" class="logo-wrapper"><img src="media/logo/mp.svg" alt=""
+                        class="logo">
+                </a>
+                <ul>
+                    <li><a href="#about-me">About me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="background">
         <main>
-            <div class="hero">
+            <div class="hero" id="hero">
                 <div class="container">
                     <div class="row">
                         <div class="col">
@@ -29,8 +61,8 @@
                 </div>
             </div>
             <div class="main-content">
-                <div class="container intro">
-                    <div class="row mv-32">
+                <div class="container intro" id="about-me">
+                    <div class="row m-v-32">
                         <div class="col-md-3"></div>
                         <div class="col-md-6">
                             <p>I’m Marco Pasquato, an <b>UX designer</b> with a graphic design background, among
@@ -63,7 +95,7 @@
                         <div class="col-md-3"></div>
                     </div>
                 </div>
-                <div class="container projects mv-80 mv-md-24">
+                <div class="container projects m-v-48 m-v-md-80" id="projects">
                     <div class="row">
                         <div class="col-12">
                             <h2>
@@ -183,7 +215,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container contacts mv-80">
+                <div class="container contacts m-v-80" id="contacts">
                     <div class="row">
                         <div class="col-12">
                             <h2>
@@ -260,7 +292,7 @@
                             <a href="#">Terms and conditions</a>
                         </p>
                     </div>
-                    <div class="col-12 col-md-6 mt-md-36">
+                    <div class="col-12 col-md-6 m-t-32 m-t-md-0">
                         <h6>
                             Credits
                         </h6>
@@ -288,7 +320,11 @@
             </div>
         </footer>
     </div>
+
     <div class="ending-decoration"></div>
+
+    <script src="js/nav-responsive.js"></script>
+    <script src="js/nav-position.js"></script>
 </body>
 
 </html>

@@ -1,7 +1,9 @@
+/* XS (ALL SIZES) */
+
 .hero {
     background-color: #C82418;
     color: #FFFFFF;
-    padding: 2.2rem;
+    padding: 22px;
 }
 
 .hero-section {
@@ -17,15 +19,15 @@
 }
 
 .intro > .row:not(:first-child) {
-    margin-top: 2.6rem;
+    margin-top: 26px;
 }
 
 .projects > .row:not(:first-child) {
-    margin-top: 3.2rem;
+    margin-top: 32px;
 }
 
 .contacts > .row:not(:first-child) {
-    margin-top: 3.2rem;
+    margin-top: 32px;
 }
 
 .cta-secondary {
@@ -37,7 +39,7 @@
 
     font-size: 1.8rem;
     line-height: 1em;
-    font-weight: bold;
+    font-weight: 700;
     color: #C82418;
     padding: 8px 12px;
 }
@@ -76,7 +78,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 24px 0;
+    padding: 32px 0;
     gap: 24px;
 }
 
@@ -104,7 +106,7 @@ p:first-of-type {
     
     color: #343434;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 1em;
     text-transform: uppercase;
 }
@@ -175,7 +177,7 @@ p:first-of-type {
 
 
 
-/* MAX WIDTH: PX 1200*/
+/* LG MAX WIDTH: 1200PX*/
 @media (max-width: 1200px) {
 
 .contacts-row {
@@ -187,7 +189,7 @@ p:first-of-type {
 
 
 
-/* MAX WIDTH: 992PX */
+/* MD MAX WIDTH: 992PX */
 @media (max-width: 992px) {
 
 .contacts-row {
@@ -199,7 +201,7 @@ p:first-of-type {
 
 
 
-/* MAX WIDTH: 768PX */
+/* SM MAX WIDTH: 768PX */
 @media (max-width: 768px) {
 
 .project-card {
@@ -237,7 +239,7 @@ p:first-of-type {
 
 
 
-/* MAX WIDTH: 576PX */
+/* XS MAX WIDTH: 576PX */
 @media (max-width: 576px) {
 
 .hero-section {
@@ -259,7 +261,7 @@ p:first-of-type {
 }
 
 .projects > .row:not(:first-child) {
-    margin-top: 2.4rem;
+    margin-top: 24px;
 }
 
 .contacts .contacts-card-container + .contacts-card-container {

@@ -1,0 +1,47 @@
+#nav-desktop {
+    background: #C82418;
+    font-weight: 500;
+}
+
+#nav-desktop-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 74px;
+}
+
+#nav-desktop-wrapper .logo-wrapper {
+    align-self: center;
+}
+
+#nav-desktop-wrapper .logo {
+    max-height: 42px;
+}
+
+#nav-desktop-wrapper ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 36px;
+}
+
+#nav-desktop-wrapper a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 2,4rem;
+    line-height: 1em;
+    padding: 8px;
+}
+
+#nav-desktop-wrapper a:hover {
+    color: #000000;
+}
+
+.fix-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
