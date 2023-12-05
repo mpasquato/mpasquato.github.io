@@ -1,6 +1,3 @@
-const navDesktop = document.getElementById("nav-desktop");
-const navMobile = document.getElementById("nav-mobile");
-
 // Run on loading and on resize
 window.addEventListener('load', checkWidth);
 window.addEventListener('resize', checkWidth);

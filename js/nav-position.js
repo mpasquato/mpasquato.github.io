@@ -1,13 +1,9 @@
-const navDesktop = document.getElementById("nav-desktop");
-const navMobile = document.getElementById("nav-mobile");
-const hero = document.getElementById("hero");
-
 // Onscroll, check the position of the nav bars; if necessary, toggle them to sticky
 window.onscroll = function () 
 {
     toggleNav(navDesktop);
     toggleNav(navMobile);
-};
+}
 
 function toggleNav(nav) 
 {
