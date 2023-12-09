@@ -1,18 +1,25 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let navMobileButton = document.getElementById("nav-mobile-button");
-    let navMobileWrapper = document.getElementById("nav-mobile-wrapper");
-    let navMobileLogo = document.getElementById("nav-mobile-logo");
-    let navMobileContent = document.getElementById("nav-mobile-content");
-
-    navMobileButton.addEventListener("click", function() {
-      navMobileWrapper.classList.toggle("nav-mobile-wrapper-expanded");
-      navMobileContent.classList.toggle("nav-mobile-content-toggle");
-      navMobileLogo.style.display = "none";
-      if (navMobileButton.textContent === "menu") {
-        navMobileButton.textContent = "close";
-      } else {
-        navMobileButton.textContent = "menu";
-        navMobileLogo.style.display = "block";
-      }
-    });
+navMobileButtonOpen.addEventListener("click", toggleOpen);
+navMobileButtonClose.addEventListener("click", toggleClose);
+navMobileLinks.forEach(function(link) {
+    link.addEventListener("click", toggleClose);
 });
+
+function toggleOpen() {
+        navMobileWrapper.classList.toggle("nav-mobile-wrapper-toggle");
+        navMobileContent.classList.toggle("nav-mobile-content-toggle");
+        navMobile.classList.toggle("nav-mobile-toggle");
+        navMobileLogo.style.display = "none";
+        navMobileButtonOpen.style.display = "none";
+        navMobileButtonClose.style.display = "block";
+        document.body.style.overflow = 'hidden';
+};
+
+function toggleClose() {
+    navMobileWrapper.classList.toggle("nav-mobile-wrapper-toggle");
+    navMobileContent.classList.toggle("nav-mobile-content-toggle");
+    navMobile.classList.toggle("nav-mobile-toggle");
+    navMobileLogo.style.display = "block";
+    navMobileButtonOpen.style.display = "block";
+    navMobileButtonClose.style.display = "none";
+    document.body.style.overflow = '';
+};

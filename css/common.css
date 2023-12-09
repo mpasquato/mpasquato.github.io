@@ -16,9 +16,16 @@ body {
     background-color: #C82418;
 }
 
-a, a:hover, a:visited {
+a, a:hover, a:focus, a:visited {
     text-decoration: underline;
+    text-decoration-thickness: 2px;
     color: inherit;
+    font-weight: 500;
+    transition: text-decoration-color 300ms ease-out;
+}
+
+a:hover, a:focus {
+    text-decoration-color: #C82418;
 }
 
 h2 {
