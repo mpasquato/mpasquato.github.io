@@ -4,7 +4,12 @@
     background-color: #C82418;
     color: #FFFFFF;
     padding: 22px;
-    background-image: url(../media/backgrounds/hero-background.png);
+    background-image: url(../media/backgrounds/hero-background@1.jpg);
+    background-image: image-set(
+        url(../media/backgrounds/hero-background@1.jpg) 1x,
+        url(../media/backgrounds/hero-background@2.jpg) 2x,
+        url(../media/backgrounds/hero-background@3.jpg) 3x
+        );
     background-blend-mode: multiply;
     background-size: cover;
 }

@@ -3,7 +3,8 @@
 html {
     font-size: 62.5%;
     line-height: 1.5;
-    scroll-padding-top: 90px;
+    scroll-padding-top: 75px;
+    scroll-behavior: smooth;
 }
 
 body {
