@@ -5,3 +5,5 @@
 [x] animations
 [x] links & content
 [] privacy policy page
+[] favicon
+[] images optimization
