@@ -1,5 +1,6 @@
 const navDesktop = document.getElementById("nav-desktop");
 const navMobile = document.getElementById("nav-mobile");
+const navMobileHeader = document.getElementById("nav-mobile-header");
 const hero = document.getElementById("hero");
 
 const navMobileButtonOpen = document.getElementById("nav-mobile-button-open");
