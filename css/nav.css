@@ -5,16 +5,12 @@
     top: 0 !important;
     left: 0 !important;
     right: 0 !important;
-    background: #C82418 !important;
+    background-color: #C82418 !important;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.50), 0px 0px 16px 0px rgba(0, 0, 0, 0.25);
 }
 
 .fix-nav-desktop {
     height: 74px !important;
-}
-
-.fix-nav-mobile {
-    height: 48px !important;
 }
 
 
@@ -29,10 +25,10 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background: none;
+    background-color: none;
     font-weight: 500;
 
-    /* transition: height 500ms ease-out; */
+    transition: background-color 500ms ease-out;
 }
 
 #nav-desktop-wrapper {
@@ -52,7 +48,8 @@
     transition-timing-function: ease-out;
 }
 
-#nav-desktop-logo:hover, #nav-desktop-logo:focus {
+#nav-desktop-logo:hover,
+#nav-desktop-logo:focus {
     filter: invert(1);
 }
 
@@ -80,7 +77,8 @@
     transition: color 300ms ease-out;
 }
 
-#nav-desktop-wrapper li a:hover, #nav-desktop-wrapper li a:focus {
+#nav-desktop-wrapper li a:hover,
+#nav-desktop-wrapper li a:focus {
     color: #000000;
 }
 
@@ -98,10 +96,12 @@
     z-index: 1000;
     font-weight: 500;
     color: #FFFFFF;
+
+    transition: background-color 500ms ease-out;
 }
 
 .nav-mobile-toggle {
-    background: #C82418 !important;
+    background-color: #C82418 !important;
 }
 
 .nav-mobile-wrapper-toggle {
@@ -119,18 +119,17 @@
     align-items: center;
     height: 48px;
     width: 100%;
-    padding-right: 16px;
-    padding-left: 16px;
 }
 
 #nav-mobile-logo {
     display: block;
     transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
     transition-duration: 300ms;
-    transition-timing-function: ease-out; 
+    transition-timing-function: ease-out;
 }
 
-#nav-mobile-logo:hover, #nav-mobile-logo:focus {
+#nav-mobile-logo:hover,
+#nav-mobile-logo:focus {
     filter: invert(1);
 }
 
@@ -152,7 +151,8 @@ a.nav-mobile-button {
     transition: color 300ms ease-out;
 }
 
-a.nav-mobile-button:hover, a.nav-mobile-button:focus {
+a.nav-mobile-button:hover,
+a.nav-mobile-button:focus {
     text-decoration: none;
     cursor: pointer;
     color: #000000;
@@ -164,7 +164,7 @@ a.nav-mobile-button:hover, a.nav-mobile-button:focus {
 
 #nav-mobile-content {
     height: 100%;
-    
+
     display: none;
     align-items: center;
     justify-content: center;
@@ -194,6 +194,17 @@ a.nav-mobile-button:hover, a.nav-mobile-button:focus {
     transition: color 300ms ease-out;
 }
 
-#nav-mobile-content a:hover, #nav-mobile-content a:focus {
+#nav-mobile-content a:hover,
+#nav-mobile-content a:focus {
     color: #000000;
+}
+
+/* XS MAX WIDTH: 576PX */
+@media (max-width: 576px) {
+
+#nav-mobile-header {
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
 }
