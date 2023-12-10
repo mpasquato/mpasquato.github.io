@@ -39,11 +39,11 @@
 #nav-desktop-logo {
     transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
     transition-duration: 300ms;
-    transition-timing-function: ease-out; 
+    transition-timing-function: ease-out;
 }
 
 #nav-desktop-logo:hover, #nav-desktop-logo:focus {
-    filter: invert(100);
+    filter: invert(1);
 }
 
 #nav-desktop-wrapper .logo {
@@ -60,17 +60,17 @@
     gap: 36px;
 }
 
-#nav-desktop-wrapper a {
+#nav-desktop-wrapper li a {
     text-decoration: none;
     color: #FFFFFF;
     font-size: 2rem;
     line-height: 1em;
     padding: 8px;
 
-    transition: all 300 ease-out;
+    transition: color 300ms ease-out;
 }
 
-#nav-desktop-wrapper a:hover, #nav-desktop-wrapper a:focus {
+#nav-desktop-wrapper li a:hover, #nav-desktop-wrapper li a:focus {
     color: #000000;
 }
 
@@ -118,11 +118,10 @@
     transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
     transition-duration: 300ms;
     transition-timing-function: ease-out; 
-    
 }
 
 #nav-mobile-logo:hover, #nav-mobile-logo:focus {
-    filter: invert(100);
+    filter: invert(1);
 }
 
 .mobile-button-wrapper {
@@ -137,11 +136,14 @@
     display: none;
 }
 
-.nav-mobile-button {
+a.nav-mobile-button {
+    text-decoration: none;
+    color: #FFFFFF;
     transition: color 300ms ease-out;
 }
 
-.nav-mobile-button:hover, .nav-mobile-button:focus {
+a.nav-mobile-button:hover, a.nav-mobile-button:focus {
+    text-decoration: none;
     cursor: pointer;
     color: #000000;
 }

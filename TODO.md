@@ -4,6 +4,7 @@
 [x] navbar
 [x] animations
 [x] links & content
-[] privacy policy page
 [x] favicon
-[] images optimization
+[x] images optimization
+[] navbars animations
+[] privacy policy page
