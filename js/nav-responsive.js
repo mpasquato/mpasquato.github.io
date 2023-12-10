@@ -6,7 +6,7 @@ window.addEventListener('resize', checkWidth);
 function checkWidth() {
     let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
-    if (viewportWidth >= 768) 
+    if (viewportWidth >= (768)) 
     {
         navDesktop.style.display = "block";
         navMobile.style.display = "none";
