@@ -58,6 +58,10 @@ p {
     margin: 1.2rem 0 0 0;
 }
 
+ul {
+    margin: 1.2rem 0 0 0;
+}
+
 b {
     font-weight: 700;
 }
@@ -87,6 +91,15 @@ img {
 
 .background {
     background-color: #FAFAFA;
+}
+
+.footer {
+    background-color: #343434;
+    padding: 48px 0;
+}
+
+.footer p:first-of-type {
+    margin-top: 1.2rem;
 }
 
 .ending-decoration {
@@ -127,5 +140,11 @@ h2 {
 h5 {
     font-size: 2.0rem;
 }
+
+.footer {
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
 
 }
