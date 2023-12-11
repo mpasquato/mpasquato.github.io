@@ -141,6 +141,11 @@ h5 {
     font-size: 2.0rem;
 }
 
+.main-content {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
 .footer {
     padding-right: 16px;
     padding-left: 16px;
