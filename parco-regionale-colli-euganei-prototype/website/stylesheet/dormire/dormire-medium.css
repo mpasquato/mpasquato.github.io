@@ -1,0 +1,247 @@
+@media screen and (min-width: 768px) and (max-width: 992px){
+/* ***************  ---GRIGLIA---  ******************* */
+.main-grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(9, auto);
+    grid-gap: 0;
+    grid-template-areas:
+    "hm hm hm hm hm hm hm hm hm hm hm hm"
+    ". . . ti ti ti ti ti ti ti . ."
+    ". . . bf bf bf bf bf bf . . ."
+    ". . . t1 t1 t1 t1 t1 t1 . . ."
+    ". . . b1 b1 b1 . . . . . ."
+    ". . . ca ca ca ca ca ca . . ."
+    ". . . ba ba ba ba ba ba . . ."
+    ". . . bb bb bb bb bb bb . . ."
+    "ff ff ff ff ff ff ff ff ff ff ff ff";
+}
+
+.bottone-selezione {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-image: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-color: white;
+    color: black;
+    font-family: OfSans, sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    padding: 0.25em 0.75em;
+    border: none;
+    border-bottom: 2px solid rgb(255, 108, 12);
+    box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.bottone-posto{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-image: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-color: white;
+    color: black;
+    font-family: OfSans, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1em;
+    padding: 0.25rem 1.5rem;
+    border: none;
+    border-bottom: 2px solid rgb(255, 108, 12);
+    box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 100%;
+}
+
+.bottone-inserimento {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-image: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-color: white;
+    color: black;
+    font-family: OfSans, sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    padding: 0.25rem 1.5rem;
+    border: none;
+    border-bottom: 2px solid rgb(255, 108, 12);
+    box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-style: italic;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.bottone-ok {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-image: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-color: white;
+    color: black;
+    font-family: OfSans, sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    padding: 0.25rem 1.5rem;
+    border: none;
+    box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+
+
+/* ***************** ---IFRAME--- ****************** */
+.blocco-frame {
+    grid-area: bf;
+    height: 400px;
+    display: inline-block;
+    overflow: hidden;
+    margin: 1.5rem 0 0 0;
+    box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 0.1);
+}
+.blocco-frame iframe {
+    /* position: relative;
+    width: 100%;
+    height: 140% !important;
+    top: -240px;
+    border: none; */
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ***************  ---CORPO---  ******************* */
+
+.titolazione{
+    grid-area: ti;
+    margin-top: 1.5rem;
+}
+
+.testo-1{
+    grid-area: t1;
+    padding-top: 2rem;
+}
+
+.bottone-1{
+    grid-area: b1;
+    position: relative;
+}
+
+.calendario{
+    margin-top: 1.5rem;
+    grid-area: ca;
+    box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 0.1);
+}
+
+.blocco-bottoni-1{
+    margin-top: 1.5rem;
+    grid-area: ba;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "tl tl"
+    "bd td"
+}
+
+.basta{
+    grid-area: tl;
+    margin-bottom: -2rem;
+}
+
+.bottoni-dati{
+    grid-area: bd;
+}
+
+.testo-dati{
+    grid-area: td;
+}
+
+.blocco-bottoni-2{
+    grid-area: bb;
+    margin-top: 0rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: auto;
+    grid-template-areas:
+    "cc aa";
+}
+
+.bottone-conferma{
+    grid-area: cc;
+}
+
+.bottone-annulla{
+    grid-area: aa;
+}
+
+
+/* ***************  ---CORPO---  ******************* */
+.titolo{
+    font-family: OfSerif; /* EDIT */ 
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1em;
+    padding: 1.5rem 0 0 0;
+}
+
+.sottotitolo{
+    font-family: OfSans;
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 1em;
+    padding: 0 0 0 0;
+}
+
+.sottosezione{
+    padding: 0 0 1rem 0;
+}
+
+
+    /* ***************  ---FOOTER---  ******************* */
+    .icona-social{
+        width: 40px;
+        margin: 0.3em;
+    }
+    .footer{
+        grid-area: ff;
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        ". fa fa fa . fb fb fb . fc . . ";
+        padding: 2em 0;
+    }
+    .foot-1{
+        grid-area: fa;
+    }
+    .foot-2{
+        grid-area: fb;
+    }
+    .foot-3{
+        grid-area: fc;
+    }
+    .blocco-icone{
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}

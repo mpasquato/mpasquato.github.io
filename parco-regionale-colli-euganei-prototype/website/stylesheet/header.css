@@ -1,0 +1,288 @@
+@media screen and (min-width: 1300px) {
+    .header {
+        display: flex;
+        background-color: white;
+        grid-area: hh;
+        position: sticky;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+        padding: 0 56px 0 40px;
+        color: black;
+        height: 87px;
+        border-bottom: 2px solid black;
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        /* transition: all 0.5s ease-in-out; */
+    }
+    .header-mobile {
+        display: none;
+    }
+    .blocco-logo {
+        padding: 16px 0;
+    }
+    .logo-header {
+        height: 55px;
+    }
+    .blocco-sezione {
+        width: 140px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2em;
+        padding: 21px 24px;
+    }
+    .blocco-sezione:hover {
+        color: rgb(255, 108, 12);
+        cursor: pointer;
+        /* box-shadow: inset 2px 0px 0px 0px black, inset -2px 0px 0px 0px black; */
+    }
+    #natura {
+        position: relative;
+    }
+    #territorio {
+        position: relative;
+    }
+    #ente {
+        position: relative;
+    }
+    .blocco-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        padding: 1em 1.5rem;
+        background-color: white;
+        width: 200px;
+        font-size: 0.8em;
+        line-height: 1.2em;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+    .blocco-dropdown.hidden:after {
+        display: none;
+    }
+    .blocco-dropdown:after {
+        display: initial;
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        width: 58px;
+        border-bottom: 2px solid black;
+    }
+    .blocco-attuale {
+        color: white;
+        background-color: rgb(255, 108, 12);
+    }
+    .blocco-attuale:hover {
+        color: white;
+        text-decoration: underline;
+    }
+    .link-singolo {
+        display: block;
+        color: black;
+        margin: 0.7em 0;
+    }
+    .link-singolo:hover, .link-singolo a {
+        color: black;
+        text-decoration: underline;
+    }
+    .bandiere-header {
+        height: 1em;
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+    .blocco-lingue {
+        padding: 20px 0 0 32px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1300px) {
+    .header {
+        display: flex;
+        background-color: white;
+        grid-area: hh;
+        position: sticky;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+        padding: 0 56px 0 40px;
+        color: black;
+        height: 87px;
+        border-bottom: 2px solid black;
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        /* transition: all 0.5s ease-in-out; */
+    }
+    .header-mobile {
+        display: none;
+    }
+    .blocco-logo {
+        padding: 1em 0;
+    }
+    .logo-header {
+        height: 55px;
+    }
+    .blocco-sezione {
+        width: 120px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2em;
+        padding: 21px 24px;
+    }
+    .blocco-sezione:hover {
+        color: rgb(255, 108, 12);
+        cursor: pointer;
+        /* box-shadow: inset 2px 0px 0px 0px black, inset -2px 0px 0px 0px black; */
+    }
+    #natura {
+        position: relative;
+    }
+    #territorio {
+        position: relative;
+    }
+    #ente {
+        position: relative;
+    }
+    .blocco-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        padding: 1em 1.5rem;
+        background-color: white;
+        width: 180px;
+        font-size: 0.8em;
+        line-height: 1.2em;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+    .blocco-dropdown.hidden:after {
+        display: none;
+    }
+    .blocco-dropdown:after {
+        display: initial;
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        width: 40px;
+        border-bottom: 2px solid black;
+    }
+    .blocco-attuale {
+        color: white;
+        background-color: rgb(255, 108, 12);
+    }
+    .blocco-attuale:hover {
+        color: white;
+        text-decoration: underline;
+    }
+    .link-singolo {
+        display: block;
+        color: black;
+        margin: 0.7em 0;
+    }
+    .link-singolo:hover, .link-singolo a {
+        color: black;
+        text-decoration: underline;
+    }
+    .bandiere-header {
+        height: 1em;
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+    .blocco-lingue {
+        padding: 1.2em 0 0 2em;
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width: 992px) {
+    .header {
+        display: none;
+    }
+    .header-mobile {
+        grid-area: hm;
+        position: sticky;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: white;
+        z-index: 1000;
+        padding: 16px 56px 16px 40px;
+        border-bottom: 2px solid black;
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    }
+    .blocco-burger {
+        float: right;
+        position: relative;
+        top: 5px;
+    }
+    .logo-header-mobile {
+        float: left;
+        height: 45px;
+    }
+    .logo-header {
+        height: 55px;
+    }
+    .blocco-sezione {
+        width: 140px;
+        font-size: 1.3em;
+        font-weight: 500;
+        line-height: 1.2em;
+    }
+    .blocco-sezione:hover {
+        color: rgb(255, 108, 12);
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .header {
+        display: none;
+    }
+    .header-mobile {
+        grid-area: hm;
+        position: sticky;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: white;
+        z-index: 1000;
+        padding: 13px 36px 13px 25px;
+        border-bottom: 2px solid black;
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    }
+    .blocco-burger {
+        float: right;
+        position: relative;
+        top: 2px;
+    }
+    .blocco-burger > img{
+        height: 33px !important;
+    }
+    .logo-header-mobile {
+        float: left;
+        height: 35px;
+    }
+    .logo-header {
+        height: 55px;
+    }
+    .blocco-sezione {
+        width: 140px;
+        font-size: 1.3em;
+        font-weight: 500;
+        line-height: 1.2em;
+    }
+    .blocco-sezione:hover {
+        color: rgb(255, 108, 12);
+    }
+}

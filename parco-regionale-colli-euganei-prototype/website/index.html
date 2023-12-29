@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="script/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" href="framework/bootstrap.min.css">
+    <script src="framework/bootstrap.min.js"></script>
+
+    <script src="framework/popper.min.js"></script>
+    <link rel="stylesheet" href="framework/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="stylesheet/font.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/general-layout.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/index-very-large.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/index-large.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/index-medium.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/index-small.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/index-extra-small.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/header.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/navigazione-laterale.css">
+
+    <script src="script/correzione-altezza-elemento.js"></script>
+
+
+    <!-- <link rel="stylesheet" href="stylesheet/bootstrap.css">
+    <script src="script/bootstrap.js"></script> -->
+
+    <!-- API Key: AIzaSyD_0g9_tsIwRKtntxCcIuR5nY9aDdneVF8 -->
+
+    <title>
+        Home - Parco Regionale dei Colli Euganei
+    </title>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <div style="display:flex; align-items:center; padding: 32px 32px 32px 32px;">
+            <div style="flex: 9; text-align:center; display:none;" id="nav-bandiere">
+                <div class="centriamo-tutto">
+                    <img src="content/flag-it.png" style="height: 20px;"> Italiano&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="content/flag-uk.png" style="height: 20px;"> English
+                </div>
+            </div>
+            <div style="flex: 1;">
+                <img src="content/croce.png" class="closebtn" onclick="closeNav()" id="bottone-chiudi"
+                    style="display: none; height: 45px; position:fixed; top: 25px; right: 20px;">
+            </div>
+        </div>
+        <div class="nav-blocco-sezioni" id="nav-sezioni" style="display: none;">
+            <div class="nav-sezione">
+                <div onclick="mostraNatura()" id="nav-natura">Natura e Storia
+                    <span style="padding: 0 0 0 43px;">
+                        <img style="height: 2rem;" id="freccia-natura" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-natura-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="geologia.html">Genesi, geologia e termalismo</a>
+                <a href="fauna.html">Fauna e parco natura 2000</a>
+                <a href="flora.html">Flora</a>
+                <a href="storia-arte-cultura.html">Storia, arte e cultura</a>
+            </div>
+
+            <div class="nav-sezione">
+                <div onclick="mostraTerritorio()" id="nav-territorio">Vivi il Territorio
+                    <span style="padding: 0 0 0 39px;">
+                        <img style="height: 2rem;" id="freccia-territorio" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-territorio-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="mangiare.html">Dove e cosa mangiare</a>
+                <a href="dormire.html">Dove dormire</a>
+                <a href="sentieri.html">Sentieri</a>
+                <a href="#" onclick="return false;">Punti di interesse e musei</a>
+                <a href="#" onclick="return false;">Attività e visite guidate</a>
+                <a href="#" onclick="return false;">Mappe</a>
+                <a href="#" onclick="return false;">Notizie</a>
+            </div>
+            <div class="nav-sezione">
+                <div onclick="mostraEnte()" id="nav-ente">Ente parco
+                    <span style="padding: 0 0 0 84px;">
+                        <img style="height: 2rem;" id="freccia-ente" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-ente-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="parco.html">Il parco</a>
+                <a href="#" onclick="return false;">Amministrazione</a>
+                <a href="progetti.html">Progetti</a>
+                <a href="guardie.html">Guardie ecologiche volontarie</a>
+                <a href="link.html">Link</a>
+            </div>
+            <div class="nav-sezione">
+                <div id="nav-contatti">Contatti</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-grid">
+        <div class="header">
+            <div class="blocco-logo">
+                <img src="content/logo-piccolo-web-positivo.jpg" class="logo-header" id="logo" alt="logo">
+            </div>
+            <div id="natura" class="blocco-sezione" style="margin-left: auto;">
+                <div class="centra-vert">
+                    Natura
+                    <br>e Storia
+                </div>
+                <div id="natura-dropdown" class="blocco-dropdown">
+                    <a href="geologia.html" class="link-singolo">Genesi, geologia e termalismo</a>
+                    <a href="fauna.html" class="link-singolo">Fauna e parco natura 2000</a>
+                    <a href="flora.html" class="link-singolo">Flora</a>
+                    <a href="storia-arte-cultura.html" class="link-singolo">Storia, arte e cultura</a>
+                </div>
+            </div>
+            <div id="territorio" class="blocco-sezione">
+                <div class="centra-vert">
+                    Vivi il
+                    <br>Territorio
+                </div>
+                <div id="territorio-dropdown" class="blocco-dropdown">
+                    <a href="mangiare.html" class="link-singolo">Dove e cosa mangiare</a>
+                    <a href="dormire.html" class="link-singolo">Dove dormire</a>
+                    <a href="sentieri.html" class="link-singolo">Sentieri</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Punti di interesse e musei</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Attività e visite guidate</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Mappe</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Notizie</a>
+                </div>
+            </div>
+            <div id="ente" class="blocco-sezione">
+                <div class="centra-vert">
+                    Ente
+                    <br>Parco
+                </div>
+                <div id="ente-dropdown" class="blocco-dropdown">
+                    <a href="parco.html" class="link-singolo">Il parco</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Amministrazione</a>
+                    <a href="progetti.html" class="link-singolo">Progetti</a>
+                    <a href="guardie.html" class="link-singolo">Guardie ecologiche volontarie</a>
+                    <a href="link.html" class="link-singolo">Link</a>
+                </div>
+            </div>
+            <div class="blocco-sezione">
+                <div class="centra-vert" onclick="window.location = 'contatti.html'">
+                    Contatti
+                </div>
+            </div>
+            <div class="blocco-lingue">
+                <img src="content/flag-it.png" class="bandiere-header"> Italiano
+                <br>
+                <img src="content/flag-uk.png" class="bandiere-header"> English
+                <!-- <br>
+                                <img src="content/flag-ger.png" class="bandiere-header"> tedesco -->
+            </div>
+        </div>
+
+        <div class="header-mobile">
+            <div class="blocco-logo-mobile">
+                <img src="content/logo-piccolo-web-positivo.jpg" class="logo-header-mobile" id="logo-mobile" alt="logo">
+            </div>
+            <div class="blocco-burger">
+                <img style="height: 38px; cursor:pointer;" onclick="openNav()" src="content/burger.png">
+            </div>
+
+        </div>
+
+        <div class="carosello-presentazione sfondo" style="margin-top: -2em">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5500" style="background-color:rgb(0,0,0);">
+                <!-- <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol> -->
+                <div class="carousel-inner">
+                    <div class="carousel-caption" style="margin-bottom: -1.5em; /*background-image: linear-gradient(rgba(255,255,255,0), rgba(0,0,0,0.9));*/">
+                        <div class="citazione-home">
+                            Se solo potessi mostrarti il secondo Elicona che per te e per le Muse ho allestito nei Colli Euganei! Penso proprio che di
+                            lì non vorresti mai più andartene
+                        </div>
+                        <div class="autore-cit-home">
+                            Francesco Petrarca
+                        </div>
+                    </div>
+                    <div class="carousel-item active">
+                        <picture>
+                            <source media="(min-width: 540px) and (max-width: 768px)" srcset="content/carosello/colli-small.jpg">
+                            <source media="(max-width: 540px)" srcset="content/carosello/colli-extra-small.jpg">
+                            <img class="d-block w-100 immagine-carosello" src="content/carosello/colli.jpg" alt="First slide">
+                        </picture>
+
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(min-width: 540px) and (max-width: 768px)" srcset="content/carosello/colli2-small.jpg">
+                            <source media="(max-width: 540px)" srcset="content/carosello/colli2-extra-small.jpg">
+                            <img class="d-block w-100 immagine-carosello" src="content/carosello/colli2.jpg" alt="Second slide">
+                        </picture>
+                    </div>
+                    <div class="carousel-item">
+                        <picture>
+                            <source media="(min-width: 540px) and (max-width: 768px)" srcset="content/carosello/colli3-small.jpg">
+                            <source media="(max-width: 540px)" srcset="content/carosello/colli3-extra-small.jpg">
+                            <img class="d-block w-100 immagine-carosello" src="content/carosello/colli3.jpg" alt="Third slide">
+                        </picture>
+                    </div>
+                </div>
+                <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a> -->
+            </div>
+        </div>
+        <div class="testo-presentazione">
+            I Colli Euganei sono un gruppo di rilievi nel mezzo della pianura veneta, in provincia di Padova. Spiccano, tra i sentieri
+            del parco, la grande varietà di flora e fauna oltre ai grandi panorami; a ciò si aggiunge il retroscena culturale:
+            proprio questa è stata la casa di grandi letterati del passato, tra cui Petrarca e Foscolo.
+        </div>
+        <div class="blocco-mappa">
+            <div class="testo-categoria">
+                trova il posto
+            </div>
+            <div class="blocco-bottoni">
+                <div>
+                    <input type="button" style="cursor: pointer;" value="Dove mangiare" id="dove-mangiare" class="bottone-selezione bottone-blocco-mappa" onclick="cambioMangiare()">
+                </div>
+                <div>
+                    <input type="button" style="cursor: pointer;" value="Dove dormire" id="dove-dormire" class="bottone-selezione bottone-blocco-mappa" onclick="cambioDormire()">
+                </div>
+                <div>
+                    <input type="button" style="cursor: pointer;" value="Sentieri" id="sentieri" class="bottone-selezione bottone-blocco-mappa" onclick="cambioSentieri()">
+                </div>
+            </div>
+            <div class="blocco-frame">
+                <iframe frameborder="0" id="map" src="https://www.google.com/maps/d/u/0/embed?mid=1PG0fujYMZ-V5sSZ3swr7uzjTMT_4obY8&ehbc=2E312F"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+        </div>
+
+        <div class="blocco-meteo">
+            <div class="meteo-1 testo-categoria">
+                il meteo a...
+            </div>
+            <div class="meteo-2 blocco-localita">
+                <span style="position: relative;">
+                    <input type="text" value="Cerca una località..." id="" class="bottone-inserimento bottone-blocco-meteo">
+                    <img src="content/icone/lente-ingrandimento.png" class="lente">
+                </span>
+            </div>
+            <div class="meteo-3" id="meteo">
+                <div class="info-meteo">
+                    <div class="info-meteo-1">
+                        <div class="paese-meteo">
+                            Teolo
+                        </div>
+                        <div class="testo-meteo">
+                            24° C - Sereno
+                        </div>
+                    </div>
+                    <div class="info-meteo-2">
+                        <img src="content/icona-meteo_v.png" class="immagine-info-meteo">
+                    </div>
+                </div>
+                <div class="giorno-1 testo-meteo">
+                    21 giugno
+                    <div class="meteo-flex">
+                        <div class="meteo-icona">
+                            <img src="content/icona-meteo_v.png" class="immagine-icona-meteo">
+                        </div>
+                        <div class="meteo-testo">
+                            Mattino
+                        </div>
+                    </div>
+                    <div class="meteo-flex">
+                        <div class="meteo-icona">
+                            <img src="content/icona-meteo_v copia.png" class="immagine-icona-meteo">
+                        </div>
+                        <div class="meteo-testo">
+                            Pomeriggio
+                        </div>
+                    </div>
+                    <div class="meteo-flex">
+                        <div class="meteo-icona">
+                            <img src="content/icona-meteo_v.png" class="immagine-icona-meteo">
+                        </div>
+                        <div class="meteo-testo">
+                            Sera
+                        </div>
+                    </div>
+                </div>
+                <div class="giorno-2 testo-meteo">
+                    22 giugno
+                    <div class="meteo-flex">
+                        <div class="meteo-icona">
+                            <img src="content/icona-meteo_v copia.png" class="immagine-icona-meteo">
+                        </div>
+                        <div class="meteo-testo">
+                            Mattino
+                        </div>
+                    </div>
+                    <div class="meteo-flex">
+                        <div class="meteo-icona">
+                            <img src="content/icona-meteo_v.png" class="immagine-icona-meteo">
+                        </div>
+                        <div class="meteo-testo">
+                            Pomeriggio
+                        </div>
+                    </div>
+                    <div class="meteo-flex">
+                        <div class="meteo-icona">
+                            <img src="content/icona-meteo_v.png" class="immagine-icona-meteo">
+                        </div>
+                        <div class="meteo-testo">
+                            Sera
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blocco-categoria-1">
+            <span class=" testo-categoria">
+                eventi e luoghi di interesse
+            </span>
+        </div>
+        <div class="blocco-elementi" style="margin-top: -2em;">
+            <div class="elemento-singolo" onclick="window.location = 'pagina-esempio.html'" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img src="content/eventi/monte-fasolo.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">Al chiaro di luna junior: intorno al Monte Fasolo</a>
+                    <br>1 dicembre 2018
+                    <br>Cinto Euganeo
+                </div>
+            </div>
+
+            <div class="elemento-singolo" onclick="window.location = 'pagina-esempio.html'" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img src="content/eventi/roccolo-bonato.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">Domeniche al Parco: M. Rua e Roccolo Bonato</a>
+                    <br>9 dicembre 2018
+                    <br>Galzignano
+                </div>
+            </div>
+
+            <div class="elemento-singolo" onclick="window.location = 'pagina-esempio.html'" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img src="content/eventi/ecowild.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">EcoWild Villa Draghi</a>
+                    <br>16 dicembre 2018
+                    <br>Montegrotto Terme
+                </div>
+            </div>
+            <div class="elemento-singolo" onclick="window.location = 'pagina-esempio.html'" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img src="content/eventi/volo-spaziale.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">Parco delle Stelle: La dinamica del volo spaziale</a>
+                    <br>12 Aprile 2019
+                    <br>Galzignano Terme
+                </div>
+            </div>
+            <div class="elemento-singolo" onclick="window.location = 'pagina-esempio.html'" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img src="content/eventi/monte-calbarina.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">Escursione al chiaro di luna junior: Monte Calbarina</a>
+                    <br>13 aprile 2019
+                    <br>Arquà Petrarca - Monselice
+                </div>
+            </div>
+            <div class="elemento-singolo" onclick="window.location = 'pagina-esempio.html'" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img src="content/eventi/monte-lozzo.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">Sul M. Lozzo con Escursionisti su Ruote Veneto</a>
+                    <br>9 giugno 2019
+                    <br>Lozzo Atesino
+                </div>
+            </div>
+            <div class="elemento-singolo" onclick="window.location = 'pagina-esempio.html'" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img src="content/eventi/luvigliano.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">Escursione a Luvigliano con Sky Explorer</a>
+                    <br>9 giugno 2019
+                    <br>Torreglia
+                </div>
+            </div>
+            <div class="elemento-singolo" onclick="window.location = 'pagina-esempio.html'" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img src="content/eventi/club-alpino.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">Escursione con il Club Alpino Italiano</a>
+                    <br>9 giugno 2019
+                    <br>Galzignano Terme, Torreglia 
+                </div>
+            </div>
+            <div class="elemento-singolo" onclick="window.location = 'pagina-esempio.html'" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img src="content/eventi/principe.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">Il sentiero del Principe</a>
+                    <br>15 giugno 2019
+                    <br>Baone, Este
+                </div>
+            </div>
+            <div class="elemento-singolo" onclick="window.location = 'pagina-esempio.html'" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img src="content/eventi/vogalonga.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">Vogalonga Euganea 2019</a>
+                    <br>16 giugno 2019
+                    <br>Vo' Vecchio, Battaglia Terme
+                </div>
+            </div>
+            <div class="elemento-singolo" onclick="window.location = 'pagina-esempio.html'" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img src="content/eventi/barca.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">In barca verso il castello con Viaggiare Curiosi</a>
+                    <br>23 giugno 2019
+                    <br>Montegrotto
+                </div>
+            </div>
+            <div class="elemento-singolo" onclick="window.location = 'pagina-esempio.html'" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img src="content/eventi/sentieri-sonori.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">Sentieri Sonori 2019 - Fattoria all’Eremo</a>
+                    <br>14 luglio 2019
+                    <br>Vo'
+                </div>
+            </div>
+        </div>
+
+        <div class="blocco-categoria-2">
+            <span class="testo-categoria">
+                iniziative ed eventi di altre associazioni
+            </span>
+        </div>
+
+        <div class="blocco-link" style="margin-top: -2em;">
+            <div class="elemento-doppio-1" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img src="content/eventi/euganeamente.png" class="immagine-elemento-doppio">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">Euganeamente</a>
+                </div>
+            </div>
+
+            <div class="elemento-doppio-2" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img src="content/eventi/reteventi.jpg" class="immagine-elemento-doppio">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">Reteventi Padova</a>
+                </div>
+            </div>
+
+            <div class="elemento-doppio-3" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)" onclick="window.location = 'link.html'">
+                <img src="content/eventi/link-esterni.jpg" class="immagine-elemento-doppio">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">Altri link utili</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="foot-1 testo-base">
+                <span class="testo-bold">
+                    © 2019
+                    <br>Parco Regionale dei Colli Euganei
+                </span>
+                <br>Amministrazione trasparente
+                <br>Responsabile protezione dati
+                <br>Privacy
+                <br>Note legali
+            </div>
+            <div class="foot-2 testo-base">
+                Via Rana Ca’ Mori, 8
+                <br>35042 Este (PD)
+                <br>Tel: 0429/632911
+                <br>Fax: 0429/601368
+                <br>e-mail: info@parcocollieuganei.com
+                <br>pec: info@pec.parcocollieuganei.com
+            </div>
+            <div class="foot-3">
+                <div class="blocco-icone">
+                    <a href="https://www.facebook.com/parcodeicollieuganei/">
+                        <img src="content/icone-social/icona-social_facebook.png" class="icona-social">
+                    </a>
+                    <a href="https://twitter.com/parcocolli">
+                        <img src="content/icone-social/icona-social_twitter.png" class="icona-social">
+                    </a>
+                    <a href="mailto:info@parcocollieuganei.com">
+                        <img src="content/icone-social/icona-social_mail.png" class="icona-social">
+                    </a>
+                    <a href="#" onclick="return false;">
+                        <img src="content/icone-social/icona-social_linkedin.png" class="icona-social">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    <p style="font-family: EBGaramond">ciaone</p>
+    <p style="font-family: OfSerif">serif bold</p>
+    <p style="font-family: OfSans">sans book</p>
+    <p style="font-family: OfSans; font-style:italic;">sans book italic</p>
+    <p style="font-family: OfSans; font-weight:500;">sans medium</p>
+    <p style="font-family: OfSans; font-weight:700;">sans bold</p>
+    ol up a minute 
+    -->
+
+    <!-- FUNZIONA CON DIV ID=MAP -->
+    <!-- <script>
+            // Initialize and add the map
+            function initMap() {
+                // The location of Uluru
+                var uluru = { lat: 45.295, lng: 11.707 };
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                    document.getElementById('map'), { zoom: 12, center: uluru });
+                // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({ position: uluru, map: map });
+            }
+        </script> -->
+
+
+    <!-- 
+        // function myMap() {
+        // var mapProp= {
+        //     center:new google.maps.LatLng(23.792750,90.407606),
+        //     zoom:5,
+        // };
+        // var map=new google.maps.Map(document.getElementById("gMap"),mapProp);
+        // } 
+
+        45°17'42.4"N 11°42'28.0"E
+    -->
+
+    <!-- FUNZIONA CON DIV ID=MAP -->
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_0g9_tsIwRKtntxCcIuR5nY9aDdneVF8&callback=initMap"></script> -->
+
+    <script src="script/bottoni-mappa.js"></script>
+    <!-- <script src="script/cambio-header.js"></script> -->
+    <script src="script/header-dropdown.js"></script>
+    <script src="script/burger-menu.js"></script>
+    <script src="script/navigazione-laterale-dropdown.js"></script>
+    <script src="script/elementi-griglia.js"></script>
+
+</body>
+
+</html>

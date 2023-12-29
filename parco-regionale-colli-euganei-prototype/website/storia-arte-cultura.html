@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="script/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" href="framework/bootstrap.min.css">
+    <script src="framework/bootstrap.min.js"></script>
+
+    <script src="framework/popper.min.js"></script>
+    <link rel="stylesheet" href="framework/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="stylesheet/font.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/general-layout.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/storia/storia-very-large.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/storia/storia-large.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/storia/storia-medium.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/storia/storia-small.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/storia/storia-extra-small.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/header.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/navigazione-laterale.css">
+
+    <script src="script/correzione-altezza-elemento.js"></script>
+
+
+    <!-- <link rel="stylesheet" href="stylesheet/bootstrap.css">
+    <script src="script/bootstrap.js"></script> -->
+
+    <!-- API Key: AIzaSyD_0g9_tsIwRKtntxCcIuR5nY9aDdneVF8 -->
+
+    <title>
+        Storia, Arte e Cultura - Parco Regionale dei Colli Euganei
+    </title>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <div style="display:flex; align-items:center; padding: 32px 32px 32px 32px;">
+            <div style="flex: 9; text-align:center; display:none;" id="nav-bandiere">
+                <div class="centriamo-tutto">
+                    <img src="content/flag-it.png" style="height: 20px;"> Italiano&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="content/flag-uk.png" style="height: 20px;"> English
+                </div>
+            </div>
+            <div style="flex: 1;">
+                <img src="content/croce.png" class="closebtn" onclick="closeNav()" id="bottone-chiudi"
+                    style="display: none; height: 45px; position:fixed; top: 25px; right: 20px;">
+            </div>
+        </div>
+        <div class="nav-blocco-sezioni" id="nav-sezioni" style="display: none;">
+            <div class="nav-sezione">
+                <div onclick="mostraNatura()" id="nav-natura">Natura e Storia
+                    <span style="padding: 0 0 0 43px;">
+                        <img style="height: 2rem;" id="freccia-natura" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-natura-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="geologia.html">Genesi, geologia e termalismo</a>
+                <a href="fauna.html">Fauna e parco natura 2000</a>
+                <a href="flora.html">Flora</a>
+                <a href="storia-arte-cultura.html">Storia, arte e cultura</a>
+            </div>
+
+            <div class="nav-sezione">
+                <div onclick="mostraTerritorio()" id="nav-territorio">Vivi il Territorio
+                    <span style="padding: 0 0 0 39px;">
+                        <img style="height: 2rem;" id="freccia-territorio" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-territorio-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="mangiare.html">Dove e cosa mangiare</a>
+                <a href="dormire.html">Dove dormire</a>
+                <a href="sentieri.html">Sentieri</a>
+                <a href="#" onclick="return false;">Punti di interesse e musei</a>
+                <a href="#" onclick="return false;">Attività e visite guidate</a>
+                <a href="#" onclick="return false;">Mappe</a>
+                <a href="#" onclick="return false;">Notizie</a>
+            </div>
+            <div class="nav-sezione">
+                <div onclick="mostraEnte()" id="nav-ente">Ente parco
+                    <span style="padding: 0 0 0 84px;">
+                        <img style="height: 2rem;" id="freccia-ente" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-ente-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="parco.html">Il parco</a>
+                <a href="#" onclick="return false;">Amministrazione</a>
+                <a href="progetti.html">Progetti</a>
+                <a href="guardie.html">Guardie ecologiche volontarie</a>
+                <a href="link.html">Link</a>
+            </div>
+            <div class="nav-sezione">
+                <div id="nav-contatti">Contatti</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-grid">
+        <div class="header">
+            <div class="blocco-logo">
+                <img src="content/logo-piccolo-web-positivo.jpg" class="logo-header" id="logo" alt="logo">
+            </div>
+            <div id="natura" class="blocco-sezione" style="margin-left: auto;">
+                <div class="centra-vert">
+                    Natura
+                    <br>e Storia
+                </div>
+                <div id="natura-dropdown" class="blocco-dropdown">
+                    <a href="geologia.html" class="link-singolo">Genesi, geologia e termalismo</a>
+                    <a href="fauna.html" class="link-singolo">Fauna e parco natura 2000</a>
+                    <a href="flora.html" class="link-singolo">Flora</a>
+                    <a href="storia-arte-cultura.html" class="link-singolo">Storia, arte e cultura</a>
+                </div>
+            </div>
+            <div id="territorio" class="blocco-sezione">
+                <div class="centra-vert">
+                    Vivi il
+                    <br>Territorio
+                </div>
+                <div id="territorio-dropdown" class="blocco-dropdown">
+                    <a href="mangiare.html" class="link-singolo">Dove e cosa mangiare</a>
+                    <a href="dormire.html" class="link-singolo">Dove dormire</a>
+                    <a href="sentieri.html" class="link-singolo">Sentieri</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Punti di interesse e musei</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Attività e visite guidate</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Mappe</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Notizie</a>
+                </div>
+            </div>
+            <div id="ente" class="blocco-sezione">
+                <div class="centra-vert">
+                    Ente
+                    <br>Parco
+                </div>
+                <div id="ente-dropdown" class="blocco-dropdown">
+                    <a href="parco.html" class="link-singolo">Il parco</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Amministrazione</a>
+                    <a href="progetti.html" class="link-singolo">Progetti</a>
+                    <a href="guardie.html" class="link-singolo">Guardie ecologiche volontarie</a>
+                    <a href="link.html" class="link-singolo">Link</a>
+                </div>
+            </div>
+            <div class="blocco-sezione">
+                <div class="centra-vert" onclick="window.location = 'contatti.html'">
+                    Contatti
+                </div>
+            </div>
+            <div class="blocco-lingue">
+                <img src="content/flag-it.png" class="bandiere-header"> Italiano
+                <br>
+                <img src="content/flag-uk.png" class="bandiere-header"> English
+                <!-- <br>
+                                <img src="content/flag-ger.png" class="bandiere-header"> tedesco -->
+            </div>
+        </div>
+
+        <div class="header-mobile">
+            <div class="blocco-logo-mobile">
+                <img src="content/logo-piccolo-web-positivo.jpg" class="logo-header-mobile" id="logo-mobile" alt="logo">
+            </div>
+            <div class="blocco-burger">
+                <img style="height: 38px; cursor:pointer;" onclick="openNav()" src="content/burger.png">
+            </div>
+
+        </div>
+
+        <div class="titolazione">
+            <div class="breadcrumbs">
+                Home
+                <span class="implica"> >> </span>Natura e Storia
+                <span class="implica">>></span> Storia, Arte e Cultura
+            </div>
+            <div class="titolo">
+                Storia, Arte e Cultura
+            </div>
+        </div>
+        <div class="blocco-testo-1">
+            <div>
+                Sul territorio dei Colli Euganei sono presenti, e possono essere osservate, arcaiche testimonianze degli Antichi Veneti.
+                Un gran numero di reperti che documentano la storia di questo territorio, dalla Preistoria all'età Romana,
+                sono conservati a Este, nel Museo Nazionale Atestino. Le testimonianze più antiche, rinvenute nelle zone
+                del monte della Madonna e del Venda, databili al Paleolitico, sono costituite da manufatti in selce. Importanti
+                reperti ceramici sono quelli relativi al periodo del Neolitico (fine IV millennio a.C.), venuti alla luce
+                in notevoli quantità presso Castelnuovo. Armi, utensili, oggetti d'ornamento e abbigliamento, risalenti all'Età
+                del Bronzo (II millennio a.C.) e testimonianti la presenza di un villaggio palustre, sono stati ritrovati
+                in prossimità del Lago della Costa, ad Arquà Petrarca. Al II secolo a.C. risale la presenza dei Romani che,
+                iniziando la costruzione di una rete viaria, danno un forte impulso agli insediamenti abitativi. La via Annia,
+                che si staccava a Legnago dalla Emilia per dirigersi ad Aquileia, passa per Monselice, uno dei comuni del
+                territorio del Parco. Durante il Medioevo, nei Colli, per la loro posizione dominante, si diffusero in gran
+                numero di corti, pievi e fortificazioni. All'inizio del XV secolo nel territorio, che entra nei domini della
+                Serenissima, si inizia la costruzione di splendide dimore volute dalla nobiltà veneziana. Valsanzibio, Luvigliano
+                e Valnogaredo conservano notevoli esempi della civiltà delle ville. Il XIX secolo, iniziato sotto le insegne
+                napoleoniche e conclusosi con l'annessione al neonato Regno d'Italia, fu un secolo di grande crescita demografica
+                che vide un consistente sfruttamento del territorio e l'inizio dell'attività estrattiva su scala industriale.
+                La tutela del territorio e la salvaguardia del paesaggio, sono iniziate negli anni settanta con la dismissione
+                graduale delle cave, che hanno avuto la loro massima attuazione nel 1989 con l'Istituzione del Parco Regionale
+                dei Colli Euganei.
+            </div>
+        </div>
+
+        <div class="blocco-immagine-1">
+            <div class="immagine-griglia">
+                <img src="content/storia/catajo.jpg" class="immagine-descrittiva">
+            </div>
+            <div class="didascalia">
+                Il Catajo
+                <br> (foto di PR Colli Euganei)
+            </div>
+        </div>
+
+        <div class="citazione-pagina-1 citazione-pagina">"Se solo potessi mostrarti il secondo Elicona che per te e per le Muse ho allestito nei Colli Euganei! Penso proprio
+            che di lì non vorresti mai più andartene"</div>
+
+        <div class="blocco-testo-2">
+            È con queste parole che Francesco Petrarca celebra gli Euganei, parlandone esplicitamente, in una lettera, la XLVI delle
+            Variarum, spedita all'amico Moggio di Parma. Anche se sappiamo che in nessuno dei componimenti del Poeta si fa
+            diretto riferimento ai Colli, alcuni studiosi ritengono che molti passi del Canzoniere abbiano l'aria di ispirarsi
+            al paesaggio collinare euganeo ed il suo soggiorno ad Arquà - dal 1369 al 1374, anno della morte - influenza,
+            soprattutto a partire dall'epoca romantica, tanti autori italiani e stranieri che hanno scritto degli Euganei.
+            Nel corso del Cinquecento - così come profetizza il Boccaccio (1313-1375) che nella Epistola a Francesco da Brossano
+            del 3 novembre 1374 parla di Arquà come del paese che avrà in sorte la notorietà del mondo legata al ricordo
+            del sommo poeta - Arquà e i Colli diventano quindi un luogo di pellegrinaggio letterario, che ispira liriche,
+            pagine ineguagliabili dei classici più amati e lettere appassionate di poeti e scrittori romantici. Tra questi
+            Marco Valerio Marziale, nato in Spagna nel 40 d.C, autore degli Epigrammi - opera monumentale sulla Roma imperiale
+            - e Claudio Claudiano, poeta della tarda antichità vissuto tra la fine del quarto secolo e i primi decenni del
+            quinto. La bellezza del territorio venne colta anche da Ugo Foscolo (1778-1827) e riportata in molti testi contenuti
+            nelle Ultime lettere di Jacopo Ortis. Percy Bysshe Shelley (1792-1822), uno dei maggiori poeti inglesi, va ricordato
+            poiché ci offre una personale e suggestiva visione dei Colli. Due capolavori del Romanticismo – Julian and Maddalo
+            (1818) e Prometeo Liberato (1820) – vennero composti da Shelley presso Villa Cappuccini a Este, dunque sullo
+            sfondo dei Colli Euganei. I gatti vulcanici, testo che Dino Buzzati (1916-2000) dedica ai Colli, può essere addirittura
+            considerato uno scritto di educazione civica: l'autore, per mezzo di un breve racconto fantastico, condanna lo
+            scempio perpetrato dalle scavatrici ai danni dei pendii Euganei.
+        </div>
+
+        <div class="blocco-immagine-2">
+            <div class="immagine-griglia">
+                <img src="content/storia/scavi-montegrotto.jpg" class="immagine-descrittiva">
+            </div>
+            <div class="didascalia">
+                Scavi archeologici Montegrotto
+                <br> (foto di PR Colli Euganei)
+            </div>
+        </div>
+
+        <div class="blocco-testo-3">
+            <p>Giorgio Bassani (1916-2000), autore del Giardino dei Finzi Contini, certo più noto come narratore che come poeta,
+                ha scritto una poesia dedicata al territorio: ha per titolo Monselice ed è tratta da una raccolta di poesie
+                intitolata L'alba ai vetri (1963). Una descrizione poco realistica dei colli, che trascura il lato selvatico
+                e ispido del territorio a favore di una immagine gentile e sensuale ci è offerta da Gabriele D'Annunzio (1863-1938)
+                in Il fuoco (1900). E infine, Antonio Fogazzaro (1842-1911) nel II capitolo di Piccolo mondo moderno (1901)
+                parla del territorio dedicando un brano che si concentra quasi tutto sull'Abbazia di Praglia.
+            </p>
+        </div>
+
+        <div class="blocco-immagine-3">
+            <div class="immagine-griglia">
+                <img src="content/storia/cava-bomba.jpg" class="immagine-descrittiva">
+            </div>
+            <div class="didascalia">
+                Museo Geopaleontologico e di Archeologia Industriale Cava Bomba
+                <br> (foto di PR Colli Euganei)
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="foot-1 testo-base">
+                <span class="testo-bold">
+                    © 2019
+                    <br>Parco Regionale dei Colli Euganei
+                </span>
+                <br>Amministrazione trasparente
+                <br>Responsabile protezione dati
+                <br>Privacy
+                <br>Note legali
+            </div>
+            <div class="foot-2 testo-base">
+                Via Rana Ca’ Mori, 8
+                <br>35042 Este (PD)
+                <br>Tel: 0429/632911
+                <br>Fax: 0429/601368
+                <br>e-mail: info@parcocollieuganei.com
+                <br>pec: info@pec.parcocollieuganei.com
+            </div>
+            <div class="foot-3">
+                <div class="blocco-icone">
+                    <a href="https://www.facebook.com/parcodeicollieuganei/">
+                        <img src="content/icone-social/icona-social_facebook.png" class="icona-social">
+                    </a>
+                    <a href="https://twitter.com/parcocolli">
+                        <img src="content/icone-social/icona-social_twitter.png" class="icona-social">
+                    </a>
+                    <a href="mailto:info@parcocollieuganei.com">
+                        <img src="content/icone-social/icona-social_mail.png" class="icona-social" onclick="">
+                    </a>
+                    <a href="#" onclick="return false;">
+                        <img src="content/icone-social/icona-social_linkedin.png" class="icona-social">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    <p style="font-family: EBGaramond">ciaone</p>
+    <p style="font-family: OfSerif">serif bold</p>
+    <p style="font-family: OfSans">sans book</p>
+    <p style="font-family: OfSans; font-style:italic;">sans book italic</p>
+    <p style="font-family: OfSans; font-weight:500;">sans medium</p>
+    <p style="font-family: OfSans; font-weight:700;">sans bold</p>
+    ol up a minute 
+    -->
+
+    <!-- FUNZIONA CON DIV ID=MAP -->
+    <!-- <script>
+            // Initialize and add the map
+            function initMap() {
+                // The location of Uluru
+                var uluru = { lat: 45.295, lng: 11.707 };
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                    document.getElementById('map'), { zoom: 12, center: uluru });
+                // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({ position: uluru, map: map });
+            }
+        </script> -->
+
+
+    <!-- 
+        // function myMap() {
+        // var mapProp= {
+        //     center:new google.maps.LatLng(23.792750,90.407606),
+        //     zoom:5,
+        // };
+        // var map=new google.maps.Map(document.getElementById("gMap"),mapProp);
+        // } 
+
+        45°17'42.4"N 11°42'28.0"E
+    -->
+
+    <!-- FUNZIONA CON DIV ID=MAP -->
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_0g9_tsIwRKtntxCcIuR5nY9aDdneVF8&callback=initMap"></script> -->
+
+    <script src="script/bottoni-mappa.js"></script>
+    <!-- <script src="script/cambio-header.js"></script> -->
+    <script src="script/header-dropdown.js"></script>
+    <script src="script/burger-menu.js"></script>
+    <script src="script/navigazione-laterale-dropdown.js"></script>
+
+</body>
+
+</html>

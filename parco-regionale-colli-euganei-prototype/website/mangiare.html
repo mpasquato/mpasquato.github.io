@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="script/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" href="framework/bootstrap.min.css">
+    <script src="framework/bootstrap.min.js"></script>
+
+    <script src="framework/popper.min.js"></script>
+    <link rel="stylesheet" href="framework/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="stylesheet/font.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/general-layout.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/mangiare/mangiare-very-large.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/mangiare/mangiare-large.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/mangiare/mangiare-medium.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/mangiare/mangiare-small.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/mangiare/mangiare-extra-small.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/header.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/navigazione-laterale.css">
+
+    <script src="script/correzione-altezza-elemento.js"></script>
+
+
+    <!-- <link rel="stylesheet" href="stylesheet/bootstrap.css">
+    <script src="script/bootstrap.js"></script> -->
+
+    <!-- API Key: AIzaSyD_0g9_tsIwRKtntxCcIuR5nY9aDdneVF8 -->
+
+    <title>
+        Dove e Cosa Mangiare - Parco Regionale dei Colli Euganei
+    </title>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <div style="display:flex; align-items:center; padding: 32px 32px 32px 32px;">
+            <div style="flex: 9; text-align:center; display:none;" id="nav-bandiere">
+                <div class="centriamo-tutto">
+                    <img src="content/flag-it.png" style="height: 20px;"> Italiano&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="content/flag-uk.png" style="height: 20px;"> English
+                </div>
+            </div>
+            <div style="flex: 1;">
+                <img src="content/croce.png" class="closebtn" onclick="closeNav()" id="bottone-chiudi"
+                    style="display: none; height: 45px; position:fixed; top: 25px; right: 20px;">
+            </div>
+        </div>
+        <div class="nav-blocco-sezioni" id="nav-sezioni" style="display: none;">
+            <div class="nav-sezione">
+                <div onclick="mostraNatura()" id="nav-natura">Natura e Storia
+                    <span style="padding: 0 0 0 43px;">
+                        <img style="height: 2rem;" id="freccia-natura" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-natura-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="geologia.html">Genesi, geologia e termalismo</a>
+                <a href="fauna.html">Fauna e parco natura 2000</a>
+                <a href="flora.html">Flora</a>
+                <a href="storia-arte-cultura.html">Storia, arte e cultura</a>
+            </div>
+
+            <div class="nav-sezione">
+                <div onclick="mostraTerritorio()" id="nav-territorio">Vivi il Territorio
+                    <span style="padding: 0 0 0 39px;">
+                        <img style="height: 2rem;" id="freccia-territorio" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-territorio-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="mangiare.html">Dove e cosa mangiare</a>
+                <a href="dormire.html">Dove dormire</a>
+                <a href="sentieri.html">Sentieri</a>
+                <a href="#" onclick="return false;">Punti di interesse e musei</a>
+                <a href="#" onclick="return false;">Attività e visite guidate</a>
+                <a href="#" onclick="return false;">Mappe</a>
+                <a href="#" onclick="return false;">Notizie</a>
+            </div>
+            <div class="nav-sezione">
+                <div onclick="mostraEnte()" id="nav-ente">Ente parco
+                    <span style="padding: 0 0 0 84px;">
+                        <img style="height: 2rem;" id="freccia-ente" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-ente-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="parco.html">Il parco</a>
+                <a href="#" onclick="return false;">Amministrazione</a>
+                <a href="progetti.html">Progetti</a>
+                <a href="guardie.html">Guardie ecologiche volontarie</a>
+                <a href="link.html">Link</a>
+            </div>
+            <div class="nav-sezione">
+                <div id="nav-contatti">Contatti</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-grid">
+        <div class="header">
+            <div class="blocco-logo">
+                <img src="content/logo-piccolo-web-positivo.jpg" class="logo-header" id="logo" alt="logo">
+            </div>
+            <div id="natura" class="blocco-sezione" style="margin-left: auto;">
+                <div class="centra-vert">
+                    Natura
+                    <br>e Storia
+                </div>
+                <div id="natura-dropdown" class="blocco-dropdown">
+                    <a href="geologia.html" class="link-singolo">Genesi, geologia e termalismo</a>
+                    <a href="fauna.html" class="link-singolo">Fauna e parco natura 2000</a>
+                    <a href="flora.html" class="link-singolo">Flora</a>
+                    <a href="storia-arte-cultura.html" class="link-singolo">Storia, arte e cultura</a>
+                </div>
+            </div>
+            <div id="territorio" class="blocco-sezione">
+                <div class="centra-vert">
+                    Vivi il
+                    <br>Territorio
+                </div>
+                <div id="territorio-dropdown" class="blocco-dropdown">
+                    <a href="mangiare.html" class="link-singolo">Dove e cosa mangiare</a>
+                    <a href="dormire.html" class="link-singolo">Dove dormire</a>
+                    <a href="sentieri.html" class="link-singolo">Sentieri</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Punti di interesse e musei</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Attività e visite guidate</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Mappe</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Notizie</a>
+                </div>
+            </div>
+            <div id="ente" class="blocco-sezione">
+                <div class="centra-vert">
+                    Ente
+                    <br>Parco
+                </div>
+                <div id="ente-dropdown" class="blocco-dropdown">
+                    <a href="parco.html" class="link-singolo">Il parco</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Amministrazione</a>
+                    <a href="progetti.html" class="link-singolo">Progetti</a>
+                    <a href="guardie.html" class="link-singolo">Guardie ecologiche volontarie</a>
+                    <a href="link.html" class="link-singolo">Link</a>
+                </div>
+            </div>
+            <div class="blocco-sezione">
+                <div class="centra-vert" onclick="window.location = 'contatti.html'">
+                    Contatti
+                </div>
+            </div>
+            <div class="blocco-lingue">
+                <img src="content/flag-it.png" class="bandiere-header"> Italiano
+                <br>
+                <img src="content/flag-uk.png" class="bandiere-header"> English
+                <!-- <br>
+                                <img src="content/flag-ger.png" class="bandiere-header"> tedesco -->
+            </div>
+        </div>
+
+        <div class="header-mobile">
+            <div class="blocco-logo-mobile">
+                <img src="content/logo-piccolo-web-positivo.jpg" class="logo-header-mobile" id="logo-mobile" alt="logo">
+            </div>
+            <div class="blocco-burger">
+                <img style="height: 38px; cursor:pointer;" onclick="openNav()" src="content/burger.png">
+            </div>
+
+        </div>
+        
+        <div class="titolazione">
+            <div class="breadcrumbs">
+                Home
+                <span class="implica"> >> </span>Vivi il Territorio
+                <span class="implica"> >> </span>Dove e Cosa Mangiare
+            </div>
+            <div class="titolo">
+                Dove e Cosa Mangiare
+            </div>
+        </div>
+
+        <div class="blocco-frame">
+            <iframe frameborder="0" id="map" src="https://www.google.com/maps/d/u/0/embed?mid=1PG0fujYMZ-V5sSZ3swr7uzjTMT_4obY8&ehbc=2E312F" allowfullscreen></iframe>
+            <!-- <iframe frameborder="0" id="map" src="https://www.google.com/maps/d/embed?mid=13Bm_qUXv_iPjcIYj6spW27pE-srTZV8T&hl=it&z=11" allowfullscreen>
+            </iframe> -->
+        </div>
+
+        <div class="blocco-testo-1">
+            <div class="sottotitolo" style="padding-bottom: 1rem;">
+                La carta del Biologico
+            </div>
+            <div>
+                <p>
+                    Nell’ambito degli interventi volti a valorizzare l’agricoltura biologica nel territorio di competenza, l’Ente Parco ha realizzato
+                    la Carta del Bio dei Colli Euganei, con lo scopo di dare maggiore visibilità ai prodotti certificati
+                    biologici nelle aree del Parco.
+                </p>
+                <p>
+                    La Carta del Bio dei Colli Euganei fornisce inoltre dati precisi sull’azienda e sull’offerta di prodotti e servizi.
+                </p>
+            </div>
+        </div>
+
+        <div class="blocco-download-1">
+            <div class="testo-categoria">download</div>
+            <div class="griglia-download-1">
+                <a href="content/colli-euganei.pdf" download="colli-euganei.pdf" class="download-singolo">
+                    <img src="content/icone/icona-pdf.png">
+                    <div>Carta del biologico</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="blocco-testo-2">
+            <div class="sottotitolo" style="padding-bottom: 1rem;">
+                Vini e Vigneti
+            </div>
+            <div>
+                <p>
+                    Grandissima è la varietà di vini prodotta nell'area dei Colli, tra cui alcuni il Rosso D.O.C., il Fior d'Arancio, il Merlot ed il Cabernet. Potete trovare maggiori informazioni nella carta dei vini.
+                </p>
+            </div>
+        </div>
+
+        <div class="blocco-download-2">
+            <div class="testo-categoria">download</div>
+            <div class="griglia-download-2">
+                <a href="content/colli-euganei.pdf" download="colli-euganei.pdf" class="download-singolo">
+                    <img src="content/icone/icona-pdf.png">
+                    <div>Carta dei Vini</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="blocco-testo-3">
+            <div class="sottotitolo" style="padding-bottom: 1rem;">
+                Sapori e Ricette del Parco
+            </div>
+            <div>
+                <p>
+                   Vista l'ampio spettro di flora e fauna presente della zona, ne derivano una moltitudine di piatti tipici che possono anche essere preparati seguendo le relative ricette.
+                </p>
+            </div>
+        </div>
+
+        <div class="blocco-download-3">
+            <div class="testo-categoria">download</div>
+            <div class="griglia-download-3">
+                <a href="content/colli-euganei.pdf" download="colli-euganei.pdf" class="download-singolo">
+                    <img src="content/icone/icona-pdf.png">
+                    <div>Ricette 1</div>
+                </a>
+                <a href="content/colli-euganei.pdf" download="colli-euganei.pdf" class="download-singolo">
+                    <img src="content/icone/icona-pdf.png">
+                    <div>Ricette 2</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="foot-1 testo-base">
+                <span class="testo-bold">
+                    © 2019
+                    <br>Parco Regionale dei Colli Euganei
+                </span>
+                <br>Amministrazione trasparente
+                <br>Responsabile protezione dati
+                <br>Privacy
+                <br>Note legali
+            </div>
+            <div class="foot-2 testo-base">
+                Via Rana Ca’ Mori, 8
+                <br>35042 Este (PD)
+                <br>Tel: 0429/632911
+                <br>Fax: 0429/601368
+                <br>e-mail: info@parcocollieuganei.com
+                <br>pec: info@pec.parcocollieuganei.com
+            </div>
+            <div class="foot-3">
+                <div class="blocco-icone">
+                    <a href="https://www.facebook.com/parcodeicollieuganei/">
+                        <img src="content/icone-social/icona-social_facebook.png" class="icona-social">
+                    </a>
+                    <a href="https://twitter.com/parcocolli">
+                        <img src="content/icone-social/icona-social_twitter.png" class="icona-social">
+                    </a>
+                    <a href="mailto:info@parcocollieuganei.com">
+                        <img src="content/icone-social/icona-social_mail.png" class="icona-social" onclick="">
+                    </a>
+                    <a href="#" onclick="return false;">
+                        <img src="content/icone-social/icona-social_linkedin.png" class="icona-social">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    <p style="font-family: EBGaramond">ciaone</p>
+    <p style="font-family: OfSerif">serif bold</p>
+    <p style="font-family: OfSans">sans book</p>
+    <p style="font-family: OfSans; font-style:italic;">sans book italic</p>
+    <p style="font-family: OfSans; font-weight:500;">sans medium</p>
+    <p style="font-family: OfSans; font-weight:700;">sans bold</p>
+    ol up a minute 
+    -->
+
+    <!-- FUNZIONA CON DIV ID=MAP -->
+    <!-- <script>
+            // Initialize and add the map
+            function initMap() {
+                // The location of Uluru
+                var uluru = { lat: 45.295, lng: 11.707 };
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                    document.getElementById('map'), { zoom: 12, center: uluru });
+                // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({ position: uluru, map: map });
+            }
+        </script> -->
+
+
+    <!-- 
+        // function myMap() {
+        // var mapProp= {
+        //     center:new google.maps.LatLng(23.792750,90.407606),
+        //     zoom:5,
+        // };
+        // var map=new google.maps.Map(document.getElementById("gMap"),mapProp);
+        // } 
+
+        45°17'42.4"N 11°42'28.0"E
+    -->
+
+    <!-- FUNZIONA CON DIV ID=MAP -->
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_0g9_tsIwRKtntxCcIuR5nY9aDdneVF8&callback=initMap"></script> -->
+
+    <script src="script/bottoni-mappa.js"></script>
+    <!-- <script src="script/cambio-header.js"></script> -->
+    <script src="script/header-dropdown.js"></script>
+    <script src="script/burger-menu.js"></script>
+    <script src="script/navigazione-laterale-dropdown.js"></script>
+    <script src="script/elementi-griglia.js"></script>
+
+</body>
+
+</html>

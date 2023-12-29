@@ -1,0 +1,363 @@
+/* ***************  ---GRIGLIA---  ******************* */
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 2em;
+    grid-template-areas: 
+    "hh hh hh hh hh hh hh hh hh hh hh hh hh hh" 
+    ". . . ti ti ti ti ti ti ti ti . . ."
+     ". b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 ." 
+     ". be be be be be be be be be be be be ." 
+     "ff ff ff ff ff ff ff ff ff ff ff ff ff ff";
+}
+
+
+.titolazione{
+    grid-area: ti;
+    margin-top: -0.5em;
+}
+
+.titolo{
+    font-family: OfSerif; /* EDIT */ 
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1em;
+    padding: 1.5rem 0 0 0;
+}
+
+/* ***************  ---CAROSELLO---  ******************* */
+.carosello-presentazione {
+    grid-area: cp;
+}
+
+.citazione-home {
+    font-family: EBGaramond;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 2.2em;
+    line-height: 1.3em;
+}
+
+.autore-cit-home {
+    font-family: OfSans;
+    font-weight: 400;
+    font-size: 1.5em;
+    line-height: 2.5em;
+    color: rgb(255, 108, 12);
+}
+
+.carousel-item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 45%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8));
+}
+
+/* .carousel-item:before{
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height: 45%;
+    background-image:linear-gradient(rgba(0,0,0,0.8), rgba(255,255,255,0));
+  } */
+
+
+
+/* ***************  ---TESTO PRESENTAZIONE---  ******************* */
+.testo-presentazione {
+    grid-area: tp;
+    padding: 1em 0;
+}
+
+
+
+/* ***************  ---BOTTONI---  ******************* */
+.blocco-bottoni {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    margin-bottom: 0.5em;
+    grid-area: bbt;
+}
+
+.blocco-localita {
+    margin-bottom: 0.5em;
+}
+
+.bottone-selezione {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-image: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-color: white;
+    color: black;
+    font-family: OfSans, sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    padding: 0.25em 0.75em;
+    border: 2px solid rgb(255, 108, 12);
+    text-align: left;
+}
+
+.bottone-inserimento {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-image: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-color: white;
+    color: black;
+    font-family: OfSans, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1em;
+    padding: 0.25em 1.5em;
+    border: 2px solid rgb(255, 108, 12);
+    text-align: left;
+}
+
+.bottone-blocco-mappa {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+}
+
+.bottone-blocco-meteo {
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+
+
+/* ***************  ---BLOCCO MAPPA---  ******************* */
+.blocco-mappa {
+    grid-area: bm;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "ttc" "bbt" "bbf";
+}
+
+
+
+/* ***************  ---CATEGORIE---  ******************* */
+.testo-categoria {
+    font-weight: 700;
+    font-variant: small-caps;
+    grid-area: ttc;
+}
+
+.blocco-categoria-1 {
+    grid-area: b1;
+}
+
+.blocco-categoria-2 {
+    grid-area: b2;
+}
+
+
+
+/* ***************  ---ELEMENTI GRIGLIA EVENTI E LINK---  ******************* */
+.descrizione-elemento {
+    padding: 1em;
+}
+
+.immagine-elemento-singolo {
+    width: 100%;
+}
+
+.immagine-elemento-doppio {
+    width: 100%;
+}
+
+.blocco-elementi {
+    grid-area: be;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    /* background-color: blue; */
+}
+
+.blocco-link {
+    grid-area: bl;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    /* background-color: blue; */
+}
+
+.elemento-singolo {
+    background-color: white;
+    box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 0.1);
+}
+
+.elemento-doppio-1 {
+    background-color: white;
+    box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 0.1);
+}
+
+.elemento-doppio-2 {
+    background-color: white;
+    box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 0.1);
+}
+
+.elemento-doppio-3 {
+    background-color: white;
+    box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 0.1);
+}
+
+.blocco-link {
+    grid-area: bl;
+}
+
+
+
+/* ***************  ---FOOTER---  ******************* */
+.icona-social {
+    width: 40px;
+    margin: 0.3em;
+}
+
+.footer {
+    grid-area: ff;
+    background-color: white;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: ". fa fa fa fa fb fb fb fb fc fc fc fc .";
+    padding: 2em 0;
+}
+
+.foot-1 {
+    grid-area: fa;
+}
+
+.foot-2 {
+    grid-area: fb;
+}
+
+.foot-3 {
+    grid-area: fc;
+}
+
+
+
+@media screen and (min-width: 1300px) {
+
+    /* ***************** ---IFRAME--- ****************** */
+    .blocco-frame {
+        grid-area: bbf;
+        height: 100%;
+        display: inline-block;
+        overflow: hidden;
+        box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 0.1);
+    }
+    .blocco-frame iframe {
+        /* position: relative;
+        width: 100%;
+        height: 140% !important;
+        top: -240px;
+        border: none; */
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    /* ***************  ---METEO---  ******************* */
+    .blocco-meteo {
+        grid-area: bt;
+        display: grid;
+        grid-template-rows: auto auto 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+        grid-template-areas: "m1" "m2" "m3";
+    }
+    .meteo-1 {
+        grid-area: m1;
+    }
+    .meteo-2 {
+        grid-area: m2;
+    }
+    .meteo-3 {
+        grid-area: m3;
+        display: grid;
+        grid-template-rows: auto 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: white;
+        box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 0.1);
+        padding: 1.5em;
+        grid-template-areas: "im im im" "g1 g1 g1" "g2 g2 g2";
+    }
+    .info-meteo {
+        grid-area: im;
+        display: flex;
+    }
+    .info-meteo-1 {
+        flex: 3;
+    }
+    .info-meteo-2 {
+        flex: 2;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .giorno-1 {
+        grid-area: g1;
+        padding-bottom: 2em;
+    }
+    .meteo-flex {
+        height: 33%;
+        display: flex;
+        align-items: center;
+    }
+    .meteo-icona {
+        flex: 3;
+        text-align: center;
+    }
+    .meteo-testo {
+        flex: 3;
+    }
+    .giorno-2 {
+        grid-area: g2;
+        padding-bottom: 2em;
+    }
+
+    .immagine-info-meteo {
+        width: 50%;
+    }
+    
+    .immagine-icona-meteo {
+        width: 30%;
+    }
+
+    .paese-meteo {
+        font-size: 2em;
+        font-weight: 700;
+        line-height: 1.3em;
+    }
+    
+    .testo-meteo {
+        font-size: 1.2em;
+        line-height: 1.5em;
+    }
+}

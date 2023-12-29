@@ -1,0 +1,94 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.35s;
+}
+
+.sidenav a {
+    display: block;
+}
+
+.sidenav a:hover {
+    
+}
+
+.sidenav .closebtn {
+}
+
+.closebtn{
+    height: 35px !important;
+    top: 28px !important;
+    right: 28px !important;
+}
+
+.closebtn:hover{
+    cursor: pointer;
+}
+
+.nav-blocco-sezioni {
+    font-size: 16px;
+    color: black;
+}
+
+.nav-sezione{
+    width: 100%;
+    height: 40px;
+    font-size: 24px;
+    line-height: 40px;
+    padding: 0 64px;
+    cursor: pointer;
+}
+
+.nav-dropdown{
+    font-size: 16px;
+    width: 100%;
+    padding: 8px 56px 16px 72px;
+}
+
+
+.nav-dropdown > a {
+    font-size: 17.6px;
+    line-height: 25.6px;
+    color: black;
+}
+
+.nav-dropdown > a:hover {
+    text-decoration: underline;
+}
+
+#freccia-natura {
+    transition: transform 0.3s;
+}
+
+#freccia-territorio {
+    transition: transform 0.3s;
+}
+
+#freccia-ente {
+    transition: transform 0.3s;
+}
+
+.rotate {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  .nav-attuale{
+    color: white;
+    background-color: rgb(255,108,12);
+  }
+
+.centriamo-tutto{
+    display: flex;
+    justify-content: center;
+    gap:5px; 
+}

@@ -1,0 +1,139 @@
+
+/* ***************  ---GRIGLIA---  ******************* */
+.main-grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 0;
+    grid-template-areas:
+    "hh hh hh hh hh hh hh hh hh hh hh hh"
+    ". . ti ti ti ti ti ti ti ti . ."
+    ". . in in in in . . . . . ."
+    ". . z1 z1 z1 z1 z1 z1 . . . ."
+    "ff ff ff ff ff ff ff ff ff ff ff ff";
+}
+
+/* EDIT */
+/* body {
+    font-family: OfSerif;
+    font-weight: 400;
+} */
+
+
+/* ***************  ---CORPO---  ******************* */
+.titolazione{
+    grid-area: ti;
+    padding: 1.5rem 0 0 0;
+}
+
+.introduzione{
+    grid-area: in;
+    padding: 1.5rem 0 0 0;
+}
+
+.blocco-download-1{
+    grid-area: z1;
+    padding: 1rem 0 3rem 0;
+}
+
+.griglia-download-1{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    padding: 0.25rem 0 0 0;
+}
+
+.griglia-download-1 > a{
+    display:block;
+}
+
+.download-singolo {
+    width: 70%;
+    /* margin: 0 auto; */
+}
+
+.download-singolo > img {
+    width: 100%;
+}
+
+.download-singolo > div {
+    padding: 0.35rem 0 0 0;
+    line-height: 1.3em;
+}
+
+.freccia{
+    transition: transform 0.3s;
+}
+
+.ruota{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.titolo{
+    font-family: OfSerif; /* EDIT */ 
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1em;
+    padding: 1.5rem 0 0 0;
+}
+
+.sottotitolo{
+    font-family: OfSans;
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 1em;
+    padding: 0 0 0 0;
+}
+
+.sottosezione{
+    padding: 0 0 1rem 0;
+}
+
+#fauna-1, #fauna-2, #fauna-3, #fauna-4, #fauna-4, #fauna-5, #fauna-6:hover{
+    cursor: pointer;
+}
+
+.immagine-descrittiva{
+    width: 100%;
+}
+
+.didascalia{
+    font-style: italic;
+    padding: 0.5rem 0 0 0;
+}
+
+.contatti-categoria{
+    padding-top: 1rem;
+}
+
+
+
+/* ***************  ---FOOTER---  ******************* */
+.icona-social{
+    width: 40px;
+    margin: 0.3em;
+}
+.footer{
+    grid-area: ff;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    ". . fa fa fa fb fb fb fc fc . .";
+    padding: 2em 0;
+}
+.foot-1{
+    grid-area: fa;
+}
+.foot-2{
+    grid-area: fb;
+}
+.foot-3{
+    grid-area: fc;
+    text-align:right;
+}

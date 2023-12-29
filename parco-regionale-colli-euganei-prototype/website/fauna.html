@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="script/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" href="framework/bootstrap.min.css">
+    <script src="framework/bootstrap.min.js"></script>
+
+    <script src="framework/popper.min.js"></script>
+    <link rel="stylesheet" href="framework/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="stylesheet/font.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/general-layout.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/fauna/fauna-very-large.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/fauna/fauna-large.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/fauna/fauna-medium.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/fauna/fauna-small.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/fauna/fauna-extra-small.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/header.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/navigazione-laterale.css">
+
+    <script src="script/correzione-altezza-elemento.js"></script>
+
+
+    <!-- <link rel="stylesheet" href="stylesheet/bootstrap.css">
+    <script src="script/bootstrap.js"></script> -->
+
+    <!-- API Key: AIzaSyD_0g9_tsIwRKtntxCcIuR5nY9aDdneVF8 -->
+
+    <title>
+        Fauna e Parco Natura 2000 - Parco Regionale dei Colli Euganei
+    </title>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <div style="display:flex; align-items:center; padding: 32px 32px 32px 32px;">
+            <div style="flex: 9; text-align:center; display:none;" id="nav-bandiere">
+                <div class="centriamo-tutto">
+                    <img src="content/flag-it.png" style="height: 20px;"> Italiano&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="content/flag-uk.png" style="height: 20px;"> English
+                </div>
+            </div>
+            <div style="flex: 1;">
+                <img src="content/croce.png" class="closebtn" onclick="closeNav()" id="bottone-chiudi"
+                    style="display: none; height: 45px; position:fixed; top: 25px; right: 20px;">
+            </div>
+        </div>
+        <div class="nav-blocco-sezioni" id="nav-sezioni" style="display: none;">
+            <div class="nav-sezione">
+                <div onclick="mostraNatura()" id="nav-natura">Natura e Storia
+                    <span style="padding: 0 0 0 43px;">
+                        <img style="height: 2rem;" id="freccia-natura" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-natura-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="geologia.html">Genesi, geologia e termalismo</a>
+                <a href="fauna.html">Fauna e parco natura 2000</a>
+                <a href="flora.html">Flora</a>
+                <a href="storia-arte-cultura.html">Storia, arte e cultura</a>
+            </div>
+
+            <div class="nav-sezione">
+                <div onclick="mostraTerritorio()" id="nav-territorio">Vivi il Territorio
+                    <span style="padding: 0 0 0 39px;">
+                        <img style="height: 2rem;" id="freccia-territorio" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-territorio-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="mangiare.html">Dove e cosa mangiare</a>
+                <a href="dormire.html">Dove dormire</a>
+                <a href="sentieri.html">Sentieri</a>
+                <a href="#" onclick="return false;">Punti di interesse e musei</a>
+                <a href="#" onclick="return false;">Attività e visite guidate</a>
+                <a href="#" onclick="return false;">Mappe</a>
+                <a href="#" onclick="return false;">Notizie</a>
+            </div>
+            <div class="nav-sezione">
+                <div onclick="mostraEnte()" id="nav-ente">Ente parco
+                    <span style="padding: 0 0 0 84px;">
+                        <img style="height: 2rem;" id="freccia-ente" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-ente-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="parco.html">Il parco</a>
+                <a href="#" onclick="return false;">Amministrazione</a>
+                <a href="progetti.html">Progetti</a>
+                <a href="guardie.html">Guardie ecologiche volontarie</a>
+                <a href="link.html">Link</a>
+            </div>
+            <div class="nav-sezione">
+                <div id="nav-contatti">Contatti</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-grid">
+        <div class="header">
+            <div class="blocco-logo">
+                <img src="content/logo-piccolo-web-positivo.jpg" class="logo-header" id="logo" alt="logo">
+            </div>
+            <div id="natura" class="blocco-sezione" style="margin-left: auto;">
+                <div class="centra-vert">
+                    Natura
+                    <br>e Storia
+                </div>
+                <div id="natura-dropdown" class="blocco-dropdown">
+                    <a href="geologia.html" class="link-singolo">Genesi, geologia e termalismo</a>
+                    <a href="fauna.html" class="link-singolo">Fauna e parco natura 2000</a>
+                    <a href="flora.html" class="link-singolo">Flora</a>
+                    <a href="storia-arte-cultura.html" class="link-singolo">Storia, arte e cultura</a>
+                </div>
+            </div>
+            <div id="territorio" class="blocco-sezione">
+                <div class="centra-vert">
+                    Vivi il
+                    <br>Territorio
+                </div>
+                <div id="territorio-dropdown" class="blocco-dropdown">
+                    <a href="mangiare.html" class="link-singolo">Dove e cosa mangiare</a>
+                    <a href="dormire.html" class="link-singolo">Dove dormire</a>
+                    <a href="sentieri.html" class="link-singolo">Sentieri</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Punti di interesse e musei</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Attività e visite guidate</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Mappe</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Notizie</a>
+                </div>
+            </div>
+            <div id="ente" class="blocco-sezione">
+                <div class="centra-vert">
+                    Ente
+                    <br>Parco
+                </div>
+                <div id="ente-dropdown" class="blocco-dropdown">
+                    <a href="parco.html" class="link-singolo">Il parco</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Amministrazione</a>
+                    <a href="progetti.html" class="link-singolo">Progetti</a>
+                    <a href="guardie.html" class="link-singolo">Guardie ecologiche volontarie</a>
+                    <a href="link.html" class="link-singolo">Link</a>
+                </div>
+            </div>
+            <div class="blocco-sezione">
+                <div class="centra-vert" onclick="window.location = 'contatti.html'">
+                    Contatti
+                </div>
+            </div>
+            <div class="blocco-lingue">
+                <img src="content/flag-it.png" class="bandiere-header"> Italiano
+                <br>
+                <img src="content/flag-uk.png" class="bandiere-header"> English
+                <!-- <br>
+                                <img src="content/flag-ger.png" class="bandiere-header"> tedesco -->
+            </div>
+        </div>
+
+        <div class="header-mobile">
+            <div class="blocco-logo-mobile">
+                <img src="content/logo-piccolo-web-positivo.jpg" class="logo-header-mobile" id="logo-mobile" alt="logo">
+            </div>
+            <div class="blocco-burger">
+                <img style="height: 38px; cursor:pointer;" onclick="openNav()" src="content/burger.png">
+            </div>
+
+        </div>
+        
+        <div class="titolazione">
+            <div class="breadcrumbs">
+                Home<span class="implica"> >> </span>Natura e Storia
+                <span class="implica">>></span> Fauna e Parco Natura 2000
+            </div>
+            <div class="titolo">
+                Fauna e Parco Natura 2000
+            </div>
+        </div>
+
+        <div class="introduzione">
+            <div>
+                I Colli Euganei costituiscono un ambiente piuttosto diversificato per tipo e numero di specie, in particolare se confrontato
+                con la pianura circostante, pur essendosi verificato nel tempo un certo impoverimento.
+                <br>Di seguito sono descritti in breve le classi di vertebrati e gli invertebrati più caratteristici dei Colli
+                Euganei. Pe maggiori informazioni e notizie, consultare il Progetto Fauna.
+            </div>
+        </div>
+
+        <div class="blocco-testo-1" id="fauna-1">
+            <div class="sottotitolo">
+                <span style="padding-right: 0.5rem;">Mammiferi</span>
+                <img style="height: 1.7rem;" id="freccia-1" class="freccia" src="content/freccia-pagine.png">
+            </div>
+        </div>
+        <div class="blocco-scomparsa-1" id="fauna-dropdown-1" style="display:none;">
+            <div class="scomparsa-testo-1">
+                Volpe, donnola e faina sono presenti tra i carnivori, oltre al tasso; tra i piccoli mammiferi insettivori sono comuni il
+                riccio, la talpa ed il toporagno; tra i roditori, il ghiro ed il moscardino. Importati dall'uomo e nel tempo
+                divenuti infestanti sono il daino e, soprattutto, il cinghiale.
+            </div>
+            <div class="scomparsa-immagine-1">
+                <img src="content/fauna/volpe.jpg" class="immagine-descrittiva">
+            </div>
+            <div class="scomparsa-didascalia-1 didascalia">
+                Volpe (foto di PR Colli Euganei)
+            </div>
+        </div>
+
+        <div class="blocco-testo-2" id="fauna-2">
+            <div class="sottotitolo">
+                <span style="padding-right: 0.5rem;">Uccelli</span>
+                <img style="height: 1.7rem;" id="freccia-2" class="freccia" src="content/freccia-pagine.png">
+            </div>
+        </div>
+        <div class="blocco-scomparsa-2" id="fauna-dropdown-2" style="display:none;">
+            <div class="scomparsa-testo-2">
+                Oltre 120 specie segnalate tra quelle stanziali, migratrici e di passo. Nei mesi invernali i boschi ospitano la beccaccia,
+                il tordo bottaccio, il tordo sassello e la cesena; mentre tra la bassa vegetazione si osservano lo scricciolo,
+                il pettirosso, il regolo, il verdone e la cinciarella. In primavera arrivano l'upupa, il rigogolo ed il cuculo,
+                l'averla piccola ed il codibugnolo. Fringuelli, cardellini e la bella ghiandaia sono presenti tutto l'anno.
+                Nelle zone prative aperte è facile osservare la calandra, la cappellaccia ed in estate il curioso succiacapre,
+                uccello crepuscolare che nidifica a terra, dal volo simile a quello di un piccolo falco. I rapaci diurni
+                sono ben rappresentati dalla poiana; presenti pure il gheppio, lo sparviero e talvolta anche il lodolaio.
+                Recentemente la presenza nidificante del falco pellegrino presso il sito, di proprietà della Regione Veneto
+                e in gestione al Parco, a Rocca Pendice, ha confermato le potenzialità faunistiche e naturalistiche dei Colli
+                Euganei, tanto da giustificare il loro inserimento tra le Zone di Protezione Speciale (ZPS) europee di Rete
+                Natura 2000. Fra i rapaci notturni è possibile incontrare il gufo comune, la civetta, la civetta nana e il
+                barbagianni e l'allocco. Molto comuni nelle aree pianeggianti lungo gli scoli d'acqua e in prossimità delle
+                zone umide sono gli uccelli legati a questa tipologia di ambienti, tra i quali l'airone cinerino e l'airone
+                bianco, la garzetta e la gallinella d'acqua.
+            </div>
+            <div class="scomparsa-immagine-2">
+                <img src="content/fauna/poiana.jpg" class="immagine-descrittiva">
+            </div>
+            <div class="scomparsa-didascalia-2 didascalia">
+                Poiana in volteggio (foto di PR Colli Euganei)
+            </div>
+        </div>
+
+        <div class="blocco-testo-3" id="fauna-3">
+            <div class="sottotitolo">
+                <span style="padding-right: 0.5rem;">Rettili</span>
+                <img style="height: 1.7rem;" id="freccia-3" class="freccia" src="content/freccia-pagine.png">
+            </div>
+        </div>
+        <div class="blocco-scomparsa-3" id="fauna-dropdown-3" style="display:none;">
+            <div class="scomparsa-testo-3">
+                Si annoverano tra i sauri alcune specie di lucertole ed il ramarro presenti nelle zone calde ed asciutte, mentre l'orbettino
+                predilige i luoghi freschi ed umidi. I serpenti sono presenti con il biacco nella varietà nera (localmente
+                detto "scarbonasso"); meno comune è il saettone o colubro di Esculapio. Diffusa è pure la natrice dal collare,
+                assieme alla natrice tessellata. La vipera è segnalata, come presenza rara, e vive nelle zone più elevate
+                e tranquille. Da ricordare la testuggine d'acqua dolce Emys orbicularis, specie però minacciata nel suo stesso
+                habitat dall'esotica Trachemys scripta, la nota tartaruga allevata in cattività che spesso purtroppo viene
+                rilasciata nelle zone umide dove prevale sulla specie locale.
+            </div>
+            <div class="scomparsa-immagine-3">
+                <img src="content/fauna/ramarro.jpg" class="immagine-descrittiva">
+            </div>
+            <div class="scomparsa-didascalia-3 didascalia">
+                Ramarro (foto di PR Colli Euganei)
+            </div>
+        </div>
+
+        <div class="blocco-testo-4" id="fauna-4">
+            <div class="sottotitolo">
+                <span style="padding-right: 0.5rem;">Anfibi</span>
+                <img style="height: 1.7rem;" id="freccia-4" class="freccia" src="content/freccia-pagine.png">
+            </div>
+        </div>
+        <div class="blocco-scomparsa-4" id="fauna-dropdown-4" style="display:none;">
+            <div class="scomparsa-testo-4">
+                Le zone umide ospitano raganelle, rane, rospi, in particolare il rospo smeraldino; il raro ululone dal ventre giallo si può
+                trovare anche nelle pozze d'acqua temporanee che si formano in seguito ai periodi di pioggia primaverili.
+                In alcuni biotopi di acqua stagnante vivono il tritone alpestre e il tritone punteggiato; la salamandra pezzata
+                è molto comune e diffusa nel sottobosco fresco, in prossimità di sorgenti e corsi d'acqua.
+            </div>
+            <div class="scomparsa-immagine-4">
+                <img src="content/fauna/salamandra.jpg" class="immagine-descrittiva">
+            </div>
+            <div class="scomparsa-didascalia-4 didascalia">
+                Salamandra pezzata (Salamandra salamandra) (foto di PR Colli Euganei)
+            </div>
+        </div>
+
+        <div class="blocco-testo-5" id="fauna-5">
+            <div class="sottotitolo">
+                <span style="padding-right: 0.5rem;">Pesci</span>
+                <img style="height: 1.7rem;" id="freccia-5" class="freccia" src="content/freccia-pagine.png">
+            </div>
+        </div>
+        <div class="blocco-scomparsa-5" id="fauna-dropdown-5" style="display:none;">
+            <div class="scomparsa-testo-5">
+                All'interno del comprensorio euganeo, non sono molte le zone con acqua permanente tutto l'anno adatte ad ospitare l'ittiofauna.
+                Intorno alle colline, lungo i canali e nei biotopi, vivono numerose specie di pesci d'acqua dolce, tipiche
+                dei corsi d'acqua della pianura.
+            </div>
+            <div class="scomparsa-immagine-5">
+                <img src="content/fauna/pesce-gatto.jpg" class="immagine-descrittiva">
+            </div>
+            <div class="scomparsa-didascalia-5 didascalia">
+                Pesce gatto (foto di PR Colli Euganei)
+            </div>
+        </div>
+
+        <div class="blocco-testo-6" id="fauna-6">
+            <div class="sottotitolo">
+                <span style="padding-right: 0.5rem;">Invertebrati</span>
+                <img style="height: 1.7rem;" id="freccia-6" class="freccia" src="content/freccia-pagine.png">
+            </div>
+        </div>
+        <div class="blocco-scomparsa-6" id="fauna-dropdown-6" style="display:none;">
+            <div class="scomparsa-testo-6">
+                La presenza di numerose specie di farfalle, soprattutto quelle diurne degli ambienti prativi dei vegri, è una delle particolarità
+                più caratteristiche e colorate della fauna euganea. Tra gli insetti, da ricordare anche numerose specie di
+                coleotteri, mentre tra gli altri invertebrati, alcuni dei quali endemici e importanti dal punto di vista
+                scientifico, si ricordano il piccolo crostaceo terrestre Glomeris euganeorum e il gambero di fiume, grosso
+                crostaceo che può raggiungere i 20 cm di lunghezza, un tempo attivamente ricercato dai valligiani come squisitezza
+                culinaria ed ora localizzato solo nei corsi d'acqua più puliti dei Colli. Purtroppo, quest'ultima specie
+                appartenente alla fauna locale tradizionale, è seriamente minacciata dalla presenza del gambero di fiume
+                americano che, come molte altre specie non autoctone, tende a divenire infestante.
+            </div>
+            <div class="scomparsa-immagine-6">
+                <img src="content/fauna/podalirio.jpg" class="immagine-descrittiva">
+            </div>
+            <div class="scomparsa-didascalia-6 didascalia">
+                Podalirio (Iphiclides podalirius) (foto di PR Colli Euganei)
+            </div>
+        </div>
+
+        <div class="blocco-testo-7">
+            <div class="sottotitolo" style="padding-bottom: 1rem;">
+                Parco Natura 2000
+            </div>
+            <div>
+                <p>
+                    È una rete di aree destinate alla conservazione della biodiversità sul territorio dell'Unione Europea, istituita dall'art.3
+                    della Direttiva 92/43/CEE Habitat per la "conservazione degli habitat naturali e seminaturali e della
+                    flora e della fauna selvatiche". Queste aree sono denominate ZPS (Zone di Protezione Speciale) e SIC
+                    (Siti di Importanza Comunitaria) e garantiscono la presenza, il mantenimento e/o il ripristino di habitat
+                    e specie del continente europeo, particolarmente minacciati di frammentazione e di estinzione. In particolare
+                    le ZPS sono definite dalla Direttiva Uccelli 79/409/CEE che individua la presenza di biotopi e habitat
+                    di pregio idonei a favorire la conservazione di determinate specie di uccelli viventi allo stato selvatico,
+                    mentre le aree SIC sono habitat definiti direttamente dalla Direttiva 92/43 già citata.
+                </p>
+                <p>
+                    La
+                    <b>Rete Natura 2000</b> permette agli stati membri di applicare il concetto di tutela della biodiversità,
+                    riconoscendo lo stretto legame che esiste tra elementi biotici, abiotici ed antropici nel garantire l'equilibrio
+                    naturale in tutte le sue componenti. Gli stati membri sono tenuti ad adottare tutte le misure di carattere
+                    generale e particolare per assicurare l'esecuzione degli obblighi determinati dagli atti delle istituzioni
+                    della Comunità; devono astenersi dal prendere misure che possano compromettere gravemente il risultato
+                    che la Direttiva prescrive. L'Italia, come stato membro, ha individuato numerosi SIC e ZPS che confluendo
+                    nella Rete Europea rispondono alla coerenza ecologica richiesta dalla direttiva.
+                </p>
+                <p>Nel nostro paese sono presenti circa il 65 % degli Habitat indicati nell'allegato I della Direttiva ed oltre
+                    il 30% delle specie animali e vegetali indicati nell'allegato II.
+                </p>
+                <p>Attualmente le regioni italiane hanno individuato 2.413 aree che rispondono ai requisiti indicati ed in particolare,
+                    fino a gennaio 2002, 341 Zone a Protezione Speciale. Risulta pertanto logico che il Progetto Natura 2000
+                    sottoponga questi siti ad un regime particolare ed estremo di salvaguardia e coloro che presentino progetti
+                    d'intervento (di tipo edilizio, in aree boscate, ecc.), ricadenti all'interno delle Zone Speciali di
+                    Conservazione dovranno presentare una "Valutazione di Incidenza" che permetta all'autorità competente
+                    di valutare la loro fattibilità.</p>
+                <p>
+                    Fra le Zone di Protezione Speciale della Regione Veneto ricade anche parte dell'area del territorio dei Colli Euganei che
+                    è stata individuata all'interno della Rete Natura 2000 con il codice identificativo "IT3260017 Colli
+                    Euganei-Monte Lozzo-Monte Ricco".</p>
+                <p>Vedi anche: Piano di Gestione ZPS del Parco Regionale dei Colli Euganei</p>
+                <p>
+                    La superficie del sito, su un'area complessiva del Parco di 18.694 ettari, è pari a 13.698,76 ettari ed interessa i seguenti
+                    habitat ritenuti prioritari a livello europeo: Formazioni erbose secche seminaturali e facies coperte
+                    da cespugli su substrato calcareo (Festuco - Brometalia) con fioritura di orchidee (cod. 6210), comunemente
+                    chiamate prati aridi o vegri (13% dell'area euganea) Formazioni erbose rupicole calcicole o basofile
+                    dell'Alysso-Sedion albi (cod. 6110) (1% del territorio) Boschi pannonici di Quercus pubescens (roverella)
+                    (cod. 91H0) (19% dei Colli Euganei)
+                </p>
+                <p>
+                    I seguenti sistemi ecologici, pur se non inseriti tra quelli prioritari a livello europeo, hanno notevole importanza naturalistica
+                    per la loro rarità nell'ambiente euganeo o per la ricchezza di specie che ospitano: Laghi eutrofici naturali
+                    con vegetazione del Magnopotamion o Hydrocharition (cod. 3150) Foreste di Castanea sativa (castagno)
+                    (cod. 9260)
+                </p>
+            </div>
+        </div>
+
+        <div class="blocco-download-1">
+            <div class="testo-categoria">download</div>
+            <div class="griglia-download-1">
+                <a href="content/colli-euganei.pdf" download="colli-euganei.pdf" class="download-singolo">
+                    <img src="content/icone/icona-pdf.png">
+                    <div>Formulario Standard Natura 2000</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="foot-1 testo-base">
+                <span class="testo-bold">
+                    © 2019
+                    <br>Parco Regionale dei Colli Euganei
+                </span>
+                <br>Amministrazione trasparente
+                <br>Responsabile protezione dati
+                <br>Privacy
+                <br>Note legali
+            </div>
+            <div class="foot-2 testo-base">
+                Via Rana Ca’ Mori, 8
+                <br>35042 Este (PD)
+                <br>Tel: 0429/632911
+                <br>Fax: 0429/601368
+                <br>e-mail: info@parcocollieuganei.com
+                <br>pec: info@pec.parcocollieuganei.com
+            </div>
+            <div class="foot-3">
+                <div class="blocco-icone">
+                    <a href="https://www.facebook.com/parcodeicollieuganei/">
+                        <img src="content/icone-social/icona-social_facebook.png" class="icona-social">
+                    </a>
+                    <a href="https://twitter.com/parcocolli">
+                        <img src="content/icone-social/icona-social_twitter.png" class="icona-social">
+                    </a>
+                    <a href="mailto:info@parcocollieuganei.com">
+                        <img src="content/icone-social/icona-social_mail.png" class="icona-social" onclick="">
+                    </a>
+                    <a href="#" onclick="return false;">
+                        <img src="content/icone-social/icona-social_linkedin.png" class="icona-social">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    <p style="font-family: EBGaramond">ciaone</p>
+    <p style="font-family: OfSerif">serif bold</p>
+    <p style="font-family: OfSans">sans book</p>
+    <p style="font-family: OfSans; font-style:italic;">sans book italic</p>
+    <p style="font-family: OfSans; font-weight:500;">sans medium</p>
+    <p style="font-family: OfSans; font-weight:700;">sans bold</p>
+    ol up a minute 
+    -->
+
+    <!-- FUNZIONA CON DIV ID=MAP -->
+    <!-- <script>
+            // Initialize and add the map
+            function initMap() {
+                // The location of Uluru
+                var uluru = { lat: 45.295, lng: 11.707 };
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                    document.getElementById('map'), { zoom: 12, center: uluru });
+                // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({ position: uluru, map: map });
+            }
+        </script> -->
+
+
+    <!-- 
+        // function myMap() {
+        // var mapProp= {
+        //     center:new google.maps.LatLng(23.792750,90.407606),
+        //     zoom:5,
+        // };
+        // var map=new google.maps.Map(document.getElementById("gMap"),mapProp);
+        // } 
+
+        45°17'42.4"N 11°42'28.0"E
+    -->
+
+    <!-- FUNZIONA CON DIV ID=MAP -->
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_0g9_tsIwRKtntxCcIuR5nY9aDdneVF8&callback=initMap"></script> -->
+
+    <script src="script/bottoni-mappa.js"></script>
+    <!-- <script src="script/cambio-header.js"></script> -->
+    <script src="script/header-dropdown.js"></script>
+    <script src="script/burger-menu.js"></script>
+    <script src="script/navigazione-laterale-dropdown.js"></script>
+    <script src="script/fauna-dropdown.js"></script>
+
+</body>
+
+</html>

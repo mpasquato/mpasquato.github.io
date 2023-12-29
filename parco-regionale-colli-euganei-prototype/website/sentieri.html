@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="script/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" href="framework/bootstrap.min.css">
+    <script src="framework/bootstrap.min.js"></script>
+
+    <script src="framework/popper.min.js"></script>
+    <link rel="stylesheet" href="framework/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="stylesheet/font.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/general-layout.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/sentieri/sentieri-very-large.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/sentieri/sentieri-large.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/sentieri/sentieri-medium.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/sentieri/sentieri-small.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/sentieri/sentieri-extra-small.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/header.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/navigazione-laterale.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/lightbox/lightbox-very-large.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/lightbox/lightbox-large.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/lightbox/lightbox-medium.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/lightbox/lightbox-small.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/lightbox/lightbox-extra-small.css">
+    <link rel="stylesheet" type="text/css">
+
+
+    <script src="script/correzione-altezza-elemento.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#lightbox").click(function () {
+                $("#lightbox,#lightbox_div").fadeOut("slow");
+                return false;
+            });
+            $(".descrizione-elemento").click(function () {
+                $("#lightbox,#lightbox_div").fadeIn("slow");
+                return false;
+            });
+            $(".immagine-elemento-singolo").click(function () {
+                $("#lightbox,#lightbox_div").fadeIn("slow");
+                return false;
+            });
+        });
+    </script>
+
+
+    <!-- <link rel="stylesheet" href="stylesheet/bootstrap.css">
+    <script src="script/bootstrap.js"></script> -->
+
+    <!-- API Key: AIzaSyD_0g9_tsIwRKtntxCcIuR5nY9aDdneVF8 -->
+
+    <title>
+        Sentieri - Parco Regionale dei Colli Euganei
+    </title>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <div style="display:flex; align-items:center; padding: 32px 32px 32px 32px;">
+            <div style="flex: 9; text-align:center; display:none;" id="nav-bandiere">
+                <div class="centriamo-tutto">
+                    <img src="content/flag-it.png" style="height: 20px;"> Italiano&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="content/flag-uk.png" style="height: 20px;"> English
+                </div>
+            </div>
+            <div style="flex: 1;">
+                <img src="content/croce.png" class="closebtn" onclick="closeNav()" id="bottone-chiudi"
+                    style="display: none; height: 45px; position:fixed; top: 25px; right: 20px;">
+            </div>
+        </div>
+        <div class="nav-blocco-sezioni" id="nav-sezioni" style="display: none;">
+            <div class="nav-sezione">
+                <div onclick="mostraNatura()" id="nav-natura">Natura e Storia
+                    <span style="padding: 0 0 0 43px;">
+                        <img style="height: 2rem;" id="freccia-natura" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-natura-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="geologia.html">Genesi, geologia e termalismo</a>
+                <a href="fauna.html">Fauna e parco natura 2000</a>
+                <a href="flora.html">Flora</a>
+                <a href="storia-arte-cultura.html">Storia, arte e cultura</a>
+            </div>
+
+            <div class="nav-sezione">
+                <div onclick="mostraTerritorio()" id="nav-territorio">Vivi il Territorio
+                    <span style="padding: 0 0 0 39px;">
+                        <img style="height: 2rem;" id="freccia-territorio" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-territorio-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="mangiare.html">Dove e cosa mangiare</a>
+                <a href="dormire.html">Dove dormire</a>
+                <a href="sentieri.html">Sentieri</a>
+                <a href="#" onclick="return false;">Punti di interesse e musei</a>
+                <a href="#" onclick="return false;">Attività e visite guidate</a>
+                <a href="#" onclick="return false;">Mappe</a>
+                <a href="#" onclick="return false;">Notizie</a>
+            </div>
+            <div class="nav-sezione">
+                <div onclick="mostraEnte()" id="nav-ente">Ente parco
+                    <span style="padding: 0 0 0 84px;">
+                        <img style="height: 2rem;" id="freccia-ente" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-ente-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="parco.html">Il parco</a>
+                <a href="#" onclick="return false;">Amministrazione</a>
+                <a href="progetti.html">Progetti</a>
+                <a href="guardie.html">Guardie ecologiche volontarie</a>
+                <a href="link.html">Link</a>
+            </div>
+            <div class="nav-sezione">
+                <div id="nav-contatti">Contatti</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-grid">
+        <div class="header">
+            <div class="blocco-logo">
+                <img src="content/logo-piccolo-web-positivo.jpg" class="logo-header" id="logo" alt="logo">
+            </div>
+            <div id="natura" class="blocco-sezione" style="margin-left: auto;">
+                <div class="centra-vert">
+                    Natura
+                    <br>e Storia
+                </div>
+                <div id="natura-dropdown" class="blocco-dropdown">
+                    <a href="geologia.html" class="link-singolo">Genesi, geologia e termalismo</a>
+                    <a href="fauna.html" class="link-singolo">Fauna e parco natura 2000</a>
+                    <a href="flora.html" class="link-singolo">Flora</a>
+                    <a href="storia-arte-cultura.html" class="link-singolo">Storia, arte e cultura</a>
+                </div>
+            </div>
+            <div id="territorio" class="blocco-sezione">
+                <div class="centra-vert">
+                    Vivi il
+                    <br>Territorio
+                </div>
+                <div id="territorio-dropdown" class="blocco-dropdown">
+                    <a href="mangiare.html" class="link-singolo">Dove e cosa mangiare</a>
+                    <a href="dormire.html" class="link-singolo">Dove dormire</a>
+                    <a href="sentieri.html" class="link-singolo">Sentieri</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Punti di interesse e musei</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Attività e visite guidate</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Mappe</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Notizie</a>
+                </div>
+            </div>
+            <div id="ente" class="blocco-sezione">
+                <div class="centra-vert">
+                    Ente
+                    <br>Parco
+                </div>
+                <div id="ente-dropdown" class="blocco-dropdown">
+                    <a href="parco.html" class="link-singolo">Il parco</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Amministrazione</a>
+                    <a href="progetti.html" class="link-singolo">Progetti</a>
+                    <a href="guardie.html" class="link-singolo">Guardie ecologiche volontarie</a>
+                    <a href="link.html" class="link-singolo">Link</a>
+                </div>
+            </div>
+            <div class="blocco-sezione">
+                <div class="centra-vert" onclick="window.location = 'contatti.html'">
+                    Contatti
+                </div>
+            </div>
+            <div class="blocco-lingue">
+                <img src="content/flag-it.png" class="bandiere-header"> Italiano
+                <br>
+                <img src="content/flag-uk.png" class="bandiere-header"> English
+                <!-- <br>
+                                <img src="content/flag-ger.png" class="bandiere-header"> tedesco -->
+            </div>
+        </div>
+
+        <div class="header-mobile">
+            <div class="blocco-logo-mobile">
+                <img src="content/logo-piccolo-web-positivo.jpg" class="logo-header-mobile" id="logo-mobile" alt="logo">
+            </div>
+            <div class="blocco-burger">
+                <img style="height: 38px; cursor:pointer;" onclick="openNav()" src="content/burger.png">
+            </div>
+
+        </div>
+
+        <div class="titolazione">
+            <div class="breadcrumbs">
+                Home
+                <span class="implica"> >> </span>Vivi il Territorio
+                <span class="implica"> >> </span>Sentieri
+            </div>
+            <div class="titolo" id="titolo-slide">
+                Sentieri
+            </div>
+        </div>
+
+        <div class="blocco-frame">
+            <iframe frameborder="0" id="map"
+                src="https://www.google.com/maps/d/u/0/embed?mid=17kZpaCEoFbOwHPM74JBjNJScXrWSTq2M&ehbc=2E312F&z=13"
+                allowfullscreen>
+            </iframe>
+            <!-- <iframe frameborder="0" id="map" src="https://www.google.com/maps/d/u/1/embed?mid=1A9y-eMiYRCsi4VZ6NrY27jm832jy2i9t&z=13" allowfullscreen>
+            </iframe> -->
+        </div>
+
+        <div class="blocco-filtri">
+            <div class="filtro-1">
+                <div class="categoria-filtro-1 testo-categoria">tipologia</div>
+                <div class="filtro-singolo-1">
+                    <input type="button" value="A piedi" onclick="onClickFiltro1(this)" id="bot1"
+                        class="bottone-selezione bottone-blocco-mappa">
+                    <input type="button" value="In bici" onclick="onClickFiltro2(this)" id=""
+                        class="bottone-selezione bottone-blocco-mappa">
+                </div>
+                <div class="filtro-singolo-12">
+                    <input type="button" value="Tematico" onclick="onClickFiltro3(this)" id=""
+                        class="bottone-selezione bottone-blocco-mappa">
+                    <input type="button" value="Area di sosta" onclick="onClickFiltro4(this)" id=""
+                        class="bottone-selezione bottone-blocco-mappa">
+                </div>
+            </div>
+            <div class="filtro-2">
+                <div class="categoria-filtro-2 testo-categoria">lunghezza</div>
+                <div class="filtro-singolo-2">
+                    <input type="button" value="&lt; 20 km" id="" class="bottone-selezionato bottone-blocco-mappa">
+                </div>
+            </div>
+            <div class="filtro-3">
+                <div class="categoria-filtro-3 testo-categoria">dislivello</div>
+                <div class="filtro-singolo-3">
+                    <input type="button" value="&lt; 1200 m" id="" class="bottone-selezionato bottone-blocco-mappa">
+                </div>
+            </div>
+            <div class="filtro-4">
+                <div class="categoria-filtro-4 testo-categoria">difficoltà</div>
+                <div class="filtro-singolo-4">
+                    <input type="button" value="Qualsiasi" id="" class="bottone-selezionato bottone-blocco-mappa">
+                </div>
+            </div>
+        </div>
+
+        <div class="blocco-elementi">
+            <div class="elemento-singolo" onmouseover="onOverSingolo(this);" onmouseout="onOutSingolo(this)"
+                id="testa1">
+                <img class="segnaposto-img" src="content/icone/segnaposto.png" onmouseover="displaySegnaposto(this)"
+                    onmouseout="hideSegnaposto(this)" onclick="cambioMappa1();">
+                <div class="segnaposto-div">
+                    <div>Segna nella mappa</div>
+                </div>
+                <img src="content/sentieri/sentiero-1.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">N. 1 - Alta Via dei Colli Euganei</a>
+                    <br>Ardua
+                    <br>6 ore
+                </div>
+            </div>
+
+            <div class="elemento-singolo" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img class="segnaposto-img" src="content/icone/segnaposto.png" onmouseover="displaySegnaposto(this)"
+                    onmouseout="hideSegnaposto(this)" onclick="cambioMappa2();">
+                <div class="segnaposto-div">
+                    <div>Segna nella mappa</div>
+                </div>
+                <img src="content/sentieri/sentiero-2.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">N. 2 - Sentiero Naturalistico dei Colli
+                        Euganei Centrali</a>
+                    <br>Difficile
+                    <br>4 ore 30 minuti
+                </div>
+            </div>
+
+            <div class="elemento-singolo" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img class="segnaposto-img" src="content/icone/segnaposto.png" onmouseover="displaySegnaposto(this)"
+                    onmouseout="hideSegnaposto(this)" onclick="cambioMappa1();">
+                <div class="segnaposto-div">
+                    <div>Segna nella mappa</div>
+                </div>
+                <img src="content/sentieri/sentiero-3.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">N. 3 - Sentiero Atestino</a>
+                    <br>Ardua
+                    <br>5 ore 30 minuti
+                </div>
+            </div>
+            <div class="elemento-singolo" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img class="segnaposto-img" src="content/icone/segnaposto.png" onmouseover="displaySegnaposto(this)"
+                    onmouseout="hideSegnaposto(this)" onclick="cambioMappa2();">
+                <div class="segnaposto-div">
+                    <div>Segna nella mappa</div>
+                </div>
+                <img src="content/sentieri/sentiero-4.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">N. 4 - Sentiero del Monte Venda
+                        G.G.Lorenzoni</a>
+                    <br>Medio
+                    <br>2 ore
+                </div>
+            </div>
+            <div class="elemento-singolo" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img class="segnaposto-img" src="content/icone/segnaposto.png" onmouseover="displaySegnaposto(this)"
+                    onmouseout="hideSegnaposto(this)" onclick="cambioMappa1();">
+                <div class="segnaposto-div">
+                    <div>Segna nella mappa</div>
+                </div>
+                <img src="content/sentieri/sentiero-5.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">N. 5 - Sentiero del Monte Lozzo</a>
+                    <br>Medio
+                    <br>1 ora
+                </div>
+            </div>
+            <div class="elemento-singolo" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img class="segnaposto-img" src="content/icone/segnaposto.png" onmouseover="displaySegnaposto(this)"
+                    onmouseout="hideSegnaposto(this)" onclick="cambioMappa2();">
+                <div class="segnaposto-div">
+                    <div>Segna nella mappa</div>
+                </div>
+                <img src="content/sentieri/sentiero-6.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">N. 6 - Sentiero del Monte Ricco e Monte
+                        Castello</a>
+                    <br>Medio
+                    <br>2 ore
+                </div>
+            </div>
+            <div class="elemento-singolo" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img class="segnaposto-img" src="content/icone/segnaposto.png" onmouseover="displaySegnaposto(this)"
+                    onmouseout="hideSegnaposto(this)" onclick="cambioMappa1();">
+                <div class="segnaposto-div">
+                    <div>Segna nella mappa</div>
+                </div>
+                <img src="content/sentieri/sentiero-7.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">N. 7 - Sentiero del Monte Calbarina e del
+                        Monte Piccolo</a>
+                    <br>Medio
+                    <br>1 ora
+                </div>
+            </div>
+            <div class="elemento-singolo" onmouseover="onOverSingolo(this)" onmouseout="onOutSingolo(this)">
+                <img class="segnaposto-img" src="content/icone/segnaposto.png" onmouseover="displaySegnaposto(this)"
+                    onmouseout="hideSegnaposto(this)" onclick="cambioMappa2();">
+                <div class="segnaposto-div">
+                    <div>Segna nella mappa</div>
+                </div>
+                <img src="content/sentieri/sentiero-8.jpg" class="immagine-elemento-singolo">
+                <div class="descrizione-elemento">
+                    <a href="#" onclick="return false;" class="a-elemento">N. 8 - Sentiero del Monte Cecilia</a>
+                    <br>Semplice
+                    <br>1 ora e 30 minuti
+                </div>
+            </div>
+        </div>
+
+        <div class="footer" style="margin-top: 3rem;">
+            <div class="foot-1 testo-base">
+                <span class="testo-bold">
+                    © 2019
+                    <br>Parco Regionale dei Colli Euganei
+                </span>
+                <br>Amministrazione trasparente
+                <br>Responsabile protezione dati
+                <br>Privacy
+                <br>Note legali
+            </div>
+            <div class="foot-2 testo-base">
+                Via Rana Ca’ Mori, 8
+                <br>35042 Este (PD)
+                <br>Tel: 0429/632911
+                <br>Fax: 0429/601368
+                <br>e-mail: info@parcocollieuganei.com
+                <br>pec: info@pec.parcocollieuganei.com
+            </div>
+            <div class="foot-3">
+                <div class="blocco-icone">
+                    <a href="https://www.facebook.com/parcodeicollieuganei/">
+                        <img src="content/icone-social/icona-social_facebook.png" class="icona-social">
+                    </a>
+                    <a href="https://twitter.com/parcocolli">
+                        <img src="content/icone-social/icona-social_twitter.png" class="icona-social">
+                    </a>
+                    <a href="mailto:info@parcocollieuganei.com">
+                        <img src="content/icone-social/icona-social_mail.png" class="icona-social" onclick="">
+                    </a>
+                    <a href="#" onclick="return false;">
+                        <img src="content/icone-social/icona-social_linkedin.png" class="icona-social">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="lightbox">
+    </div>
+    <div id="lightbox_div">
+        <div class="lightbox_container">
+            <div class="breadcrumbs">
+                Home
+                <span class="implica"> >> </span>Sentieri
+                <span class="implica"> >> </span>N. 4 - Sentiero del Monte Venda G.G.Lorenzoni
+            </div>
+            <div class="titolo" style="padding-bottom: 1.5rem;">
+                N. 4 - Sentiero del Monte Venda G.G.Lorenzoni
+            </div>
+            <div class="testo-categoria contatti-categoria">
+                partenza
+            </div>
+            <div>
+                Loc. Sottovenda - Galzignano Terme
+            </div>
+            <div class="testo-categoria contatti-categoria">
+                arrivo
+            </div>
+            <div>
+                Galzignano Terme
+            </div>
+            <div class="testo-categoria contatti-categoria">
+                durata
+            </div>
+            <div>
+                2 ore
+            </div>
+            <div class="testo-categoria contatti-categoria">
+                difficoltà
+            </div>
+            <div>
+                Media
+            </div>
+            <div class="testo-categoria contatti-categoria">
+                lunghezza
+            </div>
+            <div>
+                6 km
+            </div>
+            <div class="testo-categoria contatti-categoria">
+                dislivello
+            </div>
+            <div>
+                250m
+            </div>
+            <div class="testo-categoria contatti-categoria">
+                numero sentiero segnato
+            </div>
+            <div>
+                4
+            </div>
+            <div class="sottotitolo" style="padding-top: 1.5rem; padding-bottom: 0.5rem;">
+                Il Percorso
+            </div>
+            <div>
+                <p class="testo_box">La partenza del sentiero, presso Casa Marina in località Sottovenda. Dopo un tratto
+                    di strada bianca, una
+                    rapida salita sulla destra conduce all'antica Fontana Olivato, oltre la quale il sentiero gira sotto
+                    un grande carpino nero, sale su un ripiano ed entra in un castagneto luminoso con roverella,
+                    orniello,
+                    carpino nero e dal sottobosco ricco di fioriture primaverili di varie specie.</p>
+                <p class="testo_box">Proseguendo si incontra una piazzola di una vecchia carbonaia. Dopo un rettilineo
+                    si giunge ad una sporgenza
+                    rocciosa dove, grazie alla maggiore esposizione solare, troviamo specie di macchia mediterranea,
+                    come
+                    cisto a foglie di salvia, dittamo e asparago pungente. Segue una rientranza e una nuova sporgenza
+                    rocciosa.
+                    Da qui la stradina si abbassa fino a un gruppo di ontani neri, caratteristici di zone umide. In
+                    questa
+                    zona vi era una carbonaia: il carbonile dea busa dei onari.</p>
+                <div style="padding-top: 0.5rem;">
+                    <img src="content/sentieri/fasolo.jpg" class="immagine_box">
+                </div>
+                <div class="didascalia" style="margin-bottom: 0.5rem;">
+                    Vista dal monte Fasolo
+                </div>
+                <p class="testo_box">Il sentiero prosegue leggermente in salita; supera un dosso e si allarga poi in una
+                    piazzola sostenuta da
+                    massi trachitici, anticipata da un grande acero montano. Poco dopo inizia una breve salita sassosa.
+                    Si
+                    nota in alto una massiccia roccia: è la Pria de Scanavaca, nel cui vallone sottostante hanno le loro
+                    tane tassi, volpi e faine. Il castagneto termina presso un piccolo scoglio di breccia riolitica
+                    lasciando
+                    il posto a una boscaglia di robinia e sambuco. Si svolta a sinistra nel fresco e umido versante
+                    settentrionale.</p>
+                <p class="testo_box">Proseguendo, il sottobosco diventa più ricco e vivace e, dopo aver superato un
+                    bivio che scende a destra
+                    verso il Roccolo, al culmine del poggio si svolta a sinistra. Inizia un breve e impegnativo tratto
+                    in
+                    salita, fino alla deviazione per i ruderi del Monastero degli Olivetani; si prosegue quindi in
+                    discesa.
+                    Oltrepassate due panche si continua in discesa e, dopo un tratto di sentiero lastricato in pietra,
+                    si
+                    sbuca sulla strada militare che sale alla dismessa base aeronautica di Castelnuovo. Si segue per un
+                    tratto
+                    la strada asfaltata fino al primo tornante, la si abbandona proseguendo a destra lungo la stradina
+                    che
+                    porta a Casa Brombolina. Dopo la curva si segue la deviazione che scende in un avvallamento e risale
+                    poi in un bosco di robinia, riprendendo il tracciato originario. Seguendo il perimetro della base
+                    militare,
+                    si raggiunge la sommità di un crinale con percorso a saliscendi e, attraversata una valletta umida,
+                    si
+                    punta in salita. All'incrocio si prende a sinistra in salita; si giunge sul ripiano sassoso del
+                    carbonile
+                    del corno per uscire sullo spigolo luminoso del Corno del Venda. Si passa al versante sud, ricco di
+                    essenze
+                    mediterranee. Il tracciato riprende prima in salita e poi tagliando in piano il versante, con
+                    percorso
+                    panoramico. Si entra in un bosco misto e si affianca nuovamente la recinzione dell'ex base militare;
+                    si scende fino a incrociare un tracciato più ampio che risale lo spallone a sud-est proveniente
+                    dalle
+                    Fontane. Il tracciato ora scende lungo la tagliata dell'elettrodotto, percorre tre tornanti in
+                    rapida
+                    successione e incrocia la deviazione che sale ai ruderi del monastero. Qui imbocca il sentiero a
+                    gradini
+                    di pali di castagno che scende fino a riprendere il tratto iniziale del sentiero.</p>
+
+            </div>
+        </div>
+    </div>
+    <!-- 
+    <p style="font-family: EBGaramond">ciaone</p>
+    <p style="font-family: OfSerif">serif bold</p>
+    <p style="font-family: OfSans">sans book</p>
+    <p style="font-family: OfSans; font-style:italic;">sans book italic</p>
+    <p style="font-family: OfSans; font-weight:500;">sans medium</p>
+    <p style="font-family: OfSans; font-weight:700;">sans bold</p>
+    ol up a minute 
+    -->
+
+    <!-- FUNZIONA CON DIV ID=MAP -->
+    <!-- <script>
+            // Initialize and add the map
+            function initMap() {
+                // The location of Uluru
+                var uluru = { lat: 45.295, lng: 11.707 };
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                    document.getElementById('map'), { zoom: 12, center: uluru });
+                // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({ position: uluru, map: map });
+            }
+        </script> -->
+
+
+    <!-- 
+        // function myMap() {
+        // var mapProp= {
+        //     center:new google.maps.LatLng(23.792750,90.407606),
+        //     zoom:5,
+        // };
+        // var map=new google.maps.Map(document.getElementById("gMap"),mapProp);
+        // } 
+
+        45°17'42.4"N 11°42'28.0"E
+    -->
+
+    <!-- FUNZIONA CON DIV ID=MAP -->
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_0g9_tsIwRKtntxCcIuR5nY9aDdneVF8&callback=initMap"></script> -->
+
+    <script src="script/bottoni-mappa.js"></script>
+    <!-- <script src="script/cambio-header.js"></script> -->
+    <script src="script/header-dropdown.js"></script>
+    <script src="script/burger-menu.js"></script>
+    <script src="script/navigazione-laterale-dropdown.js"></script>
+    <script src="script/elementi-griglia.js"></script>
+
+</body>
+
+</html>

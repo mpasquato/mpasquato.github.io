@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="script/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" href="framework/bootstrap.min.css">
+    <script src="framework/bootstrap.min.js"></script>
+
+    <script src="framework/popper.min.js"></script>
+    <link rel="stylesheet" href="framework/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="stylesheet/font.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/general-layout.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/flora/flora-very-large.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/flora/flora-large.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/flora/flora-medium.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/flora/flora-small.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/flora/flora-extra-small.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/header.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/navigazione-laterale.css">
+
+    <script src="script/correzione-altezza-elemento.js"></script>
+
+
+    <!-- <link rel="stylesheet" href="stylesheet/bootstrap.css">
+    <script src="script/bootstrap.js"></script> -->
+
+    <!-- API Key: AIzaSyD_0g9_tsIwRKtntxCcIuR5nY9aDdneVF8 -->
+
+    <title>
+        Flora - Parco Regionale dei Colli Euganei
+    </title>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <div style="display:flex; align-items:center; padding: 32px 32px 32px 32px;">
+            <div style="flex: 9; text-align:center; display:none;" id="nav-bandiere">
+                <div class="centriamo-tutto">
+                    <img src="content/flag-it.png" style="height: 20px;"> Italiano&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="content/flag-uk.png" style="height: 20px;"> English
+                </div>
+            </div>
+            <div style="flex: 1;">
+                <img src="content/croce.png" class="closebtn" onclick="closeNav()" id="bottone-chiudi"
+                    style="display: none; height: 45px; position:fixed; top: 25px; right: 20px;">
+            </div>
+        </div>
+        <div class="nav-blocco-sezioni" id="nav-sezioni" style="display: none;">
+            <div class="nav-sezione">
+                <div onclick="mostraNatura()" id="nav-natura">Natura e Storia
+                    <span style="padding: 0 0 0 43px;">
+                        <img style="height: 2rem;" id="freccia-natura" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-natura-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="geologia.html">Genesi, geologia e termalismo</a>
+                <a href="fauna.html">Fauna e parco natura 2000</a>
+                <a href="flora.html">Flora</a>
+                <a href="storia-arte-cultura.html">Storia, arte e cultura</a>
+            </div>
+
+            <div class="nav-sezione">
+                <div onclick="mostraTerritorio()" id="nav-territorio">Vivi il Territorio
+                    <span style="padding: 0 0 0 39px;">
+                        <img style="height: 2rem;" id="freccia-territorio" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-territorio-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="mangiare.html">Dove e cosa mangiare</a>
+                <a href="dormire.html">Dove dormire</a>
+                <a href="sentieri.html">Sentieri</a>
+                <a href="#" onclick="return false;">Punti di interesse e musei</a>
+                <a href="#" onclick="return false;">Attività e visite guidate</a>
+                <a href="#" onclick="return false;">Mappe</a>
+                <a href="#" onclick="return false;">Notizie</a>
+            </div>
+            <div class="nav-sezione">
+                <div onclick="mostraEnte()" id="nav-ente">Ente parco
+                    <span style="padding: 0 0 0 84px;">
+                        <img style="height: 2rem;" id="freccia-ente" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-ente-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="parco.html">Il parco</a>
+                <a href="#" onclick="return false;">Amministrazione</a>
+                <a href="progetti.html">Progetti</a>
+                <a href="guardie.html">Guardie ecologiche volontarie</a>
+                <a href="link.html">Link</a>
+            </div>
+            <div class="nav-sezione">
+                <div id="nav-contatti">Contatti</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-grid">
+        <div class="header">
+            <div class="blocco-logo">
+                <img src="content/logo-piccolo-web-positivo.jpg" class="logo-header" id="logo" alt="logo">
+            </div>
+            <div id="natura" class="blocco-sezione" style="margin-left: auto;">
+                <div class="centra-vert">
+                    Natura
+                    <br>e Storia
+                </div>
+                <div id="natura-dropdown" class="blocco-dropdown">
+                    <a href="geologia.html" class="link-singolo">Genesi, geologia e termalismo</a>
+                    <a href="fauna.html" class="link-singolo">Fauna e parco natura 2000</a>
+                    <a href="flora.html" class="link-singolo">Flora</a>
+                    <a href="storia-arte-cultura.html" class="link-singolo">Storia, arte e cultura</a>
+                </div>
+            </div>
+            <div id="territorio" class="blocco-sezione">
+                <div class="centra-vert">
+                    Vivi il
+                    <br>Territorio
+                </div>
+                <div id="territorio-dropdown" class="blocco-dropdown">
+                    <a href="mangiare.html" class="link-singolo">Dove e cosa mangiare</a>
+                    <a href="dormire.html" class="link-singolo">Dove dormire</a>
+                    <a href="sentieri.html" class="link-singolo">Sentieri</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Punti di interesse e musei</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Attività e visite guidate</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Mappe</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Notizie</a>
+                </div>
+            </div>
+            <div id="ente" class="blocco-sezione">
+                <div class="centra-vert">
+                    Ente
+                    <br>Parco
+                </div>
+                <div id="ente-dropdown" class="blocco-dropdown">
+                    <a href="parco.html" class="link-singolo">Il parco</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Amministrazione</a>
+                    <a href="progetti.html" class="link-singolo">Progetti</a>
+                    <a href="guardie.html" class="link-singolo">Guardie ecologiche volontarie</a>
+                    <a href="link.html" class="link-singolo">Link</a>
+                </div>
+            </div>
+            <div class="blocco-sezione">
+                <div class="centra-vert" onclick="window.location = 'contatti.html'">
+                    Contatti
+                </div>
+            </div>
+            <div class="blocco-lingue">
+                <img src="content/flag-it.png" class="bandiere-header"> Italiano
+                <br>
+                <img src="content/flag-uk.png" class="bandiere-header"> English
+                <!-- <br>
+                                <img src="content/flag-ger.png" class="bandiere-header"> tedesco -->
+            </div>
+        </div>
+
+        <div class="header-mobile">
+            <div class="blocco-logo-mobile">
+                <img src="content/logo-piccolo-web-positivo.jpg" class="logo-header-mobile" id="logo-mobile" alt="logo">
+            </div>
+            <div class="blocco-burger">
+                <img style="height: 38px; cursor:pointer;" onclick="openNav()" src="content/burger.png">
+            </div>
+
+        </div>
+
+        <div class="titolazione">
+            <div class="breadcrumbs">
+                Home
+                <span class="implica"> >> </span>Natura e Storia
+                <span class="implica">>></span> Flora
+            </div>
+            <div class="titolo">
+                Flora
+            </div>
+        </div>
+
+        <div class="introduzione">
+            <div>
+                Nei Colli Euganei è presente un numero sorprendente di specie vegetali.
+                <br> L'origine geologica dei terreni, la morfologia dei rilievi, responsabile di microclimi e biotopi contrastanti,
+                l'isolamento da altri gruppi montuosi e le alterne vicende climatiche legate ai cicli glaciali, sono i principali
+                artefici della grande diversificazione della flora euganea. Qui vivono, a stretto contatto, specie adattate
+                al caldo e altre di carattere montano: percorrendo un giro attorno a uno dei tanti coni vulcanici, si osserva
+                come, al variare dell'esposizione, vivano a stretto contatto vegetazioni d'ambiente caldo arido (termofile)
+                accanto ad altre a carattere montano (microtermiche) o submontano.
+            </div>
+        </div>
+
+        <div class="blocco-testo-1" id="fauna-1">
+            <div class="sottotitolo">
+                <span style="padding-right: 0.5rem; line-height:1.6em;">La pseudomacchia</span>&#8203;<span style="white-space:nowrap;">mediterranea
+                    <img style="height: 1.7rem;" id="freccia-1" class="freccia" src="content/freccia-pagine.png">
+                </span>
+            </div>
+        </div>
+        <div class="blocco-scomparsa-1" id="fauna-dropdown-1" style="display:none;">
+            <div class="scomparsa-testo-1">
+                Affine alla classica macchia mediterranea, caratterizza il distretto euganeo, ed è costituita da una vegetazione quasi impenetrabile
+                di piante a basso fusto per lo più sempreverdi quali leccio, corbezzolo, erica arborea, cisto, terebinto,
+                ginestra ed asparago pungente. Distribuita a macchia di leopardo, si sviluppa su terreni vulcanici rupestri,
+                esposti a sud, assolati ed aridi. In alcune aree rupestri, presso il Monte Ceva di Battaglia, la Rocca di
+                Monselice e l'Oratorio di S. Antonio abate sul Monte Madonna, troviamo il fico d'india nano (Opuntia humifusa),
+                vero e proprio cactus in miniatura, originario degli altipiani rocciosi dell'America centrale.
+            </div>
+            <div class="scomparsa-immagine-1">
+                <img src="content/flora/pseudomacchia.jpg" class="immagine-descrittiva">
+            </div>
+            <div class="scomparsa-didascalia-1 didascalia">
+                Flora pseudomacchia- Opuntia humifusa (foto di PR Colli Euganei)
+            </div>
+        </div>
+
+        <div class="blocco-testo-2" id="fauna-2">
+            <div class="sottotitolo">
+                <span style="padding-right: 0.5rem;">Il bosco di castagno</span>
+                <img style="height: 1.7rem;" id="freccia-2" class="freccia" src="content/freccia-pagine.png">
+            </div>
+        </div>
+        <div class="blocco-scomparsa-2" id="fauna-dropdown-2" style="display:none;">
+            <div class="scomparsa-testo-2">
+                Si sviluppa nei versanti vulcanici rivolti preferibilmente a nord, su terreno siliceo, fresco e profondo. Il sottobosco,
+                normalmente ricco di humus e relativamente umido, presenta numerose specie erbacee a fioritura precoce quali:
+                bucaneve, dente di cane, elleboro, anemone fegatella, aglio orsino, sigillo di Salomone, narciso, mirtillo
+                nero, o i rari e preziosi gigli martagone e di S. Giovanni; incantevoli tracce di flora alpina, quasi impensabili
+                in un ambiente collinare così profondamente condizionato dalla millenaria presenza dell'uomo. Sono presenti,
+                piuttosto localizzati, maggiociondolo, fior d'arancio, sorbo montano faggio e qualche betulla.
+            </div>
+            <div class="scomparsa-immagine-2">
+                <img src="content/flora/castagneto.jpg" class="immagine-descrittiva">
+            </div>
+            <div class="scomparsa-didascalia-2 didascalia">
+                Castagneto (foto di PR Colli Euganei)
+            </div>
+        </div>
+
+        <div class="blocco-testo-3" id="fauna-3">
+            <div class="sottotitolo">
+                <span style="padding-right: 0.5rem;">Il bosco di quercia</span>
+                <img style="height: 1.7rem;" id="freccia-3" class="freccia" src="content/freccia-pagine.png">
+            </div>
+        </div>
+        <div class="blocco-scomparsa-3" id="fauna-dropdown-3" style="display:none;">
+            <div class="scomparsa-testo-3">
+                Occupa parte dei versanti esposti a mezzogiorno, su terreno poco profondo e asciutto, ben riscaldato povero o degradato,
+                di preferenza calcareo, pur non mancando nei distretti silicei. Il querceto, di aspetto aperto e luminoso,
+                presenta frequenti radure vivacizzate da una varia mescolanza di specie erbacee d'ambiente arido. Si presenta
+                come una boscaglia mista; alla roverella dominante si affiancano: carpino nero, orniello, albero di Giuda,
+                bagolaro, ciavardello e, tra i cespugli, lo scotano le cui foglie in autunno accendono i colli di infinite
+                sfumature. Nel sottobosco, abbastanza soffice e ricco di humus compaiono: pungitopo, biancospino, ginepro,
+                ligustro, erica, madresilva. Meno esteso del castagneto attualmente il bosco di querce termofile occupa le
+                zone meno frequentate e più intatte dal punto di vista naturalistico.
+            </div>
+            <div class="scomparsa-immagine-3">
+                <img src="content/flora/quercia.jpg" class="immagine-descrittiva">
+            </div>
+            <div class="scomparsa-didascalia-3 didascalia">
+                Quercia roverella (foto di PR Colli Euganei)
+            </div>
+        </div>
+
+        <div class="blocco-testo-4" id="fauna-4">
+            <div class="sottotitolo">
+                <span style="padding-right: 0.5rem;">I prati aridi (vegri)</span>
+                <img style="height: 1.7rem;" id="freccia-4" class="freccia" src="content/freccia-pagine.png">
+            </div>
+        </div>
+        <div class="blocco-scomparsa-4" id="fauna-dropdown-4" style="display:none;">
+            <div class="scomparsa-testo-4">
+                <p>Presenti soprattutto nella zona meridionale dei Colli, su gran parte delle ondulazioni calcaree, tra Arquà
+                    Petrarca,Valle S. Giorgio e Baone, questi prati derivano dall'abbandono di coltivi e pascoli poco produttivi,
+                    e vengono chiamati "vegri". In continua evoluzione verso la ricostituzione della boscaglia originaria,
+                    sono costituiti da specie erbacee amanti del secco, soprattutto graminacee, composite spinose e leguminose,
+                    mentre le aree abbandonate da più tempo e talvolta con un terreno molto arido, ospitano sparsi cespugli
+                    dal carattere rustico e pioniero, come biancospino, pruno spinoso, rosa canina, ginepro, viburno, ginestra,
+                    che preparano il terreno all'arrivo di roverella, carpino nero e orniello.</p>
+                <p> Poche e preziose sono le stazioni di Ruta patavina (Haplophyllum patavinum), la specie più importante del
+                    patrimonio floristico euganeo; oltre venti sono le specie di orchidee spontanee dalle forme suggestive
+                    e bizzarre, tra cui l'orchidea farfalla, la vesparia, la maggiore, la scimmia, il barbone, la manina
+                    rosa e il fior di legna.</p>
+            </div>
+            <div class="scomparsa-immagine-4">
+                <img src="content/flora/ruta.jpg" class="immagine-descrittiva">
+            </div>
+            <div class="scomparsa-didascalia-4 didascalia">
+                Ruta padovana (Haplophyllum patavinum L. G. Don fil.) (foto di PR Colli Euganei)
+            </div>
+        </div>
+
+        <div class="blocco-testo-5" id="fauna-5">
+            <div class="sottotitolo">
+                <span style="padding-right: 0.5rem;">Boscaglia di Robinia</span>
+                <img style="height: 1.7rem;" id="freccia-5" class="freccia" src="content/freccia-pagine.png">
+            </div>
+        </div>
+        <div class="blocco-scomparsa-5" id="fauna-dropdown-5" style="display:none;">
+            <div class="scomparsa-testo-5">
+                La robinia è pianta estranea alla flora europea; originaria della costa orientale del nord America, importata agli inizi
+                del '600 come specie ornamentale. La sua rapida diffusione le ha permesso di conquistare un'ampia parte di
+                territorio a scapito dei boschi originali. Una delle cause di questo è l'eccessivo sfruttamento del territorio
+                e l'abbandono dei terreni coltivati, nei quali la robinia si è insediata con la velocità delle infestanti,
+                formando in breve tempo boscaglie piuttosto monotone, con pochissime altre piante arboree e cespugli, tra
+                i quali sambuco e altre specie che tipicamente segnano il degrado, come rovi e vitalba. Il sottobosco, altrettanto
+                povero, vede la crescita di aglio orsino, anemone bianca, viola, lampascione, gigaro ed elleboro.
+            </div>
+            <div class="scomparsa-immagine-5">
+                <img src="content/flora/robinia.jpg" class="immagine-descrittiva">
+            </div>
+            <div class="scomparsa-didascalia-5 didascalia">
+                Boscaglia di robinia (foto di PR Colli Euganei)
+            </div>
+        </div>
+
+        <div class="footer" style="margin-top:3rem;">
+            <div class="foot-1 testo-base">
+                <span class="testo-bold">
+                    © 2019
+                    <br>Parco Regionale dei Colli Euganei
+                </span>
+                <br>Amministrazione trasparente
+                <br>Responsabile protezione dati
+                <br>Privacy
+                <br>Note legali
+            </div>
+            <div class="foot-2 testo-base">
+                Via Rana Ca’ Mori, 8
+                <br>35042 Este (PD)
+                <br>Tel: 0429/632911
+                <br>Fax: 0429/601368
+                <br>e-mail: info@parcocollieuganei.com
+                <br>pec: info@pec.parcocollieuganei.com
+            </div>
+            <div class="foot-3">
+                <div class="blocco-icone">
+                    <a href="https://www.facebook.com/parcodeicollieuganei/">
+                        <img src="content/icone-social/icona-social_facebook.png" class="icona-social">
+                    </a>
+                    <a href="https://twitter.com/parcocolli">
+                        <img src="content/icone-social/icona-social_twitter.png" class="icona-social">
+                    </a>
+                    <a href="mailto:info@parcocollieuganei.com">
+                        <img src="content/icone-social/icona-social_mail.png" class="icona-social" onclick="">
+                    </a>
+                    <a href="#" onclick="return false;">
+                        <img src="content/icone-social/icona-social_linkedin.png" class="icona-social">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    <p style="font-family: EBGaramond">ciaone</p>
+    <p style="font-family: OfSerif">serif bold</p>
+    <p style="font-family: OfSans">sans book</p>
+    <p style="font-family: OfSans; font-style:italic;">sans book italic</p>
+    <p style="font-family: OfSans; font-weight:500;">sans medium</p>
+    <p style="font-family: OfSans; font-weight:700;">sans bold</p>
+    ol up a minute 
+    -->
+
+    <!-- FUNZIONA CON DIV ID=MAP -->
+    <!-- <script>
+            // Initialize and add the map
+            function initMap() {
+                // The location of Uluru
+                var uluru = { lat: 45.295, lng: 11.707 };
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                    document.getElementById('map'), { zoom: 12, center: uluru });
+                // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({ position: uluru, map: map });
+            }
+        </script> -->
+
+
+    <!-- 
+        // function myMap() {
+        // var mapProp= {
+        //     center:new google.maps.LatLng(23.792750,90.407606),
+        //     zoom:5,
+        // };
+        // var map=new google.maps.Map(document.getElementById("gMap"),mapProp);
+        // } 
+
+        45°17'42.4"N 11°42'28.0"E
+    -->
+
+    <!-- FUNZIONA CON DIV ID=MAP -->
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_0g9_tsIwRKtntxCcIuR5nY9aDdneVF8&callback=initMap"></script> -->
+
+    <script src="script/bottoni-mappa.js"></script>
+    <!-- <script src="script/cambio-header.js"></script> -->
+    <script src="script/header-dropdown.js"></script>
+    <script src="script/burger-menu.js"></script>
+    <script src="script/navigazione-laterale-dropdown.js"></script>
+    <script src="script/fauna-dropdown.js"></script>
+
+</body>
+
+</html>

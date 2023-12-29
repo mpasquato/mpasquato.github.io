@@ -1,0 +1,68 @@
+/*
+    FONT-WEIGHT VALUES
+    100
+    200
+    300
+    normal (standard): 400
+    500
+    600
+    bold: 700
+    800
+    900
+    
+    FONT-STYLE VALUES
+    normal
+    italic
+    oblique
+    initial
+    inherit
+*/
+
+@font-face {
+    font-family: 'EBGaramond';
+    src: url('../font/EBGaramond-BoldItalic.ttf');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OfSans';
+    src: url('../font/OfficinaSanITC-Book.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OfSans';
+    src: url('../font/OfficinaSanITC-BookItal.otf');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OfSans';
+    src: url('../font/OfficinaSanITC-Medium.otf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OfSans';
+    src: url('../font/OfficinaSanITC-Bold.otf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OfSerif';
+    src: url('../font/OfficinaSerITC-Book.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OfSerif';
+    src: url('../font/OfficinaSerITC-Bold.otf');
+    font-weight: 700;
+    font-style: normal;
+}

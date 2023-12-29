@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="script/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" href="framework/bootstrap.min.css">
+    <script src="framework/bootstrap.min.js"></script>
+
+    <script src="framework/popper.min.js"></script>
+    <link rel="stylesheet" href="framework/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="stylesheet/font.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/general-layout.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/geologia/geologia-very-large.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/geologia/geologia-large.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/geologia/geologia-medium.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/geologia/geologia-small.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/geologia/geologia-extra-small.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/header.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/navigazione-laterale.css">
+
+    <script src="script/correzione-altezza-elemento.js"></script>
+
+
+    <!-- <link rel="stylesheet" href="stylesheet/bootstrap.css">
+    <script src="script/bootstrap.js"></script> -->
+
+    <!-- API Key: AIzaSyD_0g9_tsIwRKtntxCcIuR5nY9aDdneVF8 -->
+
+    <title>
+        Genesi, Geologia e Termalismo - Parco Regionale dei Colli Euganei
+    </title>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <div style="display:flex; align-items:center; padding: 32px 32px 32px 32px;">
+            <div style="flex: 9; text-align:center; display:none;" id="nav-bandiere">
+                <div class="centriamo-tutto">
+                    <img src="content/flag-it.png" style="height: 20px;"> Italiano&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="content/flag-uk.png" style="height: 20px;"> English
+                </div>
+            </div>
+            <div style="flex: 1;">
+                <img src="content/croce.png" class="closebtn" onclick="closeNav()" id="bottone-chiudi"
+                    style="display: none; height: 45px; position:fixed; top: 25px; right: 20px;">
+            </div>
+        </div>
+        <div class="nav-blocco-sezioni" id="nav-sezioni" style="display: none;">
+            <div class="nav-sezione">
+                <div onclick="mostraNatura()" id="nav-natura">Natura e Storia
+                    <span style="padding: 0 0 0 43px;">
+                        <img style="height: 2rem;" id="freccia-natura" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-natura-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="geologia.html">Genesi, geologia e termalismo</a>
+                <a href="fauna.html">Fauna e parco natura 2000</a>
+                <a href="flora.html">Flora</a>
+                <a href="storia-arte-cultura.html">Storia, arte e cultura</a>
+            </div>
+
+            <div class="nav-sezione">
+                <div onclick="mostraTerritorio()" id="nav-territorio">Vivi il Territorio
+                    <span style="padding: 0 0 0 39px;">
+                        <img style="height: 2rem;" id="freccia-territorio" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-territorio-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="mangiare.html">Dove e cosa mangiare</a>
+                <a href="dormire.html">Dove dormire</a>
+                <a href="sentieri.html">Sentieri</a>
+                <a href="#" onclick="return false;">Punti di interesse e musei</a>
+                <a href="#" onclick="return false;">Attività e visite guidate</a>
+                <a href="#" onclick="return false;">Mappe</a>
+                <a href="#" onclick="return false;">Notizie</a>
+            </div>
+            <div class="nav-sezione">
+                <div onclick="mostraEnte()" id="nav-ente">Ente parco
+                    <span style="padding: 0 0 0 84px;">
+                        <img style="height: 2rem;" id="freccia-ente" src="content/freccia.png">
+                    </span>
+                </div>
+            </div>
+            <div id="nav-ente-dropdown" class="nav-dropdown" style="display:none;">
+                <a href="parco.html">Il parco</a>
+                <a href="#" onclick="return false;">Amministrazione</a>
+                <a href="progetti.html">Progetti</a>
+                <a href="guardie.html">Guardie ecologiche volontarie</a>
+                <a href="link.html">Link</a>
+            </div>
+            <div class="nav-sezione">
+                <div id="nav-contatti">Contatti</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-grid">
+        <div class="header">
+            <div class="blocco-logo">
+                <img src="content/logo-piccolo-web-positivo.jpg" class="logo-header" id="logo" alt="logo">
+            </div>
+            <div id="natura" class="blocco-sezione" style="margin-left: auto;">
+                <div class="centra-vert">
+                    Natura
+                    <br>e Storia
+                </div>
+                <div id="natura-dropdown" class="blocco-dropdown">
+                    <a href="geologia.html" class="link-singolo">Genesi, geologia e termalismo</a>
+                    <a href="fauna.html" class="link-singolo">Fauna e parco natura 2000</a>
+                    <a href="flora.html" class="link-singolo">Flora</a>
+                    <a href="storia-arte-cultura.html" class="link-singolo">Storia, arte e cultura</a>
+                </div>
+            </div>
+            <div id="territorio" class="blocco-sezione">
+                <div class="centra-vert">
+                    Vivi il
+                    <br>Territorio
+                </div>
+                <div id="territorio-dropdown" class="blocco-dropdown">
+                    <a href="mangiare.html" class="link-singolo">Dove e cosa mangiare</a>
+                    <a href="dormire.html" class="link-singolo">Dove dormire</a>
+                    <a href="sentieri.html" class="link-singolo">Sentieri</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Punti di interesse e musei</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Attività e visite guidate</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Mappe</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Notizie</a>
+                </div>
+            </div>
+            <div id="ente" class="blocco-sezione">
+                <div class="centra-vert">
+                    Ente
+                    <br>Parco
+                </div>
+                <div id="ente-dropdown" class="blocco-dropdown">
+                    <a href="parco.html" class="link-singolo">Il parco</a>
+                    <a href="#" onclick="return false;" class="link-singolo">Amministrazione</a>
+                    <a href="progetti.html" class="link-singolo">Progetti</a>
+                    <a href="guardie.html" class="link-singolo">Guardie ecologiche volontarie</a>
+                    <a href="link.html" class="link-singolo">Link</a>
+                </div>
+            </div>
+            <div class="blocco-sezione">
+                <div class="centra-vert" onclick="window.location = 'contatti.html'">
+                    Contatti
+                </div>
+            </div>
+            <div class="blocco-lingue">
+                <img src="content/flag-it.png" class="bandiere-header"> Italiano
+                <br>
+                <img src="content/flag-uk.png" class="bandiere-header"> English
+                <!-- <br>
+                                <img src="content/flag-ger.png" class="bandiere-header"> tedesco -->
+            </div>
+        </div>
+
+        <div class="header-mobile">
+            <div class="blocco-logo-mobile">
+                <img src="content/logo-piccolo-web-positivo.jpg" class="logo-header-mobile" id="logo-mobile" alt="logo">
+            </div>
+            <div class="blocco-burger">
+                <img style="height: 38px; cursor:pointer;" onclick="openNav()" src="content/burger.png">
+            </div>
+
+        </div>
+
+        <div class="titolazione">
+            <div class="breadcrumbs">
+                    Home<span class="implica"> >> </span>Natura e Storia
+                <span class="implica">>></span> Genesi, Geologia e Termalismo
+            </div>
+            <div class="titolo">
+                Genesi, Geologia e Termalismo
+            </div>
+        </div>
+
+        <div class="introduzione">
+            <div>
+                I Colli Euganei hanno origine da due fenomeni naturali fondamentali: la sedimentazione e le emissioni vulcaniche. Queste
+                ultime sono quelle che oggi permettono di sfruttare il calore per le acque termali.
+            </div>
+        </div>
+
+        <div class="blocco-testo-1">
+            <div class="sottotitolo">
+                Le rocce sedimentarie
+            </div>
+            <div>
+                Le rocce che si rinvengono nel territorio euganeo partono da circa 160 milioni di anni fa con il Rosso Ammonitico, un sedimento
+                calcareo depositatosi su fondali marini profondi. Qui nuotavano le famose ammoniti (estinte, ma simili a
+                cefalopodi attuali come il Nautilus e parenti alla lontana delle seppie). Alla fine del Giurassico si deposita
+                un fine calcare bianco, la Maiolica (nota nel nord-est come Biancone), con lenti di selce nera, molto stratificato.
+                Successivamente viene sostituito da un calcare a grana fine, grigiastro, definito come Scaglia Variegata
+                Alpina. Sono tutti fanghi calcarei marini di mare profondo che si depositeranno fino a 100 milioni di anni
+                fa. Successivamente, e per tutto il Cretaceo superiore (quindi da circa 100 Ma fino a 65 Ma), si depositerà
+                la Scaglia Rossa, la roccia sedimentaria più diffusa e nota nel territorio dei Colli Euganei. La serie si
+                chiude con le Marne euganee, rocce di tipo calcareo argillose (poco più di 30 milioni di anni).
+            </div>
+        </div>
+
+        <div class="blocco-immagine-1">
+            <div class="immagine-griglia">
+                <img src="content/geologia/roccia-sedimentaria.jpg" class="immagine-descrittiva">
+            </div>
+            <div class="didascalia">
+                Roccia sedimentaria - scaglia rossa
+                <br> (foto di PR Colli Euganei)
+            </div>
+        </div>
+
+        <div class="blocco-testo-2">
+            <div class="sottotitolo">
+                Le rocce vulcaniche
+            </div>
+            <div>
+                <div class="sottosezione">
+                    <div class="testo-bold">Il primo evento eruttivo: lave basaltiche</div>
+                    Nel Paleogene un evento vulcanico produce della lava basaltica (il basalto è una roccia effusiva, cioè si raffredda in superficie,
+                    povera in silice e ricca in minerali ricchi di MgO e CaO); essa è fluida e si espande in colate sottomarine
+                    mescolandosi ai sedimenti marini. Ci sono grandi quantità di prodotti d'esplosione fatti di ceneri, lapilli,
+                    prodotti vetrosi. Nel complesso si producono lave ricche di ferro e magnesio, simili a quelle delle Hawaii.
+                    Tutto questo 43 milioni di anni fa circa (Eocene superiore). Resta coinvolta nell'evento la parte centrale
+                    dei Colli.
+                </div>
+
+                <div class="sottosezione">
+                    <div class="testo-bold">Il secondo evento eruttivo: magmi acidi</div>
+                    Un secondo ciclo eruttivo inizia dopo qualche milione d'anni con diversa modalità: magmi acidi e viscosi diventeranno rocce
+                    come rioliti, trachiti e latiti, messe in posto prevalentemente nel sottosuolo. Il ciclo termina con
+                    altre lave basaltiche, simili per tipo ma molto inferiori per quantità, a quelle del primo ciclo eruttivo.
+                    Siamo nell'Oligocene (30-35 Ma). Dalle lave riolitiche a quelle latitiche diminuisce il contenuto in
+                    silice e le rocce che si formano sono via via più scure e ricche in ferro e magnesio. Le intrusioni magmatiche
+                    hanno sollevato e modificato il fondale marino. Ecco le forme dei Colli Euganei:
+                    <ul>
+                        <li>duomo o cupola di ristagno: la lava ha alzato la copertura, fuoriuscendo in superficie e ristagnando
+                            sopra la fessura di emissione;</li>
+                        <li>laccolite classico: il magma si è intruso lungo piani di stratificazione sollevando a cupola il tetto;</li>
+                        <li>laccolite di eruzione: come prima, solo che in questo caso la spinta del magma ha lacerato le formazioni
+                            rocciose di copertura ed è fuoriuscito in superficie;</li>
+                        <li>corpi discordanti: quando il magma ha trovato fratture discordanti con la stratificazione e sono
+                            diventate queste le vie preferenziali di risalita.</li>
+                    </ul>
+                    Le eruzioni si sono verificate in ambiente sottomarino ma probabilmente i coni più elevati sono emersi dalla superficie del
+                    mare, determinando la creazione di un piccolo arcipelago di isolotti vulcanici. Tale configurazione si
+                    è protratta fino all´inizio del Quaternario (circa due milioni di anni fa) momento in cui un sollevamento
+                    generalizzato del bacino insieme a fenomeni alluvionali di grossa entità, diedero origine alla formazione
+                    della Pianura Padana. Dopo l'emersione dal mare, un'erosione selettiva di milioni di anni ha prodotto
+                    un paesaggio tormentato e vario, disgregando e asportando in parte le coperture sedimentarie più tenere,
+                    mettendo quindi in risalto i duri corpi vulcanici in forme coniche levigate e snelle.
+                </div>
+            </div>
+        </div>
+
+        <div class="blocco-immagine-2">
+            <div class="immagine-griglia">
+                <img src="content/geologia/riolite.jpg" class="immagine-descrittiva">
+            </div>
+            <div class="didascalia">
+                Roccia vulcanica - riolite
+            </div>
+        </div>
+
+        <div class="blocco-testo-3">
+            <div class="sottotitolo">Il Termalismo</div>
+            <p>L'area euganea è tra le più rinomate d'Italia per quanto riguarda la presenza di risorse termali, che costituiscono
+                una importante attrazione turistica a livello internazionale. Il bacino idrominerario dei Colli Euganei include
+                i comuni di: Abano Terme, Arquà Petrarca, Baone, Battaglia Terme, Due Carrare, Galzignano Terme, Monselice,
+                Montegrotto Terme, Teolo e Torreglia, per un'estensione complessiva di circa 23 Km2. Oltre 130 stabilimenti
+                e circa 220 piscine termali, con una capacità ricettiva di oltre 13.000 posti letto, fanno delle Terme Euganee
+                una delle più importanti e apprezzate realtà a livello europeo.
+            </p>
+            <p>Le proprietà delle acque termali euganee sono note fin dai tempi antichi, come testimonia il culto dei Veneti
+                Antichi per il dio Aponus, al quale si attribuivano i benefici effetti curativi. Le testimonianze archeologiche
+                ancora oggi visibili soprattutto presso Montegrotto Terme, mettono in luce come nell'epoca romana vennero
+                realizzati importanti stabilimenti termali, ricordati anche nei preziosi scritti di autori come Tito Livio
+                e Plinio il Vecchio. Nuovo impulso allo sfruttamento della risorsa termale venne dato dalla Serenissima e,
+                in seguito, a partire dal XVIII sec., mentre, dal secolo successivo, iniziarono a fiorire importanti stabilimenti
+                alberghieri.
+            </p>
+            <p>
+                <div class="testo-bold">L'origine delle acque termali</div>
+                Contrariamente a quanto si possa pensare, è esclusa qualsiasi relazione tra le acque calde e il fenomeno vulcanico euganeo,
+                troppo antico per rappresentare ancora una sorgente attiva di calore. Analisi e studi approfonditi, già dalla
+                metà degli anni '70 del secolo scorso, hanno stabilito che le acque sono di natura meteorica (precipitazioni)
+                e che raggiungono il suolo in un'area montana individuata a nord - nord ovest dei Colli Euganei, principalmente
+                nel territorio prealpino sedimentario delle Piccole Dolomiti (Monte Pasubio, gruppo del Carega). Qui iniziano
+                il loro lento cammino di discesa entro sistemi di fratture delle permeabili rocce calcaree, raggiungendo
+                profondità di circa 3.000 metri, fino ad incontrare un basamento cristallino impermeabile. Durante la discesa
+                le acque acquistano temperatura, per effetto geotermico (riscaldamento naturale della crosta terrestre man
+                mano che si scende verso il mantello), salinità e una leggera radioattività.
+            </p>
+            <p>
+                <div class="testo-bold">La risalita delle acque nell'area euganea</div>
+                La presenza delle acque termo-minerali nella zona euganea viene attribuita all'ostacolo creato in profondità dalle masse
+                laviche (solide e impermeabili) e ad una serie di fratture nelle stesse che favoriscono la rapida risalita
+                delle acque, sospinte dalla pressione idraulica dell'intero bacino sotterraneo. Il tempo necessario alle
+                acque per compiere il tragitto dalla zona di caduta al bacino euganeo è, secondo studi recenti, lunghissimo
+                e molto superiore ai 25 anni previsti dai primi studi.</p>
+            <p>
+                Quando ritornano in superficie nella zona dei Colli Euganei presentano una temperatura media di 75°C, una certa radioattività
+                e numerosi sali minerali provenienti dallo scioglimento delle rocce (cloro, sodio, potassio, magnesio, zolfo,
+                bromo, iodio, silicio). Dal punto di vista della temperatura, le acque sono definite come "ipertermali" (T
+                > 40 C°), con punte massime di circa 86 C°. Su base chimica esse sono di due tipologie: clorurato-sodiche
+                e salso-bromo-iodiche. L'acqua termale è fondamentale per la preparazione, in apposite vasche, del fango
+                vegeto-minerale ottenuto dalla spontanea mineralizzazione di particolari alghe microscopiche, che è l'elemento
+                curativo caratteristico del bacino termale.
+            </p>
+
+        </div>
+
+        <div class="blocco-immagine-3">
+            <div class="immagine-griglia">
+                <img src="content/geologia/termalismo.jpg" class="immagine-descrittiva">
+            </div>
+            <div class="didascalia">
+                Buso della Casara
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="foot-1 testo-base">
+                <span class="testo-bold">
+                    © 2019
+                    <br>Parco Regionale dei Colli Euganei
+                </span>
+                <br>Amministrazione trasparente
+                <br>Responsabile protezione dati
+                <br>Privacy
+                <br>Note legali
+            </div>
+            <div class="foot-2 testo-base">
+                Via Rana Ca’ Mori, 8
+                <br>35042 Este (PD)
+                <br>Tel: 0429/632911
+                <br>Fax: 0429/601368
+                <br>e-mail: info@parcocollieuganei.com
+                <br>pec: info@pec.parcocollieuganei.com
+            </div>
+            <div class="foot-3">
+                <div class="blocco-icone">
+                    <a href="https://www.facebook.com/parcodeicollieuganei/">
+                        <img src="content/icone-social/icona-social_facebook.png" class="icona-social">
+                    </a>
+                    <a href="https://twitter.com/parcocolli">
+                        <img src="content/icone-social/icona-social_twitter.png" class="icona-social">
+                    </a>
+                    <a href="mailto:info@parcocollieuganei.com">
+                        <img src="content/icone-social/icona-social_mail.png" class="icona-social" onclick="">
+                    </a>
+                    <a href="#" onclick="return false;">
+                        <img src="content/icone-social/icona-social_linkedin.png" class="icona-social">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    <p style="font-family: EBGaramond">ciaone</p>
+    <p style="font-family: OfSerif">serif bold</p>
+    <p style="font-family: OfSans">sans book</p>
+    <p style="font-family: OfSans; font-style:italic;">sans book italic</p>
+    <p style="font-family: OfSans; font-weight:500;">sans medium</p>
+    <p style="font-family: OfSans; font-weight:700;">sans bold</p>
+    ol up a minute 
+    -->
+
+    <!-- FUNZIONA CON DIV ID=MAP -->
+    <!-- <script>
+            // Initialize and add the map
+            function initMap() {
+                // The location of Uluru
+                var uluru = { lat: 45.295, lng: 11.707 };
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                    document.getElementById('map'), { zoom: 12, center: uluru });
+                // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({ position: uluru, map: map });
+            }
+        </script> -->
+
+
+    <!-- 
+        // function myMap() {
+        // var mapProp= {
+        //     center:new google.maps.LatLng(23.792750,90.407606),
+        //     zoom:5,
+        // };
+        // var map=new google.maps.Map(document.getElementById("gMap"),mapProp);
+        // } 
+
+        45°17'42.4"N 11°42'28.0"E
+    -->
+
+    <!-- FUNZIONA CON DIV ID=MAP -->
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_0g9_tsIwRKtntxCcIuR5nY9aDdneVF8&callback=initMap"></script> -->
+
+    <script src="script/bottoni-mappa.js"></script>
+    <!-- <script src="script/cambio-header.js"></script> -->
+    <script src="script/header-dropdown.js"></script>
+    <script src="script/burger-menu.js"></script>
+    <script src="script/navigazione-laterale-dropdown.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+body {
+    font-family: OfSans, sans-serif;
+    font-weight: 400;
+    margin: 0 0 0 0;
+    font-size: 1em;
+    background-color: rgb(242, 242, 242);
+    line-height: 1.4em;
+}
+
+b{
+    font-weight: 700;
+}
+
+a{
+    color:black;
+    
+}
+
+a:hover{
+    color:black;
+}
+
+.footer a:hover{
+    text-decoration: none;
+}
+
+.link-body{
+    color: black;
+    text-decoration: underline;
+    display:block;
+}
+
+.link-body:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+.testo-bold {
+    font-weight: 700;
+}
+
+.testo-sottolineato{
+    text-decoration: underline;
+}
+
+.testo-categoria{
+    font-weight: 700;
+    font-variant: small-caps;
+    font-size: 1.2rem;
+}
+
+.breadcrumbs{
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+.implica{
+    color: rgb(255,108,12);
+    margin: 0 0.3rem 0 0.3rem;
+}
+
+.a-elemento {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.a-elemento:hover {
+    color: rgb(255, 108, 12);
+    text-decoration: none;
+}
+
+.centra-vert {
+    margin-top: auto;
+    margin-bottom: auto;
+}

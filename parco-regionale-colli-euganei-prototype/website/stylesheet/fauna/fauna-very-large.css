@@ -1,0 +1,321 @@
+
+/* ***************  ---GRIGLIA---  ******************* */
+.main-grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(17, auto);
+    grid-gap: 0;
+    grid-template-areas:
+    "hh hh hh hh hh hh hh hh hh hh hh hh"
+    ". . ti ti ti ti ti ti ti ti . ."
+    ". . in in in in . . . . . ."
+    ". . t1 t1 t1 t1 . . . . . ."
+    "s1 s1 s1 s1 s1 s1 s1 s1 s1 s1 s1 s1"
+    ". . t2 t2 t2 t2 . . . . . ."
+    "s2 s2 s2 s2 s2 s2 s2 s2 s2 s2 s2 s2"
+    ". . t3 t3 t3 t3 . . . . . ."
+    "s3 s3 s3 s3 s3 s3 s3 s3 s3 s3 s3 s3"
+    ". . t4 t4 t4 t4 . . . . . ."
+    "s4 s4 s4 s4 s4 s4 s4 s4 s4 s4 s4 s4"
+    ". . t5 t5 t5 t5 . . . . . ."
+    "s5 s5 s5 s5 s5 s5 s5 s5 s5 s5 s5 s5"
+    ". . t6 t6 t6 t6 . . . . . ."
+    "s6 s6 s6 s6 s6 s6 s6 s6 s6 s6 s6 s6"
+    ". . t7 t7 t7 t7 . . . . . ."
+    ". . z1 z1 z1 z1 z1 z1 . . . ."
+    "ff ff ff ff ff ff ff ff ff ff ff ff";
+}
+
+/* EDIT */
+/* body {
+    font-family: OfSerif;
+    font-weight: 400;
+} */
+
+
+/* ***************  ---CORPO---  ******************* */
+.titolazione{
+    grid-area: ti;
+    padding: 1.5rem 0 0 0;
+}
+
+.introduzione{
+    grid-area: in;
+    padding: 1.5rem 0 0 0;
+}
+
+.blocco-testo-1{
+    grid-area: t1;
+    padding: 1.5rem 0 0 0;
+}
+
+.blocco-scomparsa-1{
+    grid-area: s1;
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    ". . x1 x1 x1 x1 . y1 y1 y1 . ."
+    ". . . . . . . d1 d1 . . .";
+}
+
+.scomparsa-testo-1{
+    grid-area: x1;
+}
+
+.scomparsa-immagine-1{
+    grid-area: y1;
+}
+
+.scomparsa-didascalia-1{
+    grid-area: d1;
+}
+
+.blocco-testo-2{
+    grid-area: t2;
+    padding: 1.5rem 0 0 0;
+}
+
+.blocco-scomparsa-2{
+    grid-area: s2;
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    ". . x2 x2 x2 x2 . y2 y2 y2 . ."
+    ". . x2 x2 x2 x2 . d2 d2 . . .";
+}
+
+.scomparsa-testo-2{
+    grid-area: x2;
+}
+
+.scomparsa-immagine-2{
+    grid-area: y2;
+}
+
+.scomparsa-didascalia-2{
+    grid-area: d2;
+}
+
+.blocco-testo-3{
+    grid-area: t3;
+    padding: 1.5rem 0 0 0;
+}
+
+.blocco-scomparsa-3{
+    grid-area: s3;
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    ". . x3 x3 x3 x3 . y3 y3 y3 . ."
+    ". . x3 x3 x3 x3 . d3 d3 . . .";
+}
+
+.scomparsa-testo-3{
+    grid-area: x3;
+}
+
+.scomparsa-immagine-3{
+    grid-area: y3;
+}
+
+.scomparsa-didascalia-3{
+    grid-area: d3;
+}
+
+.blocco-testo-4{
+    grid-area: t4;
+    padding: 1.5rem 0 0 0;
+}
+
+.blocco-scomparsa-4{
+    grid-area: s4;
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    ". . x4 x4 x4 x4 . y4 y4 y4 . ."
+    ". . x4 x4 x4 x4 . d4 d4 . . .";
+}
+
+.scomparsa-testo-4{
+    grid-area: x4;
+}
+
+.scomparsa-immagine-4{
+    grid-area: y4;
+}
+
+.scomparsa-didascalia-4{
+    grid-area: d4;
+}
+
+.blocco-testo-5{
+    grid-area: t5;
+    padding: 1.5rem 0 0 0;
+}
+
+.blocco-scomparsa-5{
+    grid-area: s5;
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    ". . x5 x5 x5 x5 . y5 y5 y5 . ."
+    ". . x5 x5 x5 x5 . d5 d5 . . .";
+}
+
+.scomparsa-testo-5{
+    grid-area: x5;
+}
+
+.scomparsa-immagine-5{
+    grid-area: y5;
+}
+
+.scomparsa-didascalia-5{
+    grid-area: d5;
+}
+
+.blocco-testo-6{
+    grid-area: t6;
+    padding: 1.5rem 0 0 0;
+}
+
+.blocco-scomparsa-6{
+    grid-area: s6;
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    ". . x6 x6 x6 x6 . y6 y6 y6 . ."
+    ". . x6 x6 x6 x6 . d6 d6 . . .";
+}
+
+.scomparsa-testo-6{
+    grid-area: x6;
+}
+
+.scomparsa-immagine-6{
+    grid-area: y6;
+}
+
+.scomparsa-didascalia-6{
+    grid-area: d6;
+}
+
+.blocco-testo-7{
+    grid-area: t7;
+    padding: 1.5rem 0 0 0;
+}
+
+.blocco-download-1{
+    grid-area: z1;
+    padding: 1.5rem 0 3rem 0;
+}
+
+.griglia-download-1{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    padding: 0.5rem 0 0 0;
+}
+
+.griglia-download-1 > a{
+    display:block;
+}
+
+.download-singolo {
+    width: 55%;
+    /* margin: 0 auto; */
+}
+
+.download-singolo > img {
+    width: 100%;
+}
+
+.download-singolo > div {
+    padding: 0.35rem 0 0 0;
+    line-height: 1.3em;
+}
+
+.freccia{
+    transition: transform 0.3s;
+}
+
+.ruota{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.titolo{
+    font-family: OfSerif; /* EDIT */ 
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1em;
+    padding: 1.5rem 0 0 0;
+}
+
+.sottotitolo{
+    font-family: OfSans;
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 1em;
+    padding: 0 0 0 0;
+}
+
+.sottosezione{
+    padding: 0 0 1rem 0;
+}
+
+#fauna-1, #fauna-2, #fauna-3, #fauna-4, #fauna-4, #fauna-5, #fauna-6:hover{
+    cursor: pointer;
+}
+
+.immagine-descrittiva{
+    width: 100%;
+}
+
+.didascalia{
+    font-style: italic;
+    padding: 0.5rem 0 0 0;
+}
+
+
+
+/* ***************  ---FOOTER---  ******************* */
+.icona-social{
+    width: 40px;
+    margin: 0.3em;
+}
+.footer{
+    grid-area: ff;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    ". . fa fa fa fb fb fb fc fc . .";
+    padding: 2em 0;
+}
+.foot-1{
+    grid-area: fa;
+}
+.foot-2{
+    grid-area: fb;
+}
+.foot-3{
+    grid-area: fc;
+    text-align:right;
+}

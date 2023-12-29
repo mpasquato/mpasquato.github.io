@@ -1,0 +1,157 @@
+@media screen and (min-width: 540px) and (max-width: 768px){
+
+
+    /* ***************  ---GRIGLIA---  ******************* */
+    .main-grid{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(5, auto);
+        grid-gap: 0;
+        grid-template-areas:
+        "hm hm hm hm hm hm hm hm hm hm hm hm"
+        ". . ti ti ti ti ti ti ti ti . ."
+        ". . in in in in in in in in . ."
+        ". . cl cl cl cl cl cl cl cl . ."
+        "ff ff ff ff ff ff ff ff ff ff ff ff";
+    }
+
+
+
+    /* ***************  ---CORPO---  ******************* */
+    .contatti-laterali{
+        grid-area: cl;
+        grid-gap: 0;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(10, auto);
+        grid-template-areas:
+        ". . t1 t1 t1 t1 t1 t1 t1 t1 . ."
+        "s1 s1 s1 s1 s1 s1 s1 s1 s1 s1 s1 s1"
+        ". . t2 t2 t2 t2 t2 t2 t2 t2 . ."
+        "s2 s2 s2 s2 s2 s2 s2 s2 s2 s2 s2 s2"
+        ". . t3 t3 t3 t3 t3 t3 t3 t3 . ."
+        "s3 s3 s3 s3 s3 s3 s3 s3 s3 s3 s3 s3"
+        ". . t4 t4 t4 t4 t4 t4 t4 t4 . ."
+        "s4 s4 s4 s4 s4 s4 s4 s4 s4 s4 s4 s4"
+        ". . t5 t5 t5 t5 t5 t5 t5 t5 . ."
+        "s5 s5 s5 s5 s5 s5 s5 s5 s5 s5 s5 s5";
+    }
+
+    .blocco-scomparsa-1{
+        grid-area: s1;
+        padding-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+        ". . x1 x1 x1 x1 x1 x1 x1 x1 . ."
+        ". . y1 y1 y1 y1 y1 y1 y1 y1 . ."
+        ". . d1 d1 d1 d1 d1 d1 d1 d1 . .";
+    }
+    
+    .blocco-scomparsa-2{
+        grid-area: s2;
+        padding-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+        ". . x2 x2 x2 x2 x2 x2 x2 x2 . ."
+        ". . y2 y2 y2 y2 y2 y2 y2 y2 . ."
+        ". . d2 d2 d2 d2 d2 d2 d2 d2 . .";
+    }
+    
+    .blocco-scomparsa-3{
+        grid-area: s3;
+        padding-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+        ". . x3 x3 x3 x3 x3 x3 x3 x3 . ."
+        ". . y3 y3 y3 y3 y3 y3 y3 y3 . ."
+        ". . d3 d3 d3 d3 d3 d3 d3 d3 . .";
+    }
+    
+    .blocco-scomparsa-4{
+        grid-area: s4;
+        padding-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+        ". . x4 x4 x4 x4 x4 x4 x4 x4 . ."
+        ". . y4 y4 y4 y4 y4 y4 y4 y4 . ."
+        ". . d4 d4 d4 d4 d4 d4 d4 d4 . .";
+    }
+    
+    .blocco-scomparsa-5{
+        grid-area: s5;
+        padding-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+        ". . x5 x5 x5 x5 x5 x5 x5 x5 . ."
+        ". . y5 y5 y5 y5 y5 y5 y5 y5 . ."
+        ". . d5 d5 d5 d5 d5 d5 d5 d5 . .";
+    }
+
+    .titolo{
+        font-family: OfSerif; /* EDIT */ 
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 1em;
+        padding: 1.5rem 0 0 0;
+    }
+    
+    .sottotitolo{
+        font-family: OfSans;
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1em;
+        padding: 0 0 0 0;
+    }
+    
+    .immagine-descrittiva{
+        width: 100%;
+        padding-top: 1.5rem;
+    }
+    
+    .didascalia{
+        text-align: left;
+        font-style: italic;
+        margin-right: 0;
+        margin-top: 0;
+    }
+    
+
+
+/* ***************  ---FOOTER---  ******************* */
+.footer {
+    grid-area: ff;
+    background-color: white;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    ". . . fc fc fc fc fc fc . . ."
+    ". . fa fa fa fa fb fb fb fb . .";
+    padding: 2em 0;
+}
+.foot-1 {
+    grid-area: fa;
+}
+.foot-2 {
+    grid-area: fb;
+}
+.foot-3 {
+    grid-area: fc;
+    justify-self: center;
+}
+.blocco-icone {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+  }

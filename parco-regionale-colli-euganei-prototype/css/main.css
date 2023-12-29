@@ -1,0 +1,28 @@
+body {
+   margin: 0;
+   background: rgb(255, 108, 12);
+}
+
+.container {
+   display: flex;
+   min-height: 870px;
+   height: 100vh;
+   justify-content: center;
+   align-items: center;
+}
+
+.phone-container {
+   position: relative;
+   border-radius: 15px;
+   width: 413px;
+   height: 848px;
+   background-image: url("../content/iphone.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.phone-container div {
+   position: absolute;
+   top: 101px;
+   left: 27px;
+}

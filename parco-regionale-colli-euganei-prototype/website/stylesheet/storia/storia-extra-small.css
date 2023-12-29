@@ -1,0 +1,137 @@
+@media screen and (min-width: 0px) and (max-width: 540px){
+
+
+    /* ***************  ---GRIGLIA---  ******************* */
+    .main-grid{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(10, auto);
+        grid-gap: 0;
+        grid-template-areas:
+        "hm hm hm hm hm hm hm hm hm hm hm hm"
+        ". ti ti ti ti ti ti ti ti ti ti ."
+        ". t1 t1 t1 t1 t1 t1 t1 t1 t1 t1 ."
+        ". i1 i1 i1 i1 i1 i1 i1 i1 i1 i1 ."
+        ". . c1 c1 c1 c1 c1 c1 c1 c1 . ."
+        ". t2 t2 t2 t2 t2 t2 t2 t2 t2 t2 ."
+        ". i2 i2 i2 i2 i2 i2 i2 i2 i2 i2 ."
+        ". t3 t3 t3 t3 t3 t3 t3 t3 t3 t3 ."
+        ". i3 i3 i3 i3 i3 i3 i3 i3 i3 i3 ."
+        "ff ff ff ff ff ff ff ff ff ff ff ff";
+    }
+
+
+
+    /* ***************  ---CORPO---  ******************* */
+    .titolazione{
+        grid-area: ti;
+        padding: 1.5rem 0 0 0;
+    }
+    
+    .introduzione{
+        grid-area: in;
+        padding: 1.5rem 0 0 0;
+    }
+    
+    .blocco-testo-1{
+        grid-area: t1;
+        padding: 1.5rem 0 0 0;
+    }
+    
+    .blocco-immagine-1{
+        grid-area: i1;
+        padding: 1.5rem 0 0 0;
+    }
+
+    .citazione-pagina-1{
+        grid-area: c1;
+        padding: 1.5rem 0 0 0;
+    }
+
+    .blocco-testo-2{
+        grid-area: t2;
+        padding: 1.5rem 0 0 0;
+    }
+    
+    .blocco-immagine-2{
+        grid-area: i2;
+        padding: 1.5rem 0 0 0;
+    }
+    
+    .blocco-testo-3{
+        grid-area: t3;
+        padding: 1.5rem 0 0rem 0;
+    }
+    
+    .blocco-immagine-3{
+        grid-area: i3;
+        padding: 1.5rem 0 3rem 0;
+    }
+    
+    .titolo{
+        font-family: OfSerif;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 1em;
+        padding: 1.5rem 0 0 0;
+    }
+    
+    .sottotitolo{
+        font-family: OfSans;
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1em;
+        padding: 0 0 1rem 0;
+    }
+    
+    .sottosezione{
+        padding: 0 0 1rem 0;
+    }
+
+    .citazione-pagina{
+        font-family: EBGaramond;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 1.5rem;
+        line-height: 1em;
+    }
+    
+    .immagine-descrittiva{
+        width: 100%;
+    }
+
+    .immagine-griglia{
+        grid-area: ig
+    }
+
+    .didascalia{
+        grid-area: dd;
+        font-style: italic;
+        padding: 0.5rem 0 1rem 0;
+        text-align: left;
+    }
+    
+
+
+    /* ***************  ---FOOTER---  ******************* */
+    .footer {
+        grid-area: ff;
+        background-color: white;
+        display: grid;
+        grid-gap: 2em;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto auto auto;
+        grid-template-areas: ". fc fc fc fc fc fc fc fc fc fc ." ". fa fa fa fa fa fa fa fa fa fa ." ". fb fb fb fb fb fb fb fb fb fb .";
+        padding: 2em 0;
+    }
+    .foot-1 {
+        grid-area: fa;
+    }
+    .foot-2 {
+        grid-area: fb;
+    }
+    .foot-3 {
+        grid-area: fc;
+        text-align: left;
+    }
+  }
