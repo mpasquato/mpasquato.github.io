@@ -745,6 +745,35 @@
     }
 }
 
+.c_process__timeline--scroll--sm-lg {
+    @media screen and (min-width: 576px) {
+        justify-content: flex-start;
+    }
+
+    @media screen and (min-width: 768px) {
+    }
+
+    @media screen and (min-width: 992px) {
+        justify-content: initial;
+    }
+}
+
+.c_process__timeline--wrapping {
+    @media screen and (min-width: 576px) {
+        flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: 768px) {
+    }
+
+    @media screen and (min-width: 992px) {
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+    }
+}
+
 .c_process__item {
     flex: 0 0 160px;
     height: 100%;
