@@ -104,17 +104,14 @@
 .c_project-hero {}
 
 .c_project-hero__inner-container {
-    max-width: initial;
+    width: calc( 100% - ( 2* (var(--sz-7) ) ) );
+    
     margin-left: var(--sz-7);
     margin-right: var(--sz-7);
 
     @media screen and (min-width: 576px) {}
 
-    @media screen and (min-width: 768px) {
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    @media screen and (min-width: 768px) {}
 
     @media screen and (min-width: 992px) {}
 
@@ -170,30 +167,24 @@
     background-color: #DAF8E0;
 }
 
-.c_project-hero__bg__content {
-    display: flex;
-    align-items: end;
+.c_project-hero__bg__content, .c_project-hero__fg__content {
 
-    margin: 0 auto;
     position: absolute;
     bottom: 0;
+    left: var(--sz-7);
+    right: var(--sz-7);
     z-index: 1;
 
-    left: 0;
-
-
-
+    width: auto;
     height: 95%;
 
-    @media screen and (min-width: 440px) {
-        left: 40%;
-        transform: translateX(-50%);
-    }
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 
-    @media screen and (min-width: 576px) {
-        left: 50%;
-        transform: translateX(-50%);
-    }
+    @media screen and (min-width: 440px) {}
+
+    @media screen and (min-width: 576px) {}
 
     @media screen and (min-width: 768px) {}
 
@@ -207,6 +198,8 @@
 .c_project-hero__bg__image {
     max-width: 100%;
     max-height: 100%;
+    display: block;
+    object-fit: contain;
 }
 
 .c_project-hero__bg__decoration {
@@ -256,55 +249,20 @@
 }
 
 .c_project-hero__fg__content {
-    display: flex;
-    align-items: end;
-
-    position: absolute;
-    bottom: 0;
-
-    right: 0;
-
     z-index: 3;
 
-    max-width: 800px;
-
-    @media screen and (min-width: 440px) {
-        right: 40%;
-        transform: translateX(40%);
-    }
-
-    @media screen and (min-width: 576px) {
-        right: 50%;
-        transform: translateX(50%);
-    }
-
-    @media screen and (min-width: 768px) {}
-
-    @media screen and (min-width: 992px) {}
-
-    @media screen and (min-width: 1200px) {}
-
-    @media screen and (min-width: 1400px) {}
+    height: 90%;
 }
 
 .c_project-hero__fg__content--page--despar {
-
     height: 85%;
-    
-    @media screen and (min-width: 440px) {
-        right: 30%;
-        transform: translateX(30%);
-    }
-
-    @media screen and (min-width: 576px) {
-        right: 50%;
-        transform: translateX(50%);
-    }
 }
 
 .c_project-hero__fg__image {
     max-width: 100%;
     max-height: 100%;
+    display: block;
+    object-fit: contain;
 }
 
 .c_project-hero__head {
