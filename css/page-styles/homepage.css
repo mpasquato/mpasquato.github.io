@@ -458,6 +458,15 @@
     }
 }
 
+.about-me p {
+    margin-bottom: var(--sz-5, 16px);
+}
+
+.about-me p:last-of-type {
+    margin-bottom: initial;
+}
+
+
 .about-me__download-container {
     display: flex;
 

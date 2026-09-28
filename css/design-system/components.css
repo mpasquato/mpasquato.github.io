@@ -399,6 +399,10 @@
     font-size: var(--sz-10);
 }
 
+.c_project-disclaimer .t_title {
+    font-weight: 800;
+}
+
 
 
 /* Table of content */
@@ -481,18 +485,29 @@
 
 .c_overview__item {}
 
-.c_overview__head {}
+.c_overview__head {
+
+    padding-right: 0;
+
+    @media screen and (min-width: 768px) {
+        padding-right: var(--sz-2, 4px);
+    }
+
+    @media screen and (min-width: 992px) {
+        padding-right: var(--sz-4, 12px);
+    }
+}
 
 .c_overview__body {
     display: flex;
+    align-self: stretch;
 }
 
 .c_overview__decoration {
     flex: 0 0 2px;
-    align-self: stretch;
 
-    margin-left: 11px;
-    margin-right: 11px;
+    margin-left: 17px;
+    margin-right: 17px;
 
     background-color: hsl(var(--clr-bittersweet-60));
 }
@@ -505,15 +520,17 @@
 }
 
 .c_overview__image {
-    flex-grow: 1;
-    border-radius: var(--sz-7);
-    object-fit: cover;
     max-height: 250px;
+    object-fit: cover;
+    
+    border-radius: var(--sz-7);
 
     @media screen and (min-width: 576px) {}
 
     @media screen and (min-width: 768px) {
-        max-height: initial;
+        flex: 1 1 0;
+        min-height: 0;
+        max-height: none;
     }
 
     @media screen and (min-width: 992px) {}
@@ -606,8 +623,8 @@
 }
 
 .c_process__content {
-    padding-top: var(--sz-8);
-    padding-bottom: var(--sz-8);
+    padding-top: var(--sz-9);
+    padding-bottom: var(--sz-10);
 
     display: flex;
 
@@ -618,7 +635,7 @@
     width: 100%;
     max-width: 100vw;
 
-    row-gap: var(--sz-4);
+    row-gap: var(--sz-6);
 }
 
 
@@ -627,6 +644,8 @@
     padding-left: var(--sz-7);
     padding-right: var(--sz-7);
     text-align: left;
+
+    font-weight: 400;
 
     @media screen and (min-width: 576px) {
         text-align: center;
@@ -922,7 +941,7 @@
 .c_content-figure {
     display: flex;
     flex-direction: column;
-    row-gap: var(--sz-7);
+    row-gap: var(--sz-4);
 }
 
 .c_content-figure--ht--fill {
@@ -989,7 +1008,14 @@
 }
 
 
-.c_content-figure__caption {}
+.c_content-figure__caption {
+
+    text-align: center;
+
+    @media screen and (min-width: 992px) {
+        text-align: left;
+    }
+}
 
 .c_content-figure__linkimage {
     background-color: initial;
@@ -1325,7 +1351,7 @@ Iopago
     align-items: center;
     gap: var(--sz-5);
 
-    text-align: center;
+    text-align: left;
 
     @media screen and (min-width: 576px) {
         flex-direction: row;
