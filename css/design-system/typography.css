@@ -54,20 +54,6 @@ body {
 
 /* Body */
 
-/* 
-    .body-xs > .t_body .t_body--sz--xs
-    .body-small > .t_body .t_body--sz--sm
-    .body-medium > .t_body
-    .body-large > .t_body .t_body--sz--lg
-
-    .body-xs-e > .t_body .t_body--sz--xs .t_body--em--yes
-    .body-small-e > .t_body .t_body--sz--sm .t_body--em--yes
-    .body-medium-e > .t_body .t_body--em--yes
-    .body-large-e > .t_body .t_body--sz--lg .t_body--em--yes
-    
-    .body-small-link > .t_body .t_body--sz--sm .t_body--int--link
-*/
-
 .t_body {
     font-family: var(--ff-sans, "Funnel Sans");
     font-style: normal;
@@ -118,15 +104,6 @@ body {
 
 
 /* Label */
-
-/* 
-    .label-small > .t_label .t_label--sz--sm
-    .label-medium > .t_label
-    .label-large > .t_label .t_label--sz--lg
-
-    .label-large-int > .t_label .t_label--sz--lg .t_label--int--btn
-    .label-large-link > .t_label .t_label--sz--lg .t_label--int--link
-*/
 
 .t_label {
     font-family: var(--ff-sans, "Funnel Sans");
@@ -192,18 +169,6 @@ body {
 
 /* Title */
 
-/* 
-    .title-small > .t_title .t_title--sz--sm
-    .title-medium > .t_title
-    .title-large > .t_title .t_title--sz--lg
-    .title-xl > .t_title .t_title--sz--xl
-
-    .title-small-e > .t_title .t_title--sz--sm .t_title--em--yes
-    .title-medium-e > .t_title .t_title--em--yes
-    .title-large-e > .t_title .t_title--sz--lg .t_title--em--yes
-    .title-xl-e > .t-title .t_title--sz--xl .t-title--em--yes
-*/
-
 .t_title {
     font-family: var(--ff-sans, "Funnel Sans");
     font-style: normal;
@@ -255,18 +220,6 @@ body {
 
 
 /* Headline */
-
-/* 
-    .headline-small > .t_headline .t_headline--sz--sm
-    .headline-medium > .t_headline
-    .headline-large > .t_headline .t_headline--sz--lg
-
-    .headline-small-e > .t_headline .t_headline--sz--sm .t_headline--em--yes
-    .headline-medium-e > .t_headline .t_headline--em--yes
-    .headline-large-e > .t_headline .t_headline--sz--lg .t_headline--em--yes
-
-    .headline-small-int > .t_headline .t_headline--sz--sm .t_headline--int--link
-*/
 
 .t_headline {
     font-family: var(--ff-serif-text, "DM Serif Text");
@@ -340,12 +293,6 @@ body {
 
 
 /* Display */
-
-/* 
-    .display-medium > .t_display
-
-    .display-medium-e > .t_display .t_display--sz--xl .t_display--em--yes
-*/
 
 .t_display {
     font-family: var(--ff-serif-text, "DM Serif Text");
